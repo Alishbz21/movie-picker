@@ -102,7 +102,7 @@ async function draw() {
     renderMovies(app.batch);
     if (window.FramePosters) {
       // Posters are optional: fetch them after rendering so choices stay responsive.
-      window.FramePosters.lookup(app.batch, app.mode, api);
+      window.FramePosters.lookup(app.batch);
     }
     const count=app.batch.length;
     $('batch-subtitle').textContent=count ? tr('batchCount',{count:localizedNum(count)}) : tr('allSelected');
