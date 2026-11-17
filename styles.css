@@ -39,3 +39,32 @@ html[lang="en"] .history-date {direction:ltr}
 html[lang="fa"] .settings-dialog {font-family:'Vazirmatn',Tahoma,sans-serif}
 html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
 @media(max-width:680px){.settings-dialog{padding:21px}.settings-actions{flex-direction:column}.settings-actions .button{width:100%}}
+
+/* Undo controls for saved watchlist selections */
+.history-entry{grid-template-columns:50px minmax(0,1fr) auto}
+.history-meta{min-width:0;display:flex;flex-direction:column;gap:4px}
+.history-title{min-width:0;overflow-wrap:anywhere}
+.history-cancel-btn{
+  align-self:center;
+  min-height:36px;
+  padding:7px 12px;
+  border:1px solid rgba(255,158,143,.55);
+  background:rgba(255,158,143,.08);
+  color:var(--red);
+  border-radius:9px;
+  font-size:12px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.history-cancel-btn:hover:not(:disabled){
+  background:rgba(255,158,143,.16);
+  border-color:var(--red);
+}
+.history-cancel-btn:disabled{opacity:.5;cursor:not-allowed}
+.history-cancel-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:680px){
+  .history-entry{grid-template-columns:38px minmax(0,1fr);gap:10px}
+  .history-meta{grid-column:2}
+  .history-cancel-btn{grid-column:2;justify-self:start}
+  .history-date{grid-column:auto}
+}
