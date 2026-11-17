@@ -100,6 +100,10 @@ async function draw() {
     const result=app.mode==='live'?await api('draw'):{movies:random20(app.demoFilms.filter(x=>!new Set(app.selected.map(s=>s.key)).has(movieKey(x))))};
     app.batch=result.movies||[];app.chosen=false;
     renderMovies(app.batch);
+    if (window.FramePosters) {
+      // Posters are optional: fetch them after rendering so choices stay responsive.
+      window.FramePosters.lookup(app.batch, app.mode, api);
+    }
     const count=app.batch.length;
     $('batch-subtitle').textContent=count ? tr('batchCount',{count:localizedNum(count)}) : tr('allSelected');
     $('draw-btn').textContent=tr('drawAgain');
@@ -119,7 +123,9 @@ function renderMovies(movies) {
     const director=document.createElement('div');director.className='film-director';director.textContent=movie.director||'—';
     const details=document.createElement('div');details.className='film-details';details.textContent=[movie.country, movie.runtime ? `${movie.runtime} ${tr('min')}` : ''].filter(Boolean).join(' · ');
     const choose=document.createElement('button');choose.type='button';choose.className='film-pick';choose.textContent=tr('choose');choose.addEventListener('click',()=>pick(movie,card));
-    card.append(top,title,director,details,choose);grid.appendChild(card);
+    card.append(top,title,director,details,choose);
+    if (window.FramePosters) window.FramePosters.prepare(card,movie);
+    grid.appendChild(card);
   });
 }
 
@@ -278,6 +284,7 @@ function wire(){
   if(oldCode&&$('endpoint-input').value){$('passcode-input').value=oldCode;connect();}
 }
 function updateLanguage() {
+  window.FramePosters?.translate();
   if (app.mode === 'live') $('connection-text').textContent=tr('connected');
   else if (app.mode === 'demo') $('connection-text').textContent=tr('demoConnected');
   else $('connection-text').textContent=tr('disconnected');
