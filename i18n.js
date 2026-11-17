@@ -1,0 +1,181 @@
+/* FRAME / 20 — UI language pack. Film names and server data stay unchanged. */
+'use strict';
+
+(function () {
+  const translations = {
+    fa: {
+      docTitle: 'انتخاب فیلم بعدی | Movie Picker',
+      description: 'از میان ۲۰ فیلم تصادفی یکی را انتخاب کن و واچ‌لیستت را در Google Sheets ذخیره کن.',
+      settings: 'تنظیمات',
+      settingsTitle: 'تنظیمات سایت',
+      settingsDescription: 'زبان نمایش را انتخاب کن. تنظیمات و انتخاب‌های فیلمت تغییری نمی‌کنند.',
+      languageLabel: 'زبان سایت',
+      connectionSettings: 'مدیریت اتصال Google Sheets',
+      closeSettings: 'بستن تنظیمات',
+      eyebrow: 'سینمای تو، انتخاب تو',
+      hero1: 'فیلم بعدی‌ات را',
+      hero2: 'خودت انتخاب کن.',
+      heroCopy: 'هر بار ۲۰ فیلم تصادفی از فیلم‌های بدون امتیاز نمایش داده می‌شوند. یکی را انتخاب کن تا اولویت بعدی واچ‌لیست را بگیرد. انتخاب‌ها همان لحظه ذخیره می‌شوند.',
+      selected: 'انتخاب‌شده',
+      remaining: 'در انتظار انتخاب',
+      rated: 'امتیازدار',
+      connectionKicker: '۰۱ / اتصال',
+      connectionTitle: 'اتصال به کتابخانهٔ فیلم‌ها',
+      oneTime: 'یک‌بار تنظیم',
+      connectionDescription: 'آدرس Web App را از Apps Script بگیر. کد دسترسی فقط در همین نشست مرورگر نگه داشته می‌شود و در فایل‌های عمومی سایت ذخیره نمی‌شود.',
+      endpointLabel: 'آدرس Google Apps Script Web App',
+      passcodeLabel: 'کد دسترسی خصوصی',
+      passcodePlaceholder: 'کدی که در Script Properties ذخیره کردی',
+      connect: 'اتصال به شیت',
+      demo: 'حالت نمایشی',
+      demoNote: 'حالت نمایشی فقط برای تست ظاهر برنامه است؛ به Google Sheets چیزی نمی‌نویسد.',
+      pickerKicker: '۰۲ / ساخت واچ‌لیست',
+      pickerTitle: '۲۰ فیلم، یک انتخاب',
+      history: 'انتخاب‌های من',
+      historyKicker: '۰۳ / انتخاب‌های تو',
+      historyTitle: 'انتخاب‌های ثبت‌شده',
+      export: 'دریافت JSON',
+      close: 'بستن',
+      footerSource: 'منبع فیلم‌ها: TSPDT · داده‌های زنده: Google Sheets',
+      disconnected: 'متصل نشده',
+      connected: 'متصل به Google Sheets',
+      demoConnected: 'حالت نمایشی (بدون اتصال)',
+      serverTimeout: 'پاسخی از سرور دریافت نشد. آدرس Web App و دسترسی به آن را بررسی کن.',
+      serverUnknown: 'خطای نامشخص سرور',
+      serverConnection: 'اتصال به Apps Script برقرار نشد. URL یا تنظیمات انتشار را بررسی کن.',
+      invalidEndpoint: 'لطفاً آدرس /exec مربوط به Apps Script را وارد کن.',
+      shortCode: 'کد دسترسی باید حداقل ۱۲ کاراکتر باشد.',
+      connectedToast: 'اتصال برقرار شد؛ فیلم‌ها و اولویت‌ها زنده هستند.',
+      demoLoadError: 'دادهٔ نمونه بارگذاری نشد. سایت را از یک وب‌سرور باز کن.',
+      demoIncomplete: 'فایل دادهٔ نمایشی ناقص است.',
+      demoToast: 'حالت نمایشی فعال شد؛ تغییرات وارد Google Sheets نمی‌شوند.',
+      batchStart: 'برای شروع، ۲۰ فیلم تصادفی بگیر.',
+      batchReady: 'برای دیدن ۲۰ گزینهٔ تصادفی، دکمهٔ نمایش فیلم‌ها را بزن.',
+      batchCount: 'از میان {count} فیلم یکی را انتخاب کن. با انتخاب، فیلم به انتهای اولویت‌های فعلی اضافه می‌شود.',
+      allSelected: 'همهٔ فیلم‌های واجد شرایط انتخاب شده‌اند!',
+      noneEligible: 'فیلم بدون امتیاز و بدون اولویت دیگری باقی نمانده است.',
+      draw: '🎲 نمایش ۲۰ فیلم',
+      drawAgain: '🎲 ۲۰ فیلم تصادفی دیگر',
+      drawNext: '🎲 دور بعد: ۲۰ فیلم تازه',
+      emptyMovie: 'فیلمی برای پیشنهاد باقی نمانده است.',
+      choose: 'انتخاب این فیلم ←',
+      chosenPriority: '✓ اولویت {priority} ثبت شد',
+      githubMirrorFailed: ' (ذخیرهٔ GitHub موفق نشد؛ نسخهٔ Drive محفوظ است)',
+      statusRefreshFailed: ' (به‌روزرسانی آمار با بارگذاری دوباره انجام می‌شود)',
+      pickSuccess: '«{title}» با اولویت {priority} ثبت شد. برای دور بعد، دکمهٔ نمایش ۲۰ فیلم را بزن.{warning}',
+      pickToast: 'انتخاب ثبت شد؛ از دور بعد ادامه بده.',
+      historyEmpty: 'هنوز فیلمی انتخاب نشده است.',
+      min: 'دقیقه',
+      noDate: '—'
+    },
+    en: {
+      docTitle: 'Choose Your Next Movie | Movie Picker',
+      description: 'Pick one of 20 random films and save your watchlist priorities to Google Sheets.',
+      settings: 'Settings',
+      settingsTitle: 'Site settings',
+      settingsDescription: 'Choose the display language. Your connection and movie picks will stay intact.',
+      languageLabel: 'Display language',
+      connectionSettings: 'Manage Google Sheets connection',
+      closeSettings: 'Close settings',
+      eyebrow: 'YOUR CINEMA, YOUR ORDER',
+      hero1: 'Choose your',
+      hero2: 'next movie.',
+      heroCopy: 'Get 20 randomly selected unrated films each round. Pick one to assign the next watchlist priority. Your choices are saved immediately.',
+      selected: 'Selected',
+      remaining: 'Available to pick',
+      rated: 'Rated',
+      connectionKicker: '01 / CONNECTION',
+      connectionTitle: 'Connect your movie library',
+      oneTime: 'One-time setup',
+      connectionDescription: 'Get the Web App URL from Apps Script. Your access code is kept only for this browser session and never stored in the public site files.',
+      endpointLabel: 'Google Apps Script Web App URL',
+      passcodeLabel: 'Private access code',
+      passcodePlaceholder: 'Code saved in Script Properties',
+      connect: 'Connect to Sheet',
+      demo: 'Try demo',
+      demoNote: 'Demo mode only tests the interface and does not write anything to Google Sheets.',
+      pickerKicker: '02 / CURATE YOUR WATCHLIST',
+      pickerTitle: '20 films. One pick.',
+      history: 'My picks',
+      historyKicker: '03 / YOUR PICKS',
+      historyTitle: 'Saved selections',
+      export: 'Export JSON',
+      close: 'Close',
+      footerSource: 'Film source: TSPDT · Live data: Google Sheets',
+      disconnected: 'Not connected',
+      connected: 'Connected to Google Sheets',
+      demoConnected: 'Demo mode (offline)',
+      serverTimeout: 'The server did not respond. Check the Web App URL and its access settings.',
+      serverUnknown: 'Unknown server error',
+      serverConnection: 'Could not reach Apps Script. Check the URL or deployment settings.',
+      invalidEndpoint: 'Please enter the Apps Script Web App URL ending in /exec.',
+      shortCode: 'The access code must have at least 12 characters.',
+      connectedToast: 'Connected! Movies and priorities are now live.',
+      demoLoadError: 'Could not load demo data. Open this site through a web server.',
+      demoIncomplete: 'The demo data file is incomplete.',
+      demoToast: 'Demo mode is active; changes will not be saved to Google Sheets.',
+      batchStart: 'Start by drawing 20 random films.',
+      batchReady: 'Draw 20 random films to begin.',
+      batchCount: 'Choose one of these {count} films. Your pick will get the next available watchlist priority.',
+      allSelected: 'All eligible movies have been selected!',
+      noneEligible: 'No unrated, unprioritized movies remain.',
+      draw: '🎲 Show 20 random films',
+      drawAgain: '🎲 Draw 20 more films',
+      drawNext: '🎲 Next round: 20 fresh films',
+      emptyMovie: 'No more eligible films to suggest.',
+      choose: 'Select this film →',
+      chosenPriority: '✓ Saved as priority {priority}',
+      githubMirrorFailed: ' (GitHub backup failed; your Drive copy is safe)',
+      statusRefreshFailed: ' (Refresh the page to update the statistics)',
+      pickSuccess: '“{title}” was saved with priority {priority}. Click the draw button to start another round.{warning}',
+      pickToast: 'Selection saved. Ready for another round!',
+      historyEmpty: 'You have not selected any films yet.',
+      min: 'min',
+      noDate: '—'
+    }
+  };
+
+  const stored = (() => {
+    try { return localStorage.getItem('frame20_language'); }
+    catch (_) { return null; }
+  })();
+  let lang = stored === 'en' ? 'en' : 'fa';
+
+  function t(key, values = {}) {
+    const template = translations[lang][key] ?? translations.fa[key] ?? key;
+    return template.replace(/\{([a-zA-Z]+)\}/g, (_, name) =>
+      Object.prototype.hasOwnProperty.call(values, name) ? String(values[name]) : ''
+    );
+  }
+  function number(value) {
+    return new Intl.NumberFormat(lang === 'fa' ? 'fa-IR' : 'en-US').format(value ?? 0);
+  }
+  function date(value) {
+    return new Date(value).toLocaleString(lang === 'fa' ? 'fa-IR' : 'en-US');
+  }
+  function apply() {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+    document.documentElement.dataset.language = lang;
+    document.title = t('docTitle');
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.content = t('description');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      el.textContent = t(el.dataset.i18n);
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      el.setAttribute('placeholder', t(el.dataset.i18nPlaceholder));
+    });
+    const picker = document.getElementById('language-select');
+    if (picker) picker.value = lang;
+    document.dispatchEvent(new CustomEvent('frame20:languagechange', {detail:{language:lang}}));
+  }
+  function setLanguage(value) {
+    if (value !== 'fa' && value !== 'en') return;
+    lang = value;
+    try { localStorage.setItem('frame20_language', lang); } catch (_) {}
+    apply();
+  }
+  window.FrameI18n = {t,number,date,apply,setLanguage,get language(){return lang;}};
+  document.addEventListener('DOMContentLoaded', apply);
+})();
