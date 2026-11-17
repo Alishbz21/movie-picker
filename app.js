@@ -11,7 +11,7 @@ const app = { mode: 'disconnected', endpoint: '', code: '', busy: false, batch: 
 function show(id, visible) { $(id).classList.toggle('hidden', !visible); }
 function toast(message) { const node = $('toast'); node.textContent = message; show('toast', true); clearTimeout(toast.timer); toast.timer = setTimeout(() => show('toast', false), 4200); }
 function message(text, error = false) { const node = $('picker-message'); node.textContent = text; node.classList.toggle('error', error); show('picker-message', Boolean(text)); }
-function setBusy(value) { app.busy = value; ['draw-btn', 'connect-btn'].forEach(id => {$(id).disabled = value;}); document.querySelectorAll('.film-pick').forEach(el => el.disabled = value || app.chosen); }
+function setBusy(value) { app.busy = value; ['draw-btn', 'connect-btn'].forEach(id => {$(id).disabled = value;}); document.querySelectorAll('.film-pick').forEach(el => el.disabled = value || app.chosen); document.querySelectorAll('.history-cancel-btn').forEach(el => el.disabled = value); }
 function normalize(text) { return String(text ?? '').normalize('NFC').trim().toLocaleLowerCase(); }
 function movieKey(movie) { return [movie.title, movie.director, String(movie.year)].map(normalize).join('||'); }
 function validRating(value) { return Number.isFinite(Number(value)) && value !== '' && value !== null && value !== undefined && Number(value) >= 1 && Number(value) <= 10; }
@@ -152,17 +152,100 @@ async function pick(movie,card) {
   }catch(e){message(e.message,true);}finally{setBusy(false);}
 }
 
+async function cancelSelection(selection) {
+  if (app.busy || app.mode === 'disconnected') return;
+  const key = selection.key || movieKey(selection);
+  const currentPriority = selection.currentPriority === undefined ? selection.priority : selection.currentPriority;
+  const priorityLabel = currentPriority !== null && currentPriority !== undefined ? localizedNum(currentPriority) : '—';
+  const prompt = tr('cancelConfirm', {
+    title: selection.title,
+    priority: priorityLabel,
+    note: selection.isRated ? tr('cancelRatedNote') : tr('cancelUnratedNote')
+  });
+  if (!window.confirm(prompt)) return;
+
+  setBusy(true);
+  try {
+    let githubMirror = 'not_configured';
+    if (app.mode === 'live') {
+      const response = await api('cancel', {key}, 45000);
+      githubMirror = response.githubMirror;
+      statusDisplay(response);
+    } else {
+      const index = app.selected.findIndex(item => (item.key || movieKey(item)) === key);
+      if (index < 0) throw new Error(tr('cancelMissing'));
+      const removedPriority = Number(app.selected[index].priority);
+      app.selected.splice(index, 1);
+      if (Number.isInteger(removedPriority)) {
+        for (const item of app.selected) {
+          if (Number(item.priority) > removedPriority) item.priority = Number(item.priority) - 1;
+        }
+      }
+      localStorage.setItem('frame20_demo_state',
+        JSON.stringify({version:1, selected:app.selected, updatedAt:new Date().toISOString()}));
+      refreshDemoStatus();
+    }
+
+    // The previous batch may contain the cancelled film; require a new draw.
+    app.batch = [];
+    app.chosen = false;
+    $('movie-grid').replaceChildren();
+    $('batch-subtitle').textContent = tr('batchReady');
+    $('draw-btn').textContent = tr('draw');
+    const warning = githubMirror === 'failed' ? tr('githubMirrorFailed') : '';
+    message(tr('cancelSuccess', {title:selection.title,warning}));
+    toast(tr('cancelToast'));
+  } catch (err) {
+    const issue = /Unknown action/i.test(String(err.message))
+      ? tr('cancelBackendUpgrade') : err.message;
+    message(issue, true);
+    toast(issue);
+  } finally {
+    setBusy(false);
+  }
+}
+
 function renderHistory() {
-  const el=$('history-list');el.replaceChildren();
-  const selected=[...app.selected].sort((a,b)=>new Date(b.selectedAt||0)-new Date(a.selectedAt||0));
-  if(!selected.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=tr('historyEmpty');el.appendChild(empty);return;}
-  for(const s of selected){
-    const row=document.createElement('div');row.className='history-entry';
-    const number=document.createElement('span');number.className='history-priority';
-    number.textContent=s.isRated?'✓':s.currentPriority===null?'—':'#'+(s.currentPriority??s.priority);
-    const title=document.createElement('span');title.className='history-title';title.textContent=`${s.title} (${s.year}) — ${s.director}`;
-    const date=document.createElement('span');date.className='history-date';date.textContent=s.selectedAt?localizedDate(s.selectedAt):'—';
-    row.append(number,title,date);el.appendChild(row);
+  const el = $('history-list');
+  el.replaceChildren();
+  const selected = [...app.selected]
+    .sort((a,b) => new Date(b.selectedAt||0) - new Date(a.selectedAt||0));
+  if (!selected.length) {
+    const empty = document.createElement('div');
+    empty.className = 'empty';
+    empty.textContent = tr('historyEmpty');
+    el.appendChild(empty);
+    return;
+  }
+  for (const selection of selected) {
+    const row = document.createElement('div');
+    row.className = 'history-entry';
+    const number = document.createElement('span');
+    number.className = 'history-priority';
+    number.textContent = selection.isRated ? '✓' :
+      selection.currentPriority === null ? '—' :
+      '#' + localizedNum(selection.currentPriority ?? selection.priority);
+
+    const details = document.createElement('div');
+    details.className = 'history-meta';
+    const title = document.createElement('span');
+    title.className = 'history-title';
+    title.textContent = `${selection.title} (${selection.year}) — ${selection.director}`;
+    const date = document.createElement('span');
+    date.className = 'history-date';
+    date.textContent = selection.selectedAt ? localizedDate(selection.selectedAt) : '—';
+    details.append(title,date);
+
+    const cancel = document.createElement('button');
+    cancel.type = 'button';
+    cancel.className = 'history-cancel-btn';
+    cancel.textContent = tr('cancelPick');
+    cancel.setAttribute('aria-label',tr('cancelPickAria',{title:selection.title}));
+    cancel.disabled = app.busy;
+    cancel.addEventListener('click', () => cancelSelection(selection));
+
+    row.append(number,details,cancel);
+    el.appendChild(row);
   }
 }
 function exportJson(){
