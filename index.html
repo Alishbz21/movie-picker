@@ -7,8 +7,9 @@
   <meta name="theme-color" content="#101519" />
   <title>انتخاب فیلم بعدی | Movie Picker</title>
   <meta name="description" content="از میان ۲۰ فیلم تصادفی یکی را انتخاب کن و واچ‌لیستت را در Google Sheets ذخیره کن." />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <script src="i18n.js?v=1" defer></script>
+  <script src="app.js?v=2" defer></script>
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -21,44 +22,44 @@
       </a>
       <div class="top-controls">
         <span class="pill" id="connection-pill"><span class="status-dot"></span><span id="connection-text">متصل نشده</span></span>
-        <button class="button button-outline button-small" id="settings-btn" type="button">تنظیمات <span aria-hidden="true">⚙</span></button>
+        <button class="button button-outline button-small" id="settings-btn" type="button"><span data-i18n="settings">تنظیمات</span> <span aria-hidden="true">⚙</span></button>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR CINEMA, YOUR ORDER</div>
-        <h1>فیلم بعدی‌ات را<br /><em>خودت انتخاب کن.</em></h1>
-        <p class="hero-copy">هر بار ۲۰ فیلم تصادفی از فیلم‌های بدون امتیاز نمایش داده می‌شوند. یکی را انتخاب کن تا اولویت بعدی واچ‌لیست را بگیرد. انتخاب‌ها همان لحظه ذخیره می‌شوند.</p>
+        <div class="eyebrow"><span class="eyebrow-line"></span> <span data-i18n="eyebrow">سینمای تو، انتخاب تو</span></div>
+        <h1><span data-i18n="hero1">فیلم بعدی‌ات را</span><br /><em data-i18n="hero2">خودت انتخاب کن.</em></h1>
+        <p class="hero-copy" data-i18n="heroCopy">هر بار ۲۰ فیلم تصادفی از فیلم‌های بدون امتیاز نمایش داده می‌شوند. یکی را انتخاب کن تا اولویت بعدی واچ‌لیست را بگیرد. انتخاب‌ها همان لحظه ذخیره می‌شوند.</p>
         <div class="metrics" aria-live="polite">
-          <div class="metric"><span class="metric-number" id="priority-count">—</span><span class="metric-label">انتخاب‌شده</span></div>
-          <div class="metric"><span class="metric-number" id="remaining-count">—</span><span class="metric-label">در انتظار انتخاب</span></div>
-          <div class="metric"><span class="metric-number" id="rated-count">—</span><span class="metric-label">امتیازدار</span></div>
+          <div class="metric"><span class="metric-number" id="priority-count">—</span><span class="metric-label" data-i18n="selected">انتخاب‌شده</span></div>
+          <div class="metric"><span class="metric-number" id="remaining-count">—</span><span class="metric-label" data-i18n="remaining">در انتظار انتخاب</span></div>
+          <div class="metric"><span class="metric-number" id="rated-count">—</span><span class="metric-label" data-i18n="rated">امتیازدار</span></div>
         </div>
       </section>
 
       <section class="panel" id="connection-panel">
         <div class="section-heading">
-          <div><span class="mini-label">01 / CONNECTION</span><h2>اتصال به کتابخانهٔ فیلم‌ها</h2></div>
-          <span class="tag tag-amber">یک‌بار تنظیم</span>
+          <div><span class="mini-label" data-i18n="connectionKicker">۰۱ / اتصال</span><h2 data-i18n="connectionTitle">اتصال به کتابخانهٔ فیلم‌ها</h2></div>
+          <span class="tag tag-amber" data-i18n="oneTime">یک‌بار تنظیم</span>
         </div>
-        <p class="soft">آدرس Web App را از Apps Script بگیر. کد دسترسی فقط در همین نشست مرورگر نگه داشته می‌شود و در فایل‌های عمومی سایت ذخیره نمی‌شود.</p>
+        <p class="soft" data-i18n="connectionDescription">آدرس Web App را از Apps Script بگیر. کد دسترسی فقط در همین نشست مرورگر نگه داشته می‌شود و در فایل‌های عمومی سایت ذخیره نمی‌شود.</p>
         <form id="connect-form" class="connect-form">
-          <label>آدرس Google Apps Script Web App
+          <label><span data-i18n="endpointLabel">آدرس Google Apps Script Web App</span>
             <input id="endpoint-input" type="url" required autocomplete="off" placeholder="https://script.google.com/macros/s/.../exec" dir="ltr" />
           </label>
-          <label>کد دسترسی خصوصی
-            <input id="passcode-input" type="password" required minlength="12" autocomplete="off" placeholder="کدی که در Script Properties ذخیره کردی" dir="ltr" />
+          <label><span data-i18n="passcodeLabel">کد دسترسی خصوصی</span>
+            <input id="passcode-input" type="password" required minlength="12" autocomplete="off" data-i18n-placeholder="passcodePlaceholder" placeholder="کدی که در Script Properties ذخیره کردی" dir="ltr" />
           </label>
-          <div class="connect-actions"><button class="button button-primary" type="submit" id="connect-btn">اتصال به شیت <span>←</span></button><button class="button button-outline" type="button" id="demo-btn">حالت نمایشی</button></div>
+          <div class="connect-actions"><button class="button button-primary" type="submit" id="connect-btn"><span data-i18n="connect">اتصال به شیت</span> <span aria-hidden="true" class="direction-arrow">←</span></button><button class="button button-outline" type="button" id="demo-btn" data-i18n="demo">حالت نمایشی</button></div>
         </form>
-        <p class="small-note">حالت نمایشی فقط برای تست ظاهر برنامه است؛ به Google Sheets چیزی نمی‌نویسد.</p>
+        <p class="small-note" data-i18n="demoNote">حالت نمایشی فقط برای تست ظاهر برنامه است؛ به Google Sheets چیزی نمی‌نویسد.</p>
       </section>
 
       <section class="panel picker-panel hidden" id="picker-panel">
         <div class="section-heading section-heading-wide">
-          <div><span class="mini-label">02 / CURATE YOUR WATCHLIST</span><h2>۲۰ فیلم، یک انتخاب</h2><p class="soft" id="batch-subtitle">برای شروع، ۲۰ فیلم تصادفی بگیر.</p></div>
-          <div class="section-actions"><button class="button button-primary" id="draw-btn" type="button">🎲 نمایش ۲۰ فیلم</button><button class="button button-outline" id="history-btn" type="button">انتخاب‌های من</button></div>
+          <div><span class="mini-label" data-i18n="pickerKicker">۰۲ / ساخت واچ‌لیست</span><h2 data-i18n="pickerTitle">۲۰ فیلم، یک انتخاب</h2><p class="soft" id="batch-subtitle">برای شروع، ۲۰ فیلم تصادفی بگیر.</p></div>
+          <div class="section-actions"><button class="button button-primary" id="draw-btn" type="button">🎲 نمایش ۲۰ فیلم</button><button class="button button-outline" id="history-btn" type="button" data-i18n="history">انتخاب‌های من</button></div>
         </div>
         <div id="picker-message" role="status" class="message hidden"></div>
         <div id="movie-grid" class="movie-grid" aria-live="polite"></div>
@@ -66,15 +67,36 @@
 
       <section class="panel hidden" id="history-panel">
         <div class="section-heading">
-          <div><span class="mini-label">03 / YOUR PICKS</span><h2>انتخاب‌های ثبت‌شده</h2></div>
-          <div class="section-actions"><button class="button button-outline button-small" id="export-btn" type="button">دریافت JSON</button><button class="button button-outline button-small" id="close-history-btn" type="button">بستن</button></div>
+          <div><span class="mini-label" data-i18n="historyKicker">۰۳ / انتخاب‌های تو</span><h2 data-i18n="historyTitle">انتخاب‌های ثبت‌شده</h2></div>
+          <div class="section-actions"><button class="button button-outline button-small" id="export-btn" type="button" data-i18n="export">دریافت JSON</button><button class="button button-outline button-small" id="close-history-btn" type="button" data-i18n="close">بستن</button></div>
         </div>
         <div id="history-list" class="history-list"></div>
       </section>
     </main>
 
-    <footer class="footer"><span>FRAME / 20 · A PERSONAL CINEMA PROJECT</span><span>منبع فیلم‌ها: TSPDT · داده‌های زنده: Google Sheets</span></footer>
+    <footer class="footer"><span>FRAME / 20 · A PERSONAL CINEMA PROJECT</span><span data-i18n="footerSource">منبع فیلم‌ها: TSPDT · داده‌های زنده: Google Sheets</span></footer>
   </div>
   <div class="toast hidden" id="toast" role="status"></div>
+  <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title">
+    <div class="settings-heading">
+      <div>
+        <span class="mini-label">FRAME / 20</span>
+        <h2 id="settings-title" data-i18n="settingsTitle">تنظیمات سایت</h2>
+      </div>
+      <button type="button" class="settings-x" id="settings-close-x" aria-label="Close" title="Close">×</button>
+    </div>
+    <p class="soft" data-i18n="settingsDescription">زبان نمایش را انتخاب کن. تنظیمات و انتخاب‌های فیلمت تغییری نمی‌کنند.</p>
+    <div class="settings-field">
+      <label for="language-select" data-i18n="languageLabel">زبان سایت</label>
+      <select id="language-select" aria-label="Language">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="settings-actions">
+      <button id="connection-settings-btn" type="button" class="button button-outline" data-i18n="connectionSettings">مدیریت اتصال Google Sheets</button>
+      <button id="settings-close-btn" type="button" class="button button-primary" data-i18n="closeSettings">بستن تنظیمات</button>
+    </div>
+  </dialog>
 </body>
 </html>
