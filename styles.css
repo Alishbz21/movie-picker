@@ -123,3 +123,19 @@ html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
   .film-poster-edition {font-size:8px}
   .film-poster-sigil {font-size:46px}
 }
+
+/* Per-image provenance and licensing on each Commons artwork */
+.film-poster-credit {
+  position:absolute;
+  z-index:3;
+  bottom:0;
+  inset-inline:0;
+  padding:22px 9px 8px;
+  background:linear-gradient(transparent,rgba(0,0,0,.85));
+  color:white;
+  font:600 10px 'DM Sans',sans-serif;
+  text-align:center;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+.film-poster-credit:hover {color:var(--accent)}
