@@ -3,6 +3,9 @@
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1LJXyVJrWrux99oqgN8OwtHlOCYVWINgDdnKnULEk4j8/edit';
 const $ = (id) => document.getElementById(id);
+const tr = (key,vars) => window.FrameI18n.t(key,vars);
+const localizedNum = (n) => window.FrameI18n.number(n);
+const localizedDate = (d) => window.FrameI18n.date(d);
 const app = { mode: 'disconnected', endpoint: '', code: '', busy: false, batch: [], chosen: false, selected: [], status: null, demoFilms: [] };
 
 function show(id, visible) { $(id).classList.toggle('hidden', !visible); }
@@ -23,9 +26,9 @@ function api(action, fields = {}, timeout = 25000) {
     let settled = false;
     const clean = () => { clearTimeout(timer); script.remove(); try {delete window[name];} catch (_) {window[name] = undefined;} };
     const finish = (err, value) => { if(settled) return; settled=true; clean(); err ? reject(err) : resolve(value); };
-    const timer = setTimeout(() => finish(new Error('پاسخی از سرور دریافت نشد. آدرس Web App و دسترسی به آن را بررسی کن.')), timeout);
-    window[name] = (data) => { if(!data || !data.ok) return finish(new Error(data?.error || 'خطای نامشخص سرور')); finish(null,data); };
-    script.onerror = () => finish(new Error('اتصال به Apps Script برقرار نشد. URL یا تنظیمات انتشار را بررسی کن.'));
+    const timer = setTimeout(() => finish(new Error(tr('serverTimeout'))), timeout);
+    window[name] = (data) => { if(!data || !data.ok) return finish(new Error(data?.error || tr('serverUnknown'))); finish(null,data); };
+    script.onerror = () => finish(new Error(tr('serverConnection')));
     script.src = `${app.endpoint}?${params.toString()}`;
     document.head.appendChild(script);
   });
@@ -33,9 +36,9 @@ function api(action, fields = {}, timeout = 25000) {
 
 function statusDisplay(s) {
   app.status=s;
-  $('priority-count').textContent = new Intl.NumberFormat('fa-IR').format(s.prioritized ?? 0);
-  $('remaining-count').textContent = new Intl.NumberFormat('fa-IR').format(s.remaining ?? 0);
-  $('rated-count').textContent = new Intl.NumberFormat('fa-IR').format(s.rated ?? 0);
+  $('priority-count').textContent = localizedNum(s.prioritized ?? 0);
+  $('remaining-count').textContent = localizedNum(s.remaining ?? 0);
+  $('rated-count').textContent = localizedNum(s.rated ?? 0);
   app.selected = Array.isArray(s.selected) ? s.selected : [];
   renderHistory();
 }
@@ -45,9 +48,9 @@ async function connect(event) {
   const endpoint = $('endpoint-input').value.trim().replace(/\?.*$/, '');
   const code = $('passcode-input').value;
   if (!/^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec\/?$/.test(endpoint)) {
-    toast('لطفاً آدرس /exec مربوط به Apps Script را وارد کن.'); return;
+    toast(tr('invalidEndpoint')); return;
   }
-  if (code.length < 12) { toast('کد دسترسی باید حداقل ۱۲ کاراکتر باشد.'); return; }
+  if (code.length < 12) { toast(tr('shortCode')); return; }
   app.endpoint=endpoint; app.code=code;
   setBusy(true);
   try {
@@ -56,8 +59,8 @@ async function connect(event) {
     localStorage.setItem('frame20_endpoint',endpoint);
     sessionStorage.setItem('frame20_code',code);
     statusDisplay(s);
-    enterPicker('متصل به Google Sheets');
-    toast('اتصال برقرار شد؛ فیلم‌ها و اولویت‌ها زنده هستند.');
+    enterPicker(tr('connected'));
+    toast(tr('connectedToast'));
   } catch(e) { toast(e.message); } finally { setBusy(false); }
 }
 
@@ -66,9 +69,9 @@ function enterPicker(label) {
   const pill=$('connection-pill'); pill.classList.toggle('connected',app.mode==='live'); pill.classList.toggle('demo',app.mode==='demo');
   $('connection-text').textContent=label;
   $('movie-grid').replaceChildren();
-  $('batch-subtitle').textContent='برای دیدن ۲۰ گزینهٔ تصادفی، دکمهٔ نمایش فیلم‌ها را بزن.';
+  $('batch-subtitle').textContent=tr('batchReady');
   app.batch=[]; app.chosen=false;
-  $('draw-btn').textContent='🎲 نمایش ۲۰ فیلم';
+  $('draw-btn').textContent=tr('draw');
   message('');
 }
 
@@ -76,14 +79,14 @@ async function startDemo() {
   setBusy(true);
   try {
     const res=await fetch('./films.json', {cache:'no-store'});
-    if(!res.ok) throw new Error('دادهٔ نمونه بارگذاری نشد. سایت را از یک وب‌سرور باز کن.');
+    if(!res.ok) throw new Error(tr('demoLoadError'));
     app.demoFilms=await res.json();
-    if(!Array.isArray(app.demoFilms)||app.demoFilms.length<20) throw new Error('فایل دادهٔ نمایشی ناقص است.');
+    if(!Array.isArray(app.demoFilms)||app.demoFilms.length<20) throw new Error(tr('demoIncomplete'));
     const state=JSON.parse(localStorage.getItem('frame20_demo_state')||'{"selected":[]}');
     app.selected=Array.isArray(state.selected)?state.selected:[];
     app.mode='demo';
-    refreshDemoStatus(); enterPicker('حالت نمایشی (بدون اتصال)');
-    toast('حالت نمایشی فعال شد؛ تغییرات وارد Google Sheets نمی‌شوند.');
+    refreshDemoStatus(); enterPicker(tr('demoConnected'));
+    toast(tr('demoToast'));
   } catch(e){toast(e.message);} finally {setBusy(false);}
 }
 function refreshDemoStatus() {
@@ -98,15 +101,15 @@ async function draw() {
     app.batch=result.movies||[];app.chosen=false;
     renderMovies(app.batch);
     const count=app.batch.length;
-    $('batch-subtitle').textContent=count ? `از میان ${new Intl.NumberFormat('fa-IR').format(count)} فیلم یکی را انتخاب کن. با انتخاب، فیلم به انتهای اولویت‌های فعلی اضافه می‌شود.` : 'همهٔ فیلم‌های واجد شرایط انتخاب شده‌اند!';
-    $('draw-btn').textContent='🎲 ۲۰ فیلم تصادفی دیگر';
-    if(!count) message('فیلم بدون امتیاز و بدون اولویت دیگری باقی نمانده است.');
+    $('batch-subtitle').textContent=count ? tr('batchCount',{count:localizedNum(count)}) : tr('allSelected');
+    $('draw-btn').textContent=tr('drawAgain');
+    if(!count) message(tr('noneEligible'));
   } catch(e){message(e.message,true);}finally{setBusy(false);}
 }
 
 function renderMovies(movies) {
   const grid=$('movie-grid');grid.replaceChildren();
-  if(!movies.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='فیلمی برای پیشنهاد باقی نمانده است.';grid.appendChild(empty);return;}
+  if(!movies.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=tr('emptyMovie');grid.appendChild(empty);return;}
   movies.forEach((movie,i)=>{
     const card=document.createElement('article');card.className='film-card';
     const top=document.createElement('div');top.className='film-top';
@@ -114,8 +117,8 @@ function renderMovies(movies) {
     const year=document.createElement('span');year.className='film-year';year.textContent=String(movie.year||'—');top.append(num,year);
     const title=document.createElement('div');title.className='film-title';title.textContent=movie.title;
     const director=document.createElement('div');director.className='film-director';director.textContent=movie.director||'—';
-    const details=document.createElement('div');details.className='film-details';details.textContent=[movie.country, movie.runtime ? `${movie.runtime} min` : ''].filter(Boolean).join(' · ');
-    const choose=document.createElement('button');choose.type='button';choose.className='film-pick';choose.textContent='انتخاب این فیلم ←';choose.addEventListener('click',()=>pick(movie,card));
+    const details=document.createElement('div');details.className='film-details';details.textContent=[movie.country, movie.runtime ? `${movie.runtime} ${tr('min')}` : ''].filter(Boolean).join(' · ');
+    const choose=document.createElement('button');choose.type='button';choose.className='film-pick';choose.textContent=tr('choose');choose.addEventListener('click',()=>pick(movie,card));
     card.append(top,title,director,details,choose);grid.appendChild(card);
   });
 }
@@ -128,12 +131,12 @@ async function pick(movie,card) {
     if(app.mode==='live'){
       const result=await api('pick',{key:movie.key},45000);
       priority=result.priority;
-      if(result.githubMirror==='failed') mirrorWarning=' (ذخیرهٔ GitHub موفق نشد؛ نسخهٔ Drive محفوظ است)';
+      if(result.githubMirror==='failed') mirrorWarning=tr('githubMirrorFailed');
       try {const s=await api('status');statusDisplay(s);} catch (_) {
         // The pick has already been committed; do not invite a second pick.
         app.selected.push(result.movie);
         if (app.status) statusDisplay({...app.status, selected:app.selected, prioritized:(app.status.prioritized||0)+1, remaining:Math.max(0,(app.status.remaining||1)-1)});
-        mirrorWarning += ' (به‌روزرسانی آمار با بارگذاری دوباره انجام می‌شود)';
+        mirrorWarning += tr('statusRefreshFailed');
       }
     }else{
       const used=new Set(app.selected.map(x=>x.priority));priority=1;while(used.has(priority))priority++;
@@ -142,23 +145,23 @@ async function pick(movie,card) {
       refreshDemoStatus();
     }
     app.chosen=true;card.classList.add('chosen');
-    card.querySelector('.film-pick').textContent=`✓ اولویت ${new Intl.NumberFormat('fa-IR').format(priority)} ثبت شد`;
-    message(`«${movie.title}» با اولویت ${new Intl.NumberFormat('fa-IR').format(priority)} ثبت شد. برای دور بعد، دکمهٔ نمایش ۲۰ فیلم را بزن.${mirrorWarning}`);
-    toast('انتخاب ثبت شد؛ از دور بعد ادامه بده.');
-    $('draw-btn').textContent='🎲 دور بعد: ۲۰ فیلم تازه';
+    card.querySelector('.film-pick').textContent=tr('chosenPriority',{priority:localizedNum(priority)});
+    message(tr('pickSuccess',{title:movie.title,priority:localizedNum(priority),warning:mirrorWarning}));
+    toast(tr('pickToast'));
+    $('draw-btn').textContent=tr('drawNext');
   }catch(e){message(e.message,true);}finally{setBusy(false);}
 }
 
 function renderHistory() {
   const el=$('history-list');el.replaceChildren();
   const selected=[...app.selected].sort((a,b)=>new Date(b.selectedAt||0)-new Date(a.selectedAt||0));
-  if(!selected.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='هنوز فیلمی انتخاب نشده است.';el.appendChild(empty);return;}
+  if(!selected.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=tr('historyEmpty');el.appendChild(empty);return;}
   for(const s of selected){
     const row=document.createElement('div');row.className='history-entry';
     const number=document.createElement('span');number.className='history-priority';
     number.textContent=s.isRated?'✓':s.currentPriority===null?'—':'#'+(s.currentPriority??s.priority);
     const title=document.createElement('span');title.className='history-title';title.textContent=`${s.title} (${s.year}) — ${s.director}`;
-    const date=document.createElement('span');date.className='history-date';date.textContent=s.selectedAt?new Date(s.selectedAt).toLocaleString('fa-IR'):'—';
+    const date=document.createElement('span');date.className='history-date';date.textContent=s.selectedAt?localizedDate(s.selectedAt):'—';
     row.append(number,title,date);el.appendChild(row);
   }
 }
@@ -167,11 +170,22 @@ function exportJson(){
   const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json;charset=utf-8'});
   const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='movie_picker_state.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);
 }
-function disconnect(){app.mode='disconnected';app.code='';app.chosen=false;sessionStorage.removeItem('frame20_code');show('connection-panel',true);show('picker-panel',false);show('history-panel',false);$('connection-pill').classList.remove('connected','demo');$('connection-text').textContent='متصل نشده';$('passcode-input').value='';}
+function disconnect(){app.mode='disconnected';app.code='';app.chosen=false;sessionStorage.removeItem('frame20_code');show('connection-panel',true);show('picker-panel',false);show('history-panel',false);$('connection-pill').classList.remove('connected','demo');$('connection-text').textContent=tr('disconnected');$('passcode-input').value='';}
 function wire(){
   $('endpoint-input').value=localStorage.getItem('frame20_endpoint')||'';
   $('connect-form').addEventListener('submit',connect);
-  $('settings-btn').addEventListener('click',()=>{disconnect();window.scrollTo({top:0,behavior:'smooth'});});
+  $('settings-btn').addEventListener('click', () => $('settings-dialog').showModal());
+  const closeSettings = () => $('settings-dialog').close();
+  $('settings-close-btn').addEventListener('click',closeSettings);
+  $('settings-close-x').addEventListener('click',closeSettings);
+  $('settings-dialog').addEventListener('click',event => {
+    if(event.target === $('settings-dialog'))closeSettings();
+  });
+  $('language-select').addEventListener('change',event => window.FrameI18n.setLanguage(event.target.value));
+  $('connection-settings-btn').addEventListener('click',()=>{
+    closeSettings();disconnect();window.scrollTo({top:0,behavior:'smooth'});
+  });
+  document.addEventListener('frame20:languagechange', updateLanguage);
   $('demo-btn').addEventListener('click',startDemo);
   $('draw-btn').addEventListener('click',draw);
   $('history-btn').addEventListener('click',()=>{renderHistory();show('history-panel',true);$('history-panel').scrollIntoView({behavior:'smooth',block:'start'});});
@@ -179,5 +193,29 @@ function wire(){
   $('export-btn').addEventListener('click',exportJson);
   const oldCode=sessionStorage.getItem('frame20_code');
   if(oldCode&&$('endpoint-input').value){$('passcode-input').value=oldCode;connect();}
+}
+function updateLanguage() {
+  if (app.mode === 'live') $('connection-text').textContent=tr('connected');
+  else if (app.mode === 'demo') $('connection-text').textContent=tr('demoConnected');
+  else $('connection-text').textContent=tr('disconnected');
+  if (app.status) statusDisplay(app.status);
+  if (app.mode !== 'disconnected') {
+    const count = app.batch.length;
+    $('batch-subtitle').textContent = count ? tr('batchCount',{count:localizedNum(count)}) : tr('batchReady');
+    $('draw-btn').textContent = app.chosen ? tr('drawNext') : count ? tr('drawAgain') : tr('draw');
+    if (count) {
+      const selectedCardIndex = [...$('movie-grid').children].findIndex(card=>card.classList.contains('chosen'));
+      renderMovies(app.batch);
+      if(selectedCardIndex >= 0) {
+        const card = $('movie-grid').children[selectedCardIndex];
+        card.classList.add('chosen');
+        const selected = app.batch[selectedCardIndex];
+        const chosenRecord = app.selected.find(s => (s.key || movieKey(s)) === (selected.key || movieKey(selected)));
+        card.querySelector('.film-pick').textContent = tr('chosenPriority',{priority:localizedNum(chosenRecord?.currentPriority ?? chosenRecord?.priority ?? '')});
+        card.querySelector('.film-pick').disabled = true;
+      }
+    }
+    renderHistory();
+  }
 }
 document.addEventListener('DOMContentLoaded',wire);
