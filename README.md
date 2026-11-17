@@ -98,19 +98,20 @@ README.md                # راهنمای نصب
 
 **برای فعال شدن لغو انتخاب در حالت متصل:** نسخهٔ جدید بک‌اند را در فایل `PickerBackend.gs` پروژهٔ Apps Script جایگزین و ذخیره کنید؛ سپس **Deploy → Manage deployments → Edit → New version → Deploy** را انجام دهید. صرفاً تغییر فایل‌های GitHub Pages کافی نیست و تا زمانی که بک‌اند به‌روزرسانی نشود، سایت نمی‌تواند لغو انتخاب را در Google Sheets اجرا کند.
 
-## Movie posters (optional integration)
+## Movie artwork (free, no API key)
 
-The movie cards now support actual posters from **TMDB**. The web page renders immediately with a styled fallback; the server fetches posters in a separate request. A movie title and its original release year must match the metadata record to prevent posters for unrelated movies. Missing or unmatched images show the fallback instead.
+Movie cards retrieve freely hosted artwork from **Wikidata** and **Wikimedia Commons** directly through public browser-accessible APIs, with no registration or API token. This does not alter Google Sheets, Apps Script, history, selection, or undo.
 
-### Activate real posters
+- After drawing 20 films, the movie grid appears immediately and searches for art asynchronously.
+- Candidate Wikidata items must match the film's English title and original release year (±1 year) and have a film-related description.
+- If Wikidata lists a Commons image (P18), Wikimedia Commons supplies a resized image plus its file-page link and licensing metadata.
+- Each image includes an attribution link to the Wikimedia Commons file page.
+- Images/missing results are cached in this browser for 21 days. Failed network requests are not cached.
+- Films without a confidently matched, freely hosted image retain the designed placeholder; a poster for every title is **not** guaranteed.
+- Only the *artwork* lookup is keyless; live movie picking still needs the previously deployed Google Apps Script backend and private access code.
 
-1. Create a TMDB account at https://www.themoviedb.org/ and request developer API access under **Settings → API**. Check TMDB's usage terms and attribution guidelines.
-2. Copy the **API Read Access Token** (long bearer token, **not** the short API Key).
-3. In the same Google Apps Script project as the movie-picker backend, open **Project Settings → Script Properties**, add `TMDB_READ_ACCESS_TOKEN` with the token as its value, and save.
-4. Replace **only the PickerBackend.gs file content** with the newer file **PickerBackend_with_Posters.gs** (which also includes the previous undo-selection behavior). Keep the separate Code.gs sorting functions unchanged.
-5. Go to **Deploy → Manage deployments → Edit (pencil) → Version: New version → Deploy**. Keep your existing Web App URL and its access code.
-6. Reload the GitHub Pages site and draw 20 films. Each poster loads asynchronously; films without matching posters keep a clean generic cover.
+**Setup:** No change to `PickerBackend.gs`, no deployment, and no TMDB property. Refresh the GitHub Pages site and draw 20 movies. This feature also works with the demo film list.
 
-Do **not** put the TMDB token in GitHub, `posters.js`, `app.js`, or `index.html`. TMDB requests go through Google Apps Script, which also caches successful and missing matches for six hours, while the browser caches display results locally for up to 30 days. The site works without the token, but shows the fallback artwork until it is configured.
-
-TMDB's approved logos and attribution: https://www.themoviedb.org/about/logos-attribution . The footer includes the non-endorsement statement; ensure your use follows TMDB's current developer terms.
+Wikidata: https://www.wikidata.org/
+Wikimedia Commons: https://commons.wikimedia.org/
+Check the linked Commons page for each picture's precise license and reuse conditions.
