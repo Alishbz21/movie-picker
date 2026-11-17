@@ -7,10 +7,9 @@
   <meta name="theme-color" content="#101519" />
   <title>انتخاب فیلم بعدی | Movie Picker</title>
   <meta name="description" content="از میان ۲۰ فیلم تصادفی یکی را انتخاب کن و واچ‌لیستت را در Google Sheets ذخیره کن." />
-  <link rel="stylesheet" href="styles.css?v=5" />
-  <script src="i18n.js?v=4" defer></script>
-  <script src="posters.js?v=2" defer></script>
-  <script src="app.js?v=5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=6" />
+  <script src="i18n.js?v=5" defer></script>
+  <script src="app.js?v=6" defer></script>
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -63,7 +62,6 @@
           <div class="section-actions"><button class="button button-primary" id="draw-btn" type="button">🎲 نمایش ۲۰ فیلم</button><button class="button button-outline" id="history-btn" type="button" data-i18n="history">انتخاب‌های من</button></div>
         </div>
         <div id="picker-message" role="status" class="message hidden"></div>
-        <p id="poster-status" class="poster-status hidden" role="status"></p>
         <div id="movie-grid" class="movie-grid" aria-live="polite"></div>
       </section>
 
@@ -76,7 +74,7 @@
       </section>
     </main>
 
-    <footer class="footer"><span>FRAME / 20 · A PERSONAL CINEMA PROJECT</span><span data-i18n="footerSource">منبع فیلم‌ها: TSPDT · داده‌های زنده: Google Sheets</span><span class="poster-attribution">Artwork: <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">Wikidata</a></span></footer>
+    <footer class="footer"><span>FRAME / 20 · A PERSONAL CINEMA PROJECT</span><span data-i18n="footerSource">منبع فیلم‌ها: TSPDT · داده‌های زنده: Google Sheets</span></footer>
   </div>
   <div class="toast hidden" id="toast" role="status"></div>
   <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title">
