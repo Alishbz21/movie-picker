@@ -97,21 +97,3 @@ README.md                # راهنمای نصب
 در سایت از **انتخاب‌های من / My picks** می‌توانید کنار هر فیلم گزینه **لغو انتخاب / Undo pick** را بزنید. پس از تأیید، انتخاب از تاریخچهٔ JSON حذف می‌شود. اگر فیلم هنوز اولویت داشته باشد، مقدار ستون G آن پاک می‌شود و اولویت‌های بزرگ‌تر یک واحد کم می‌شوند. **Personal Rating هیچ‌وقت پاک نمی‌شود.** فیلم بدون امتیاز دوباره می‌تواند در قرعه‌کشی بیاید؛ فیلم امتیازدار همچنان از قرعه‌کشی کنار می‌ماند. حالت نمایشی هم لغو انتخاب را در حافظهٔ مرورگر پشتیبانی می‌کند.
 
 **برای فعال شدن لغو انتخاب در حالت متصل:** نسخهٔ جدید بک‌اند را در فایل `PickerBackend.gs` پروژهٔ Apps Script جایگزین و ذخیره کنید؛ سپس **Deploy → Manage deployments → Edit → New version → Deploy** را انجام دهید. صرفاً تغییر فایل‌های GitHub Pages کافی نیست و تا زمانی که بک‌اند به‌روزرسانی نشود، سایت نمی‌تواند لغو انتخاب را در Google Sheets اجرا کند.
-
-## Movie artwork (free, no API key)
-
-Movie cards retrieve freely hosted artwork from **Wikidata** and **Wikimedia Commons** directly through public browser-accessible APIs, with no registration or API token. This does not alter Google Sheets, Apps Script, history, selection, or undo.
-
-- After drawing 20 films, the movie grid appears immediately and searches for art asynchronously.
-- Candidate Wikidata items must match the film's English title and original release year (±1 year) and have a film-related description.
-- If Wikidata lists a Commons image (P18), Wikimedia Commons supplies a resized image plus its file-page link and licensing metadata.
-- Each image includes an attribution link to the Wikimedia Commons file page.
-- Images/missing results are cached in this browser for 21 days. Failed network requests are not cached.
-- Films without a confidently matched, freely hosted image retain the designed placeholder; a poster for every title is **not** guaranteed.
-- Only the *artwork* lookup is keyless; live movie picking still needs the previously deployed Google Apps Script backend and private access code.
-
-**Setup:** No change to `PickerBackend.gs`, no deployment, and no TMDB property. Refresh the GitHub Pages site and draw 20 movies. This feature also works with the demo film list.
-
-Wikidata: https://www.wikidata.org/
-Wikimedia Commons: https://commons.wikimedia.org/
-Check the linked Commons page for each picture's precise license and reuse conditions.
