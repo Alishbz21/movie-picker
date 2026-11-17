@@ -74,12 +74,6 @@
       cancelSuccess: 'انتخاب «{title}» لغو و فهرست به‌روزرسانی شد.{warning}',
       cancelToast: 'انتخاب با موفقیت لغو شد.',
       cancelBackendUpgrade: 'برای لغو انتخاب، نسخه جدید PickerBackend.gs را در Apps Script ذخیره و Web App را با New version دوباره Deploy کن.',
-      posterLoading: 'در حال جست‌وجوی تصویر فیلم‌ها در ویکی‌مدیا…',
-      posterAttribution: 'منبع و مجوز تصویر',
-      posterMissingToken: 'برای نمایش پوسترها، کلید TMDB را در Apps Script تنظیم کن. فعلاً کارت‌های بدون پوستر نمایش داده می‌شوند.',
-      posterBackendUpdate: 'برای دریافت پوسترها باید نسخه جدید PickerBackend.gs را در Apps Script منتشر کنی.',
-      posterNetworkError: 'دریافت بعضی پوسترها ممکن نشد؛ انتخاب فیلم‌ها همچنان فعال است.',
-      posterImageAlt: 'پوستر فیلم {title}',
       min: 'دقیقه',
       noDate: '—'
     },
@@ -154,12 +148,6 @@
       cancelSuccess: 'Your pick of “{title}” was undone. Watchlist updated.{warning}',
       cancelToast: 'Selection undone.',
       cancelBackendUpgrade: 'To undo picks, update PickerBackend.gs in Apps Script and redeploy the Web App with New version.',
-      posterLoading: 'Looking up film artwork on Wikimedia…',
-      posterAttribution: 'Image source & license',
-      posterMissingToken: 'Set your TMDB token in Apps Script to enable posters. Film cards are still usable.',
-      posterBackendUpdate: 'Deploy the updated PickerBackend.gs Web App to enable posters.',
-      posterNetworkError: 'Some posters could not be loaded. You can still pick a movie.',
-      posterImageAlt: 'Poster for {title}',
       min: 'min',
       noDate: '—'
     }
