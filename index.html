@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#101519" />
+  <title>انتخاب فیلم بعدی | Movie Picker</title>
+  <meta name="description" content="از میان ۲۰ فیلم تصادفی یکی را انتخاب کن و واچ‌لیستت را در Google Sheets ذخیره کن." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="shell">
+    <header class="topbar">
+      <a href="#" class="brand" aria-label="Movie Picker">
+        <span class="brand-logo">✦</span>
+        <span class="brand-label"><strong>FRAME / 20</strong><small>MOVIE PICKER</small></span>
+      </a>
+      <div class="top-controls">
+        <span class="pill" id="connection-pill"><span class="status-dot"></span><span id="connection-text">متصل نشده</span></span>
+        <button class="button button-outline button-small" id="settings-btn" type="button">تنظیمات <span aria-hidden="true">⚙</span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR CINEMA, YOUR ORDER</div>
+        <h1>فیلم بعدی‌ات را<br /><em>خودت انتخاب کن.</em></h1>
+        <p class="hero-copy">هر بار ۲۰ فیلم تصادفی از فیلم‌های بدون امتیاز نمایش داده می‌شوند. یکی را انتخاب کن تا اولویت بعدی واچ‌لیست را بگیرد. انتخاب‌ها همان لحظه ذخیره می‌شوند.</p>
+        <div class="metrics" aria-live="polite">
+          <div class="metric"><span class="metric-number" id="priority-count">—</span><span class="metric-label">انتخاب‌شده</span></div>
+          <div class="metric"><span class="metric-number" id="remaining-count">—</span><span class="metric-label">در انتظار انتخاب</span></div>
+          <div class="metric"><span class="metric-number" id="rated-count">—</span><span class="metric-label">امتیازدار</span></div>
+        </div>
+      </section>
+
+      <section class="panel" id="connection-panel">
+        <div class="section-heading">
+          <div><span class="mini-label">01 / CONNECTION</span><h2>اتصال به کتابخانهٔ فیلم‌ها</h2></div>
+          <span class="tag tag-amber">یک‌بار تنظیم</span>
+        </div>
+        <p class="soft">آدرس Web App را از Apps Script بگیر. کد دسترسی فقط در همین نشست مرورگر نگه داشته می‌شود و در فایل‌های عمومی سایت ذخیره نمی‌شود.</p>
+        <form id="connect-form" class="connect-form">
+          <label>آدرس Google Apps Script Web App
+            <input id="endpoint-input" type="url" required autocomplete="off" placeholder="https://script.google.com/macros/s/.../exec" dir="ltr" />
+          </label>
+          <label>کد دسترسی خصوصی
+            <input id="passcode-input" type="password" required minlength="12" autocomplete="off" placeholder="کدی که در Script Properties ذخیره کردی" dir="ltr" />
+          </label>
+          <div class="connect-actions"><button class="button button-primary" type="submit" id="connect-btn">اتصال به شیت <span>←</span></button><button class="button button-outline" type="button" id="demo-btn">حالت نمایشی</button></div>
+        </form>
+        <p class="small-note">حالت نمایشی فقط برای تست ظاهر برنامه است؛ به Google Sheets چیزی نمی‌نویسد.</p>
+      </section>
+
+      <section class="panel picker-panel hidden" id="picker-panel">
+        <div class="section-heading section-heading-wide">
+          <div><span class="mini-label">02 / CURATE YOUR WATCHLIST</span><h2>۲۰ فیلم، یک انتخاب</h2><p class="soft" id="batch-subtitle">برای شروع، ۲۰ فیلم تصادفی بگیر.</p></div>
+          <div class="section-actions"><button class="button button-primary" id="draw-btn" type="button">🎲 نمایش ۲۰ فیلم</button><button class="button button-outline" id="history-btn" type="button">انتخاب‌های من</button></div>
+        </div>
+        <div id="picker-message" role="status" class="message hidden"></div>
+        <div id="movie-grid" class="movie-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel hidden" id="history-panel">
+        <div class="section-heading">
+          <div><span class="mini-label">03 / YOUR PICKS</span><h2>انتخاب‌های ثبت‌شده</h2></div>
+          <div class="section-actions"><button class="button button-outline button-small" id="export-btn" type="button">دریافت JSON</button><button class="button button-outline button-small" id="close-history-btn" type="button">بستن</button></div>
+        </div>
+        <div id="history-list" class="history-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>FRAME / 20 · A PERSONAL CINEMA PROJECT</span><span>منبع فیلم‌ها: TSPDT · داده‌های زنده: Google Sheets</span></footer>
+  </div>
+  <div class="toast hidden" id="toast" role="status"></div>
+</body>
+</html>

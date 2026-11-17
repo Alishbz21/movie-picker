@@ -1,0 +1,7002 @@
+[
+  {
+    "title": "Citizen Kane",
+    "director": "Orson Welles",
+    "year": "1941",
+    "country": "USA",
+    "runtime": 119
+  },
+  {
+    "title": "Vertigo",
+    "director": "Alfred Hitchcock",
+    "year": "1958",
+    "country": "USA",
+    "runtime": 128
+  },
+  {
+    "title": "2001: A Space Odyssey",
+    "director": "Stanley Kubrick",
+    "year": "1968",
+    "country": "UK-USA",
+    "runtime": 139
+  },
+  {
+    "title": "Tokyo Story",
+    "director": "Yasujiro Ozu",
+    "year": "1953",
+    "country": "Japan",
+    "runtime": 134
+  },
+  {
+    "title": "The Rules Of The Game",
+    "director": "Jean Renoir",
+    "year": "1939",
+    "country": "France",
+    "runtime": 113
+  },
+  {
+    "title": "The Godfather",
+    "director": "Francis Ford Coppola",
+    "year": "1972",
+    "country": "USA",
+    "runtime": 175
+  },
+  {
+    "title": "8½",
+    "director": "Federico Fellini",
+    "year": "1963",
+    "country": "Italy",
+    "runtime": 135
+  },
+  {
+    "title": "Sunrise: A Song Of Two Humans",
+    "director": "F.W. Murnau",
+    "year": "1927",
+    "country": "USA",
+    "runtime": 110
+  },
+  {
+    "title": "The Searchers",
+    "director": "John Ford",
+    "year": "1956",
+    "country": "USA",
+    "runtime": 119
+  },
+  {
+    "title": "Seven Samurai",
+    "director": "Akira Kurosawa",
+    "year": "1954",
+    "country": "Japan",
+    "runtime": 200
+  },
+  {
+    "title": "Singin' In The Rain",
+    "director": "Stanley Donen & Gene Kelly",
+    "year": "1952",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "Jeanne Dielman, 23 Quai Du Commerce, 1080 Bruxelles",
+    "director": "Chantal Akerman",
+    "year": "1975",
+    "country": "Belgium-France",
+    "runtime": 201
+  },
+  {
+    "title": "Apocalypse Now",
+    "director": "Francis Ford Coppola",
+    "year": "1979",
+    "country": "USA",
+    "runtime": 150
+  },
+  {
+    "title": "Taxi Driver",
+    "director": "Martin Scorsese",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 113
+  },
+  {
+    "title": "Bicycle Thieves",
+    "director": "Vittorio De Sica",
+    "year": "1948",
+    "country": "Italy",
+    "runtime": 89
+  },
+  {
+    "title": "Persona",
+    "director": "Ingmar Bergman",
+    "year": "1966",
+    "country": "Sweden",
+    "runtime": 83
+  },
+  {
+    "title": "In The Mood For Love",
+    "director": "Wong Kar-wai",
+    "year": "2000",
+    "country": "Hong Kong-France",
+    "runtime": 97
+  },
+  {
+    "title": "Breathless",
+    "director": "Jean-Luc Godard",
+    "year": "1960",
+    "country": "France",
+    "runtime": 89
+  },
+  {
+    "title": "The Passion Of Joan Of Arc",
+    "director": "Carl Theodor Dreyer",
+    "year": "1928",
+    "country": "France",
+    "runtime": 110
+  },
+  {
+    "title": "Battleship Potemkin",
+    "director": "Sergei Eisenstein",
+    "year": "1925",
+    "country": "USSR",
+    "runtime": 71
+  },
+  {
+    "title": "L'Atalante",
+    "director": "Jean Vigo",
+    "year": "1934",
+    "country": "France",
+    "runtime": 89
+  },
+  {
+    "title": "Man With A Movie Camera",
+    "director": "Dziga Vertov",
+    "year": "1929",
+    "country": "USSR",
+    "runtime": 80
+  },
+  {
+    "title": "Mirror",
+    "director": "Andrei Tarkovsky",
+    "year": "1975",
+    "country": "USSR",
+    "runtime": 107
+  },
+  {
+    "title": "Psycho",
+    "director": "Alfred Hitchcock",
+    "year": "1960",
+    "country": "USA",
+    "runtime": 109
+  },
+  {
+    "title": "Rashomon",
+    "director": "Akira Kurosawa",
+    "year": "1950",
+    "country": "Japan",
+    "runtime": 88
+  },
+  {
+    "title": "City Lights",
+    "director": "Charles Chaplin",
+    "year": "1931",
+    "country": "USA",
+    "runtime": 86
+  },
+  {
+    "title": "The 400 Blows",
+    "director": "François Truffaut",
+    "year": "1959",
+    "country": "France",
+    "runtime": 99
+  },
+  {
+    "title": "Andrei Rublev",
+    "director": "Andrei Tarkovsky",
+    "year": "1966",
+    "country": "USSR",
+    "runtime": 185
+  },
+  {
+    "title": "Mulholland Dr.",
+    "director": "David Lynch",
+    "year": "2001",
+    "country": "USA-France",
+    "runtime": 147
+  },
+  {
+    "title": "The Godfather Part Ii",
+    "director": "Francis Ford Coppola",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 200
+  },
+  {
+    "title": "Some Like It Hot",
+    "director": "Billy Wilder",
+    "year": "1959",
+    "country": "USA",
+    "runtime": 121
+  },
+  {
+    "title": "Au Hasard Balthazar",
+    "director": "Robert Bresson",
+    "year": "1966",
+    "country": "France",
+    "runtime": 95
+  },
+  {
+    "title": "La Dolce Vita",
+    "director": "Federico Fellini",
+    "year": "1960",
+    "country": "Italy",
+    "runtime": 175
+  },
+  {
+    "title": "Ordet",
+    "director": "Carl Theodor Dreyer",
+    "year": "1955",
+    "country": "Denmark",
+    "runtime": 125
+  },
+  {
+    "title": "Raging Bull",
+    "director": "Martin Scorsese",
+    "year": "1980",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "The Night Of The Hunter",
+    "director": "Charles Laughton",
+    "year": "1955",
+    "country": "USA",
+    "runtime": 92
+  },
+  {
+    "title": "Casablanca",
+    "director": "Michael Curtiz",
+    "year": "1942",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "L'Avventura",
+    "director": "Michelangelo Antonioni",
+    "year": "1960",
+    "country": "Italy-France",
+    "runtime": 145
+  },
+  {
+    "title": "Blade Runner",
+    "director": "Ridley Scott",
+    "year": "1982",
+    "country": "USA",
+    "runtime": 118
+  },
+  {
+    "title": "Rear Window",
+    "director": "Alfred Hitchcock",
+    "year": "1954",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "Sunset Blvd.",
+    "director": "Billy Wilder",
+    "year": "1950",
+    "country": "USA",
+    "runtime": 110
+  },
+  {
+    "title": "Touch Of Evil",
+    "director": "Orson Welles",
+    "year": "1958",
+    "country": "USA",
+    "runtime": 108
+  },
+  {
+    "title": "Barry Lyndon",
+    "director": "Stanley Kubrick",
+    "year": "1975",
+    "country": "UK",
+    "runtime": 183
+  },
+  {
+    "title": "Contempt",
+    "director": "Jean-Luc Godard",
+    "year": "1963",
+    "country": "France-Italy",
+    "runtime": 103
+  },
+  {
+    "title": "Playtime",
+    "director": "Jacques Tati",
+    "year": "1967",
+    "country": "France",
+    "runtime": 108
+  },
+  {
+    "title": "Pather Panchali",
+    "director": "Satyajit Ray",
+    "year": "1955",
+    "country": "India",
+    "runtime": 112
+  },
+  {
+    "title": "Close-Up",
+    "director": "Abbas Kiarostami",
+    "year": "1990",
+    "country": "Iran",
+    "runtime": 98
+  },
+  {
+    "title": "Lawrence Of Arabia",
+    "director": "David Lean",
+    "year": "1962",
+    "country": "UK",
+    "runtime": 216
+  },
+  {
+    "title": "Stalker",
+    "director": "Andrei Tarkovsky",
+    "year": "1979",
+    "country": "USSR",
+    "runtime": 160
+  },
+  {
+    "title": "The General",
+    "director": "Buster Keaton & Clyde Bruckman",
+    "year": "1926",
+    "country": "USA",
+    "runtime": 74
+  },
+  {
+    "title": "Modern Times",
+    "director": "Charles Chaplin",
+    "year": "1936",
+    "country": "USA",
+    "runtime": 89
+  },
+  {
+    "title": "Beau Travail",
+    "director": "Claire Denis",
+    "year": "1999",
+    "country": "France",
+    "runtime": 92
+  },
+  {
+    "title": "M",
+    "director": "Fritz Lang",
+    "year": "1931",
+    "country": "Germany",
+    "runtime": 99
+  },
+  {
+    "title": "The Third Man",
+    "director": "Carol Reed",
+    "year": "1949",
+    "country": "UK",
+    "runtime": 104
+  },
+  {
+    "title": "Late Spring",
+    "director": "Yasujiro Ozu",
+    "year": "1949",
+    "country": "Japan",
+    "runtime": 108
+  },
+  {
+    "title": "The Apartment",
+    "director": "Billy Wilder",
+    "year": "1960",
+    "country": "USA",
+    "runtime": 125
+  },
+  {
+    "title": "North By Northwest",
+    "director": "Alfred Hitchcock",
+    "year": "1959",
+    "country": "USA",
+    "runtime": 136
+  },
+  {
+    "title": "Ugetsu Monogatari",
+    "director": "Kenji Mizoguchi",
+    "year": "1953",
+    "country": "Japan",
+    "runtime": 96
+  },
+  {
+    "title": "Goodfellas",
+    "director": "Martin Scorsese",
+    "year": "1990",
+    "country": "USA",
+    "runtime": 146
+  },
+  {
+    "title": "The Battle Of Algiers",
+    "director": "Gillo Pontecorvo",
+    "year": "1966",
+    "country": "Italy-Algeria",
+    "runtime": 121
+  },
+  {
+    "title": "La Grande Illusion",
+    "director": "Jean Renoir",
+    "year": "1937",
+    "country": "France",
+    "runtime": 117
+  },
+  {
+    "title": "Wild Strawberries",
+    "director": "Ingmar Bergman",
+    "year": "1957",
+    "country": "Sweden",
+    "runtime": 90
+  },
+  {
+    "title": "Rio Bravo",
+    "director": "Howard Hawks",
+    "year": "1959",
+    "country": "USA",
+    "runtime": 141
+  },
+  {
+    "title": "Fanny And Alexander",
+    "director": "Ingmar Bergman",
+    "year": "1982",
+    "country": "Sweden",
+    "runtime": 189
+  },
+  {
+    "title": "Dr. Strangelove Or: How I Learned To Stop Worrying And Love The Bomb",
+    "director": "Stanley Kubrick",
+    "year": "1964",
+    "country": "UK-USA",
+    "runtime": 93
+  },
+  {
+    "title": "Shoah",
+    "director": "Claude Lanzmann",
+    "year": "1985",
+    "country": "France",
+    "runtime": 566
+  },
+  {
+    "title": "Once Upon A Time In The West",
+    "director": "Sergio Leone",
+    "year": "1968",
+    "country": "Italy-USA",
+    "runtime": 165
+  },
+  {
+    "title": "Chinatown",
+    "director": "Roman Polanski",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 131
+  },
+  {
+    "title": "Journey To Italy",
+    "director": "Roberto Rossellini",
+    "year": "1954",
+    "country": "Italy",
+    "runtime": 97
+  },
+  {
+    "title": "Pierrot Le Fou",
+    "director": "Jean-Luc Godard",
+    "year": "1965",
+    "country": "France-Italy",
+    "runtime": 110
+  },
+  {
+    "title": "Do The Right Thing",
+    "director": "Spike Lee",
+    "year": "1989",
+    "country": "USA",
+    "runtime": 120
+  },
+  {
+    "title": "Metropolis",
+    "director": "Fritz Lang",
+    "year": "1927",
+    "country": "Germany",
+    "runtime": 153
+  },
+  {
+    "title": "A Woman Under The Influence",
+    "director": "John Cassavetes",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 155
+  },
+  {
+    "title": "Les Enfants Du Paradis",
+    "director": "Marcel Carné",
+    "year": "1945",
+    "country": "France",
+    "runtime": 195
+  },
+  {
+    "title": "La Strada",
+    "director": "Federico Fellini",
+    "year": "1954",
+    "country": "Italy",
+    "runtime": 115
+  },
+  {
+    "title": "The Leopard",
+    "director": "Luchino Visconti",
+    "year": "1963",
+    "country": "Italy-France",
+    "runtime": 186
+  },
+  {
+    "title": "Amarcord",
+    "director": "Federico Fellini",
+    "year": "1973",
+    "country": "Italy",
+    "runtime": 127
+  },
+  {
+    "title": "It'S A Wonderful Life",
+    "director": "Frank Capra",
+    "year": "1946",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "The Wild Bunch",
+    "director": "Sam Peckinpah",
+    "year": "1969",
+    "country": "USA",
+    "runtime": 135
+  },
+  {
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "year": "1994",
+    "country": "USA",
+    "runtime": 154
+  },
+  {
+    "title": "Viridiana",
+    "director": "Luis Buñuel",
+    "year": "1961",
+    "country": "Spain",
+    "runtime": 90
+  },
+  {
+    "title": "Jaws",
+    "director": "Steven Spielberg",
+    "year": "1975",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "The Shining",
+    "director": "Stanley Kubrick",
+    "year": "1980",
+    "country": "USA-UK",
+    "runtime": 142
+  },
+  {
+    "title": "A Man Escaped",
+    "director": "Robert Bresson",
+    "year": "1956",
+    "country": "France",
+    "runtime": 102
+  },
+  {
+    "title": "Blue Velvet",
+    "director": "David Lynch",
+    "year": "1986",
+    "country": "USA",
+    "runtime": 120
+  },
+  {
+    "title": "Sansho The Bailiff",
+    "director": "Kenji Mizoguchi",
+    "year": "1954",
+    "country": "Japan",
+    "runtime": 125
+  },
+  {
+    "title": "The Conformist",
+    "director": "Bernardo Bertolucci",
+    "year": "1970",
+    "country": "Italy-France-West Germany",
+    "runtime": 107
+  },
+  {
+    "title": "The Seventh Seal",
+    "director": "Ingmar Bergman",
+    "year": "1957",
+    "country": "Sweden",
+    "runtime": 96
+  },
+  {
+    "title": "The Man Who Shot Liberty Valance",
+    "director": "John Ford",
+    "year": "1962",
+    "country": "USA",
+    "runtime": 119
+  },
+  {
+    "title": "Nashville",
+    "director": "Robert Altman",
+    "year": "1975",
+    "country": "USA",
+    "runtime": 160
+  },
+  {
+    "title": "The Magnificent Ambersons",
+    "director": "Orson Welles",
+    "year": "1942",
+    "country": "USA",
+    "runtime": 88
+  },
+  {
+    "title": "Pickpocket",
+    "director": "Robert Bresson",
+    "year": "1959",
+    "country": "France",
+    "runtime": 75
+  },
+  {
+    "title": "The Gold Rush",
+    "director": "Charles Chaplin",
+    "year": "1925",
+    "country": "USA",
+    "runtime": 82
+  },
+  {
+    "title": "La Jetée",
+    "director": "Chris Marker",
+    "year": "1962",
+    "country": "France",
+    "runtime": 27
+  },
+  {
+    "title": "Gertrud",
+    "director": "Carl Theodor Dreyer",
+    "year": "1964",
+    "country": "Denmark",
+    "runtime": 116
+  },
+  {
+    "title": "Sans Soleil",
+    "director": "Chris Marker",
+    "year": "1983",
+    "country": "France",
+    "runtime": 100
+  },
+  {
+    "title": "Cléo From 5 To 7",
+    "director": "Agnès Varda",
+    "year": "1962",
+    "country": "France",
+    "runtime": 90
+  },
+  {
+    "title": "Jules Et Jim",
+    "director": "François Truffaut",
+    "year": "1962",
+    "country": "France",
+    "runtime": 104
+  },
+  {
+    "title": "To Be Or Not To Be",
+    "director": "Ernst Lubitsch",
+    "year": "1942",
+    "country": "USA",
+    "runtime": 99
+  },
+  {
+    "title": "Meshes Of The Afternoon",
+    "director": "Maya Deren & Alexander Hammid",
+    "year": "1943",
+    "country": "USA",
+    "runtime": 15
+  },
+  {
+    "title": "The Mother And The Whore",
+    "director": "Jean Eustache",
+    "year": "1973",
+    "country": "France",
+    "runtime": 210
+  },
+  {
+    "title": "Sátántangó",
+    "director": "Béla Tarr",
+    "year": "1994",
+    "country": "Hungary-Germany-Switzerland",
+    "runtime": 439
+  },
+  {
+    "title": "Madame De...",
+    "director": "Max Ophüls",
+    "year": "1953",
+    "country": "France-Italy",
+    "runtime": 105
+  },
+  {
+    "title": "Sherlock Jr.",
+    "director": "Buster Keaton",
+    "year": "1924",
+    "country": "USA",
+    "runtime": 45
+  },
+  {
+    "title": "A Clockwork Orange",
+    "director": "Stanley Kubrick",
+    "year": "1971",
+    "country": "UK",
+    "runtime": 137
+  },
+  {
+    "title": "Ikiru",
+    "director": "Akira Kurosawa",
+    "year": "1952",
+    "country": "Japan",
+    "runtime": 143
+  },
+  {
+    "title": "Ali: Fear Eats The Soul",
+    "director": "Rainer Werner Fassbinder",
+    "year": "1974",
+    "country": "West Germany",
+    "runtime": 94
+  },
+  {
+    "title": "Aguirre, The Wrath Of God",
+    "director": "Werner Herzog",
+    "year": "1972",
+    "country": "West Germany",
+    "runtime": 94
+  },
+  {
+    "title": "Come And See",
+    "director": "Elem Klimov",
+    "year": "1985",
+    "country": "USSR",
+    "runtime": 142
+  },
+  {
+    "title": "Annie Hall",
+    "director": "Woody Allen",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 93
+  },
+  {
+    "title": "The Spirit Of The Beehive",
+    "director": "Víctor Erice",
+    "year": "1973",
+    "country": "Spain",
+    "runtime": 95
+  },
+  {
+    "title": "Last Year At Marienbad",
+    "director": "Alain Resnais",
+    "year": "1961",
+    "country": "France-Italy",
+    "runtime": 94
+  },
+  {
+    "title": "Once Upon A Time In America",
+    "director": "Sergio Leone",
+    "year": "1984",
+    "country": "Italy-USA",
+    "runtime": 229
+  },
+  {
+    "title": "Greed",
+    "director": "Erich von Stroheim",
+    "year": "1924",
+    "country": "USA",
+    "runtime": 140
+  },
+  {
+    "title": "The Wizard Of Oz",
+    "director": "Victor Fleming",
+    "year": "1939",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "The Piano",
+    "director": "Jane Campion",
+    "year": "1993",
+    "country": "New Zealand-Australia-France",
+    "runtime": 121
+  },
+  {
+    "title": "A Brighter Summer Day",
+    "director": "Edward Yang",
+    "year": "1991",
+    "country": "Taiwan-South Korea",
+    "runtime": 237
+  },
+  {
+    "title": "Yi Yi",
+    "director": "Edward Yang",
+    "year": "2000",
+    "country": "Taiwan-Japan",
+    "runtime": 173
+  },
+  {
+    "title": "Don'T Look Now",
+    "director": "Nicolas Roeg",
+    "year": "1973",
+    "country": "UK-Italy",
+    "runtime": 110
+  },
+  {
+    "title": "Hiroshima Mon Amour",
+    "director": "Alain Resnais",
+    "year": "1959",
+    "country": "France-Japan",
+    "runtime": 91
+  },
+  {
+    "title": "The Red Shoes",
+    "director": "Michael Powell & Emeric Pressburger",
+    "year": "1948",
+    "country": "UK",
+    "runtime": 133
+  },
+  {
+    "title": "Alien",
+    "director": "Ridley Scott",
+    "year": "1979",
+    "country": "USA-UK",
+    "runtime": 117
+  },
+  {
+    "title": "E.T. The Extra-Terrestrial",
+    "director": "Steven Spielberg",
+    "year": "1982",
+    "country": "USA",
+    "runtime": 115
+  },
+  {
+    "title": "Bringing Up Baby",
+    "director": "Howard Hawks",
+    "year": "1938",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "Blow-Up",
+    "director": "Michelangelo Antonioni",
+    "year": "1966",
+    "country": "Italy-UK",
+    "runtime": 111
+  },
+  {
+    "title": "A Day In The Country",
+    "director": "Jean Renoir",
+    "year": "1936",
+    "country": "France",
+    "runtime": 40
+  },
+  {
+    "title": "Notorious",
+    "director": "Alfred Hitchcock",
+    "year": "1946",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "Vivre Sa Vie",
+    "director": "Jean-Luc Godard",
+    "year": "1962",
+    "country": "France",
+    "runtime": 85
+  },
+  {
+    "title": "Intolerance",
+    "director": "D.W. Griffith",
+    "year": "1916",
+    "country": "USA",
+    "runtime": 178
+  },
+  {
+    "title": "L'Eclisse",
+    "director": "Michelangelo Antonioni",
+    "year": "1962",
+    "country": "Italy-France",
+    "runtime": 126
+  },
+  {
+    "title": "Spirited Away",
+    "director": "Hayao Miyazaki",
+    "year": "2001",
+    "country": "Japan",
+    "runtime": 124
+  },
+  {
+    "title": "A Matter Of Life And Death",
+    "director": "Michael Powell & Emeric Pressburger",
+    "year": "1946",
+    "country": "UK",
+    "runtime": 104
+  },
+  {
+    "title": "Letter From An Unknown Woman",
+    "director": "Max Ophüls",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 90
+  },
+  {
+    "title": "All About Eve",
+    "director": "Joseph L. Mankiewicz",
+    "year": "1950",
+    "country": "USA",
+    "runtime": 138
+  },
+  {
+    "title": "Los Olvidados",
+    "director": "Luis Buñuel",
+    "year": "1950",
+    "country": "Mexico",
+    "runtime": 88
+  },
+  {
+    "title": "The Exterminating Angel",
+    "director": "Luis Buñuel",
+    "year": "1962",
+    "country": "Mexico",
+    "runtime": 95
+  },
+  {
+    "title": "Star Wars",
+    "director": "George Lucas",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 121
+  },
+  {
+    "title": "Imitation Of Life",
+    "director": "Douglas Sirk",
+    "year": "1959",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "His Girl Friday",
+    "director": "Howard Hawks",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 92
+  },
+  {
+    "title": "Histoire(S) Du Cinéma",
+    "director": "Jean-Luc Godard",
+    "year": "1988-98",
+    "country": "France",
+    "runtime": 267
+  },
+  {
+    "title": "Gone With The Wind",
+    "director": "Victor Fleming",
+    "year": "1939",
+    "country": "USA",
+    "runtime": 222
+  },
+  {
+    "title": "Nosferatu",
+    "director": "F.W. Murnau",
+    "year": "1922",
+    "country": "Germany",
+    "runtime": 84
+  },
+  {
+    "title": "There Will Be Blood",
+    "director": "Paul Thomas Anderson",
+    "year": "2007",
+    "country": "USA",
+    "runtime": 158
+  },
+  {
+    "title": "My Darling Clementine",
+    "director": "John Ford",
+    "year": "1946",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "Rome, Open City",
+    "director": "Roberto Rossellini",
+    "year": "1945",
+    "country": "Italy",
+    "runtime": 105
+  },
+  {
+    "title": "Daisies",
+    "director": "Věra Chytilová",
+    "year": "1966",
+    "country": "Czechoslovakia",
+    "runtime": 76
+  },
+  {
+    "title": "Wanda",
+    "director": "Barbara Loden",
+    "year": "1970",
+    "country": "USA",
+    "runtime": 105
+  },
+  {
+    "title": "Céline And Julie Go Boating",
+    "director": "Jacques Rivette",
+    "year": "1974",
+    "country": "France",
+    "runtime": 192
+  },
+  {
+    "title": "The Gospel According To St. Matthew",
+    "director": "Pier Paolo Pasolini",
+    "year": "1964",
+    "country": "Italy-France",
+    "runtime": 135
+  },
+  {
+    "title": "One Flew Over The Cuckoo'S Nest",
+    "director": "Milos Forman",
+    "year": "1975",
+    "country": "USA",
+    "runtime": 133
+  },
+  {
+    "title": "The Umbrellas Of Cherbourg",
+    "director": "Jacques Demy",
+    "year": "1964",
+    "country": "France-Germany",
+    "runtime": 91
+  },
+  {
+    "title": "The Conversation",
+    "director": "Francis Ford Coppola",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 113
+  },
+  {
+    "title": "Killer Of Sheep",
+    "director": "Charles Burnett",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 83
+  },
+  {
+    "title": "Un Chien Andalou",
+    "director": "Luis Buñuel",
+    "year": "1928",
+    "country": "France",
+    "runtime": 16
+  },
+  {
+    "title": "Days Of Heaven",
+    "director": "Terrence Malick",
+    "year": "1978",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "The Good, The Bad And The Ugly",
+    "director": "Sergio Leone",
+    "year": "1966",
+    "country": "Italy-Spain",
+    "runtime": 161
+  },
+  {
+    "title": "Double Indemnity",
+    "director": "Billy Wilder",
+    "year": "1944",
+    "country": "USA",
+    "runtime": 106
+  },
+  {
+    "title": "Trouble In Paradise",
+    "director": "Ernst Lubitsch",
+    "year": "1932",
+    "country": "USA",
+    "runtime": 83
+  },
+  {
+    "title": "The Deer Hunter",
+    "director": "Michael Cimino",
+    "year": "1978",
+    "country": "USA",
+    "runtime": 183
+  },
+  {
+    "title": "L'Argent",
+    "director": "Robert Bresson",
+    "year": "1983",
+    "country": "France-Switzerland",
+    "runtime": 90
+  },
+  {
+    "title": "Chungking Express",
+    "director": "Wong Kar-wai",
+    "year": "1994",
+    "country": "Hong Kong",
+    "runtime": 104
+  },
+  {
+    "title": "My Neighbour Totoro",
+    "director": "Hayao Miyazaki",
+    "year": "1988",
+    "country": "Japan",
+    "runtime": 86
+  },
+  {
+    "title": "Cries And Whispers",
+    "director": "Ingmar Bergman",
+    "year": "1972",
+    "country": "Sweden",
+    "runtime": 106
+  },
+  {
+    "title": "Tropical Malady",
+    "director": "Apichatpong Weerasethakul",
+    "year": "2004",
+    "country": "Thailand-France-Germany-Italy",
+    "runtime": 118
+  },
+  {
+    "title": "Manhattan",
+    "director": "Woody Allen",
+    "year": "1979",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "Rosemary'S Baby",
+    "director": "Roman Polanski",
+    "year": "1968",
+    "country": "USA",
+    "runtime": 136
+  },
+  {
+    "title": "The Passenger",
+    "director": "Michelangelo Antonioni",
+    "year": "1975",
+    "country": "Italy",
+    "runtime": 119
+  },
+  {
+    "title": "Badlands",
+    "director": "Terrence Malick",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "L'Âge D'Or",
+    "director": "Luis Buñuel",
+    "year": "1930",
+    "country": "France",
+    "runtime": 63
+  },
+  {
+    "title": "The Texas Chain Saw Massacre",
+    "director": "Tobe Hooper",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 83
+  },
+  {
+    "title": "Dekalog",
+    "director": "Krzysztof Kieslowski",
+    "year": "1989",
+    "country": "Poland-West Germany",
+    "runtime": 550
+  },
+  {
+    "title": "The Discreet Charm Of The Bourgeoisie",
+    "director": "Luis Buñuel",
+    "year": "1972",
+    "country": "France-Italy-Spain",
+    "runtime": 102
+  },
+  {
+    "title": "Portrait Of A Lady On Fire",
+    "director": "Céline Sciamma",
+    "year": "2019",
+    "country": "France",
+    "runtime": 121
+  },
+  {
+    "title": "Raiders Of The Lost Ark",
+    "director": "Steven Spielberg",
+    "year": "1981",
+    "country": "USA",
+    "runtime": 115
+  },
+  {
+    "title": "Only Angels Have Wings",
+    "director": "Howard Hawks",
+    "year": "1939",
+    "country": "USA",
+    "runtime": 121
+  },
+  {
+    "title": "Stagecoach",
+    "director": "John Ford",
+    "year": "1939",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "Brief Encounter",
+    "director": "David Lean",
+    "year": "1945",
+    "country": "UK",
+    "runtime": 85
+  },
+  {
+    "title": "Touki Bouki",
+    "director": "Djibril Diop Mambéty",
+    "year": "1973",
+    "country": "Senegal",
+    "runtime": 85
+  },
+  {
+    "title": "Duck Soup",
+    "director": "Leo McCarey",
+    "year": "1933",
+    "country": "USA",
+    "runtime": 70
+  },
+  {
+    "title": "Close Encounters Of The Third Kind",
+    "director": "Steven Spielberg",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 135
+  },
+  {
+    "title": "The Birds",
+    "director": "Alfred Hitchcock",
+    "year": "1963",
+    "country": "USA",
+    "runtime": 119
+  },
+  {
+    "title": "Johnny Guitar",
+    "director": "Nicholas Ray",
+    "year": "1954",
+    "country": "USA",
+    "runtime": 110
+  },
+  {
+    "title": "Ran",
+    "director": "Akira Kurosawa",
+    "year": "1985",
+    "country": "France-Japan",
+    "runtime": 161
+  },
+  {
+    "title": "Mouchette",
+    "director": "Robert Bresson",
+    "year": "1967",
+    "country": "France",
+    "runtime": 80
+  },
+  {
+    "title": "The Colour Of Pomegranates",
+    "director": "Sergei Parajanov",
+    "year": "1969",
+    "country": "USSR",
+    "runtime": 80
+  },
+  {
+    "title": "Earth",
+    "director": "Alexander Dovzhenko",
+    "year": "1930",
+    "country": "USSR",
+    "runtime": 75
+  },
+  {
+    "title": "Vampyr",
+    "director": "Carl Theodor Dreyer",
+    "year": "1932",
+    "country": "Germany-France",
+    "runtime": 73
+  },
+  {
+    "title": "Napoléon",
+    "director": "Abel Gance",
+    "year": "1927",
+    "country": "France",
+    "runtime": 235
+  },
+  {
+    "title": "Out Of The Past",
+    "director": "Jacques Tourneur",
+    "year": "1947",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "Paris, Texas",
+    "director": "Wim Wenders",
+    "year": "1984",
+    "country": "West Germany-France-UK",
+    "runtime": 150
+  },
+  {
+    "title": "The River",
+    "director": "Jean Renoir",
+    "year": "1951",
+    "country": "France-India-USA",
+    "runtime": 99
+  },
+  {
+    "title": "The Tree Of Life",
+    "director": "Terrence Malick",
+    "year": "2011",
+    "country": "USA",
+    "runtime": 139
+  },
+  {
+    "title": "Chimes At Midnight",
+    "director": "Orson Welles",
+    "year": "1965",
+    "country": "Switzerland-Spain",
+    "runtime": 115
+  },
+  {
+    "title": "Black Narcissus",
+    "director": "Michael Powell & Emeric Pressburger",
+    "year": "1947",
+    "country": "UK",
+    "runtime": 99
+  },
+  {
+    "title": "The Gleaners & I",
+    "director": "Agnès Varda",
+    "year": "2000",
+    "country": "France",
+    "runtime": 82
+  },
+  {
+    "title": "La Notte",
+    "director": "Michelangelo Antonioni",
+    "year": "1961",
+    "country": "Italy-France",
+    "runtime": 120
+  },
+  {
+    "title": "Paisan",
+    "director": "Roberto Rossellini",
+    "year": "1946",
+    "country": "Italy",
+    "runtime": 120
+  },
+  {
+    "title": "King Kong",
+    "director": "Merian C. Cooper & Ernest B. Schoedsack",
+    "year": "1933",
+    "country": "USA",
+    "runtime": 103
+  },
+  {
+    "title": "Nights Of Cabiria",
+    "director": "Federico Fellini",
+    "year": "1957",
+    "country": "Italy-France",
+    "runtime": 110
+  },
+  {
+    "title": "Rocco And His Brothers",
+    "director": "Luchino Visconti",
+    "year": "1960",
+    "country": "Italy-France",
+    "runtime": 180
+  },
+  {
+    "title": "Spring In A Small Town",
+    "director": "Fei Mu",
+    "year": "1948",
+    "country": "China",
+    "runtime": 98
+  },
+  {
+    "title": "Salò, Or The 120 Days Of Sodom",
+    "director": "Pier Paolo Pasolini",
+    "year": "1975",
+    "country": "Italy-France",
+    "runtime": 117
+  },
+  {
+    "title": "The Lady Eve",
+    "director": "Preston Sturges",
+    "year": "1941",
+    "country": "USA",
+    "runtime": 94
+  },
+  {
+    "title": "On The Waterfront",
+    "director": "Elia Kazan",
+    "year": "1954",
+    "country": "USA",
+    "runtime": 108
+  },
+  {
+    "title": "The Last Laugh",
+    "director": "F.W. Murnau",
+    "year": "1924",
+    "country": "Germany",
+    "runtime": 77
+  },
+  {
+    "title": "A City Of Sadness",
+    "director": "Hou Hsiao-hsien",
+    "year": "1989",
+    "country": "Taiwan-Hong Kong",
+    "runtime": 157
+  },
+  {
+    "title": "News From Home",
+    "director": "Chantal Akerman",
+    "year": "1976",
+    "country": "Belgium-France-West Germany",
+    "runtime": 85
+  },
+  {
+    "title": "The Thing",
+    "director": "John Carpenter",
+    "year": "1982",
+    "country": "USA",
+    "runtime": 108
+  },
+  {
+    "title": "Vagabond",
+    "director": "Agnès Varda",
+    "year": "1985",
+    "country": "France",
+    "runtime": 105
+  },
+  {
+    "title": "The Great Dictator",
+    "director": "Charles Chaplin",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 128
+  },
+  {
+    "title": "Magnolia",
+    "director": "Paul Thomas Anderson",
+    "year": "1999",
+    "country": "USA",
+    "runtime": 188
+  },
+  {
+    "title": "Death In Venice",
+    "director": "Luchino Visconti",
+    "year": "1971",
+    "country": "Italy",
+    "runtime": 130
+  },
+  {
+    "title": "Wings Of Desire",
+    "director": "Wim Wenders",
+    "year": "1987",
+    "country": "West Germany-France",
+    "runtime": 130
+  },
+  {
+    "title": "The Life And Death Of Colonel Blimp",
+    "director": "Michael Powell & Emeric Pressburger",
+    "year": "1943",
+    "country": "UK",
+    "runtime": 163
+  },
+  {
+    "title": "Moonlight",
+    "director": "Barry Jenkins",
+    "year": "2016",
+    "country": "USA",
+    "runtime": 111
+  },
+  {
+    "title": "Breaking The Waves",
+    "director": "Lars von Trier",
+    "year": "1996",
+    "country": "Denmark-Sweden-France-Netherlands-Norway-Iceland-Spain",
+    "runtime": 156
+  },
+  {
+    "title": "Solaris",
+    "director": "Andrei Tarkovsky",
+    "year": "1972",
+    "country": "USSR",
+    "runtime": 165
+  },
+  {
+    "title": "The Quiet Man",
+    "director": "John Ford",
+    "year": "1952",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "Wavelength",
+    "director": "Michael Snow",
+    "year": "1967",
+    "country": "Canada-USA",
+    "runtime": 45
+  },
+  {
+    "title": "Brazil",
+    "director": "Terry Gilliam",
+    "year": "1985",
+    "country": "UK",
+    "runtime": 131
+  },
+  {
+    "title": "Le Samouraï",
+    "director": "Jean-Pierre Melville",
+    "year": "1967",
+    "country": "France-Italy",
+    "runtime": 101
+  },
+  {
+    "title": "Kes",
+    "director": "Ken Loach",
+    "year": "1969",
+    "country": "UK",
+    "runtime": 113
+  },
+  {
+    "title": "Zero For Conduct",
+    "director": "Jean Vigo",
+    "year": "1933",
+    "country": "France",
+    "runtime": 41
+  },
+  {
+    "title": "Umberto D.",
+    "director": "Vittorio De Sica",
+    "year": "1952",
+    "country": "Italy",
+    "runtime": 89
+  },
+  {
+    "title": "Where Is The Friend'S House?",
+    "director": "Abbas Kiarostami",
+    "year": "1987",
+    "country": "Iran",
+    "runtime": 85
+  },
+  {
+    "title": "The Grapes Of Wrath",
+    "director": "John Ford",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "The Big Lebowski",
+    "director": "Joel Coen & Ethan Coen",
+    "year": "1998",
+    "country": "USA-UK",
+    "runtime": 113
+  },
+  {
+    "title": "Eternal Sunshine Of The Spotless Mind",
+    "director": "Michel Gondry",
+    "year": "2004",
+    "country": "USA",
+    "runtime": 108
+  },
+  {
+    "title": "The Best Years Of Our Lives",
+    "director": "William Wyler",
+    "year": "1946",
+    "country": "USA",
+    "runtime": 172
+  },
+  {
+    "title": "The Life Of Oharu",
+    "director": "Kenji Mizoguchi",
+    "year": "1952",
+    "country": "Japan",
+    "runtime": 146
+  },
+  {
+    "title": "Parasite",
+    "director": "Bong Joon-ho",
+    "year": "2019",
+    "country": "South Korea",
+    "runtime": 132
+  },
+  {
+    "title": "Sullivan'S Travels",
+    "director": "Preston Sturges",
+    "year": "1941",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "Back To The Future",
+    "director": "Robert Zemeckis",
+    "year": "1985",
+    "country": "USA",
+    "runtime": 116
+  },
+  {
+    "title": "The Matrix",
+    "director": "Lana Wachowski & Lilly Wachowski",
+    "year": "1999",
+    "country": "USA-Australia",
+    "runtime": 136
+  },
+  {
+    "title": "Mccabe & Mrs. Miller",
+    "director": "Robert Altman",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 121
+  },
+  {
+    "title": "The Travelling Players",
+    "director": "Theo Angelopoulos",
+    "year": "1975",
+    "country": "Greece",
+    "runtime": 230
+  },
+  {
+    "title": "Black God, White Devil",
+    "director": "Glauber Rocha",
+    "year": "1964",
+    "country": "Brazil",
+    "runtime": 110
+  },
+  {
+    "title": "Love Streams",
+    "director": "John Cassavetes",
+    "year": "1984",
+    "country": "USA",
+    "runtime": 141
+  },
+  {
+    "title": "The House Is Black",
+    "director": "Forugh Farrokhzad",
+    "year": "1963",
+    "country": "Iran",
+    "runtime": 20
+  },
+  {
+    "title": "Germany, Year Zero",
+    "director": "Roberto Rossellini",
+    "year": "1948",
+    "country": "Italy-West Germany",
+    "runtime": 74
+  },
+  {
+    "title": "The Crowd",
+    "director": "King Vidor",
+    "year": "1928",
+    "country": "USA",
+    "runtime": 104
+  },
+  {
+    "title": "Ashes And Diamonds",
+    "director": "Andrzej Wajda",
+    "year": "1958",
+    "country": "Poland",
+    "runtime": 103
+  },
+  {
+    "title": "Red Desert",
+    "director": "Michelangelo Antonioni",
+    "year": "1964",
+    "country": "Italy-France",
+    "runtime": 118
+  },
+  {
+    "title": "Memories Of Underdevelopment",
+    "director": "Tomás Gutiérrez Alea",
+    "year": "1968",
+    "country": "Cuba",
+    "runtime": 97
+  },
+  {
+    "title": "Eraserhead",
+    "director": "David Lynch",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 89
+  },
+  {
+    "title": "Ivan The Terrible, Part Ii",
+    "director": "Sergei Eisenstein",
+    "year": "1946",
+    "country": "USSR",
+    "runtime": 88
+  },
+  {
+    "title": "In A Lonely Place",
+    "director": "Nicholas Ray",
+    "year": "1950",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "The Band Wagon",
+    "director": "Vincente Minnelli",
+    "year": "1953",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "The Graduate",
+    "director": "Mike Nichols",
+    "year": "1967",
+    "country": "USA",
+    "runtime": 105
+  },
+  {
+    "title": "Ivan The Terrible, Part I",
+    "director": "Sergei Eisenstein",
+    "year": "1944",
+    "country": "USSR",
+    "runtime": 96
+  },
+  {
+    "title": "Schindler'S List",
+    "director": "Steven Spielberg",
+    "year": "1993",
+    "country": "USA",
+    "runtime": 195
+  },
+  {
+    "title": "Caché",
+    "director": "Michael Haneke",
+    "year": "2005",
+    "country": "France-Austria-Germany-Italy-USA",
+    "runtime": 117
+  },
+  {
+    "title": "An Autumn Afternoon",
+    "director": "Yasujiro Ozu",
+    "year": "1962",
+    "country": "Japan",
+    "runtime": 115
+  },
+  {
+    "title": "Performance",
+    "director": "Nicolas Roeg & Donald Cammell",
+    "year": "1970",
+    "country": "UK",
+    "runtime": 105
+  },
+  {
+    "title": "The Exorcist",
+    "director": "William Friedkin",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 122
+  },
+  {
+    "title": "Heat",
+    "director": "Michael Mann",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 174
+  },
+  {
+    "title": "Meet Me In St. Louis",
+    "director": "Vincente Minnelli",
+    "year": "1944",
+    "country": "USA",
+    "runtime": 113
+  },
+  {
+    "title": "The Thin Red Line",
+    "director": "Terrence Malick",
+    "year": "1998",
+    "country": "USA",
+    "runtime": 170
+  },
+  {
+    "title": "Cinema Paradiso",
+    "director": "Giuseppe Tornatore",
+    "year": "1988",
+    "country": "Italy-France",
+    "runtime": 155
+  },
+  {
+    "title": "Daughters Of The Dust",
+    "director": "Julie Dash",
+    "year": "1991",
+    "country": "USA-UK",
+    "runtime": 112
+  },
+  {
+    "title": "Belle De Jour",
+    "director": "Luis Buñuel",
+    "year": "1967",
+    "country": "France-Italy",
+    "runtime": 100
+  },
+  {
+    "title": "The Green Ray",
+    "director": "Eric Rohmer",
+    "year": "1986",
+    "country": "France",
+    "runtime": 99
+  },
+  {
+    "title": "Eyes Wide Shut",
+    "director": "Stanley Kubrick",
+    "year": "1999",
+    "country": "USA-UK",
+    "runtime": 159
+  },
+  {
+    "title": "El Verdugo",
+    "director": "Luis García Berlanga",
+    "year": "1963",
+    "country": "Spain-Italy",
+    "runtime": 90
+  },
+  {
+    "title": "Fargo",
+    "director": "Joel Coen & Ethan Coen",
+    "year": "1996",
+    "country": "USA",
+    "runtime": 98
+  },
+  {
+    "title": "Diary Of A Country Priest",
+    "director": "Robert Bresson",
+    "year": "1951",
+    "country": "France",
+    "runtime": 120
+  },
+  {
+    "title": "Uncle Boonmee Who Can Recall His Past Lives",
+    "director": "Apichatpong Weerasethakul",
+    "year": "2010",
+    "country": "Thailand-UK-France-Germany-Spain-Netherlands",
+    "runtime": 114
+  },
+  {
+    "title": "The Treasure Of The Sierra Madre",
+    "director": "John Huston",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "F For Fake",
+    "director": "Orson Welles",
+    "year": "1973",
+    "country": "France-Iran-West Germany",
+    "runtime": 89
+  },
+  {
+    "title": "The Cabinet Of Dr. Caligari",
+    "director": "Robert Wiene",
+    "year": "1920",
+    "country": "Germany",
+    "runtime": 75
+  },
+  {
+    "title": "Red River",
+    "director": "Howard Hawks",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 133
+  },
+  {
+    "title": "Tabu",
+    "director": "F.W. Murnau",
+    "year": "1931",
+    "country": "USA",
+    "runtime": 82
+  },
+  {
+    "title": "Night And Fog",
+    "director": "Alain Resnais",
+    "year": "1955",
+    "country": "France",
+    "runtime": 32
+  },
+  {
+    "title": "La Ciénaga",
+    "director": "Lucrecia Martel",
+    "year": "2001",
+    "country": "Argentina-France-Spain",
+    "runtime": 103
+  },
+  {
+    "title": "Three Colours: Blue",
+    "director": "Krzysztof Kieslowski",
+    "year": "1993",
+    "country": "France-Poland-Switzerland",
+    "runtime": 100
+  },
+  {
+    "title": "Kind Hearts And Coronets",
+    "director": "Robert Hamer",
+    "year": "1949",
+    "country": "UK",
+    "runtime": 106
+  },
+  {
+    "title": "Sweet Smell Of Success",
+    "director": "Alexander Mackendrick",
+    "year": "1957",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "Taste Of Cherry",
+    "director": "Abbas Kiarostami",
+    "year": "1997",
+    "country": "Iran",
+    "runtime": 99
+  },
+  {
+    "title": "Day Of Wrath",
+    "director": "Carl Theodor Dreyer",
+    "year": "1943",
+    "country": "Denmark",
+    "runtime": 110
+  },
+  {
+    "title": "My Night At Maud'S",
+    "director": "Eric Rohmer",
+    "year": "1969",
+    "country": "France",
+    "runtime": 105
+  },
+  {
+    "title": "Black Girl",
+    "director": "Ousmane Sembene",
+    "year": "1966",
+    "country": "Senegal-France",
+    "runtime": 65
+  },
+  {
+    "title": "All That Jazz",
+    "director": "Bob Fosse",
+    "year": "1979",
+    "country": "USA",
+    "runtime": 123
+  },
+  {
+    "title": "Groundhog Day",
+    "director": "Harold Ramis",
+    "year": "1993",
+    "country": "USA",
+    "runtime": 103
+  },
+  {
+    "title": "The Shop Around The Corner",
+    "director": "Ernst Lubitsch",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "Paths Of Glory",
+    "director": "Stanley Kubrick",
+    "year": "1957",
+    "country": "USA",
+    "runtime": 86
+  },
+  {
+    "title": "The Ascent",
+    "director": "Larisa Shepitko",
+    "year": "1977",
+    "country": "USSR",
+    "runtime": 111
+  },
+  {
+    "title": "The Story Of The Last Chrysanthemums",
+    "director": "Kenji Mizoguchi",
+    "year": "1939",
+    "country": "Japan",
+    "runtime": 148
+  },
+  {
+    "title": "Goodbye, Dragon Inn",
+    "director": "Tsai Ming-liang",
+    "year": "2003",
+    "country": "Taiwan",
+    "runtime": 82
+  },
+  {
+    "title": "Pandora'S Box",
+    "director": "G.W. Pabst",
+    "year": "1929",
+    "country": "Germany",
+    "runtime": 133
+  },
+  {
+    "title": "India Song",
+    "director": "Marguerite Duras",
+    "year": "1975",
+    "country": "France",
+    "runtime": 120
+  },
+  {
+    "title": "Army Of Shadows",
+    "director": "Jean-Pierre Melville",
+    "year": "1969",
+    "country": "France-Italy",
+    "runtime": 140
+  },
+  {
+    "title": "Throne Of Blood",
+    "director": "Akira Kurosawa",
+    "year": "1957",
+    "country": "Japan",
+    "runtime": 110
+  },
+  {
+    "title": "2 Or 3 Things I Know About Her",
+    "director": "Jean-Luc Godard",
+    "year": "1967",
+    "country": "France",
+    "runtime": 87
+  },
+  {
+    "title": "All That Heaven Allows",
+    "director": "Douglas Sirk",
+    "year": "1955",
+    "country": "USA",
+    "runtime": 89
+  },
+  {
+    "title": "The Sacrifice",
+    "director": "Andrei Tarkovsky",
+    "year": "1986",
+    "country": "France-Sweden",
+    "runtime": 145
+  },
+  {
+    "title": "Cabaret",
+    "director": "Bob Fosse",
+    "year": "1972",
+    "country": "USA",
+    "runtime": 128
+  },
+  {
+    "title": "All About My Mother",
+    "director": "Pedro Almodóvar",
+    "year": "1999",
+    "country": "Spain-France",
+    "runtime": 101
+  },
+  {
+    "title": "Three Colours: Red",
+    "director": "Krzysztof Kieslowski",
+    "year": "1994",
+    "country": "France-Switzerland-Poland",
+    "runtime": 99
+  },
+  {
+    "title": "City Of God",
+    "director": "Fernando Meirelles & Kátia Lund",
+    "year": "2002",
+    "country": "Brazil-Germany-France",
+    "runtime": 129
+  },
+  {
+    "title": "Unforgiven",
+    "director": "Clint Eastwood",
+    "year": "1992",
+    "country": "USA",
+    "runtime": 127
+  },
+  {
+    "title": "The Big Sleep",
+    "director": "Howard Hawks",
+    "year": "1946",
+    "country": "USA",
+    "runtime": 114
+  },
+  {
+    "title": "Mean Streets",
+    "director": "Martin Scorsese",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 110
+  },
+  {
+    "title": "Distant Voices, Still Lives",
+    "director": "Terence Davies",
+    "year": "1988",
+    "country": "UK",
+    "runtime": 85
+  },
+  {
+    "title": "Happy Together",
+    "director": "Wong Kar-wai",
+    "year": "1997",
+    "country": "Hong Kong",
+    "runtime": 97
+  },
+  {
+    "title": "The Empire Strikes Back",
+    "director": "Irvin Kershner",
+    "year": "1980",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "The Maltese Falcon",
+    "director": "John Huston",
+    "year": "1941",
+    "country": "USA",
+    "runtime": 100
+  },
+  {
+    "title": "Werckmeister Harmonies",
+    "director": "Béla Tarr",
+    "year": "2000",
+    "country": "Hungary-Germany-France-Switzerland-Italy",
+    "runtime": 145
+  },
+  {
+    "title": "Terra Em Transe",
+    "director": "Glauber Rocha",
+    "year": "1967",
+    "country": "Brazil",
+    "runtime": 106
+  },
+  {
+    "title": "The Music Room",
+    "director": "Satyajit Ray",
+    "year": "1958",
+    "country": "India",
+    "runtime": 95
+  },
+  {
+    "title": "Mr. Hulot'S Holiday",
+    "director": "Jacques Tati",
+    "year": "1953",
+    "country": "France",
+    "runtime": 86
+  },
+  {
+    "title": "A Separation",
+    "director": "Asghar Farhadi",
+    "year": "2011",
+    "country": "Iran-France-Australia",
+    "runtime": 123
+  },
+  {
+    "title": "Floating Clouds",
+    "director": "Mikio Naruse",
+    "year": "1955",
+    "country": "Japan",
+    "runtime": 123
+  },
+  {
+    "title": "Freaks",
+    "director": "Tod Browning",
+    "year": "1932",
+    "country": "USA",
+    "runtime": 64
+  },
+  {
+    "title": "Midnight Cowboy",
+    "director": "John Schlesinger",
+    "year": "1969",
+    "country": "USA",
+    "runtime": 113
+  },
+  {
+    "title": "Charulata",
+    "director": "Satyajit Ray",
+    "year": "1964",
+    "country": "India",
+    "runtime": 117
+  },
+  {
+    "title": "Nanook Of The North",
+    "director": "Robert J. Flaherty",
+    "year": "1922",
+    "country": "USA",
+    "runtime": 79
+  },
+  {
+    "title": "The World Of Apu",
+    "director": "Satyajit Ray",
+    "year": "1959",
+    "country": "India",
+    "runtime": 103
+  },
+  {
+    "title": "Faces",
+    "director": "John Cassavetes",
+    "year": "1968",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "Melancholia",
+    "director": "Lars von Trier",
+    "year": "2011",
+    "country": "Denmark-Sweden-France-Germany",
+    "runtime": 136
+  },
+  {
+    "title": "Amadeus",
+    "director": "Milos Forman",
+    "year": "1984",
+    "country": "USA",
+    "runtime": 158
+  },
+  {
+    "title": "High And Low",
+    "director": "Akira Kurosawa",
+    "year": "1963",
+    "country": "Japan",
+    "runtime": 142
+  },
+  {
+    "title": "The King Of Comedy",
+    "director": "Martin Scorsese",
+    "year": "1982",
+    "country": "USA",
+    "runtime": 109
+  },
+  {
+    "title": "In The Realm Of The Senses",
+    "director": "Nagisa Oshima",
+    "year": "1976",
+    "country": "Japan-France",
+    "runtime": 109
+  },
+  {
+    "title": "Videodrome",
+    "director": "David Cronenberg",
+    "year": "1983",
+    "country": "Canada",
+    "runtime": 90
+  },
+  {
+    "title": "I Am Cuba",
+    "director": "Mikhail Kalatozov",
+    "year": "1964",
+    "country": "Cuba-USSR",
+    "runtime": 141
+  },
+  {
+    "title": "Monsieur Verdoux",
+    "director": "Charles Chaplin",
+    "year": "1947",
+    "country": "USA",
+    "runtime": 123
+  },
+  {
+    "title": "Harold And Maude",
+    "director": "Hal Ashby",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "Husbands",
+    "director": "John Cassavetes",
+    "year": "1970",
+    "country": "USA",
+    "runtime": 138
+  },
+  {
+    "title": "Lola Montès",
+    "director": "Max Ophüls",
+    "year": "1955",
+    "country": "France-West Germany",
+    "runtime": 116
+  },
+  {
+    "title": "Pyaasa",
+    "director": "Guru Dutt",
+    "year": "1957",
+    "country": "India",
+    "runtime": 146
+  },
+  {
+    "title": "Kings Of The Road",
+    "director": "Wim Wenders",
+    "year": "1976",
+    "country": "West Germany",
+    "runtime": 175
+  },
+  {
+    "title": "La Belle Et La Bête",
+    "director": "Jean Cocteau",
+    "year": "1946",
+    "country": "France",
+    "runtime": 95
+  },
+  {
+    "title": "The Philadelphia Story",
+    "director": "George Cukor",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "Dog Day Afternoon",
+    "director": "Sidney Lumet",
+    "year": "1975",
+    "country": "USA",
+    "runtime": 125
+  },
+  {
+    "title": "Berlin Alexanderplatz",
+    "director": "Rainer Werner Fassbinder",
+    "year": "1980",
+    "country": "West Germany-Italy",
+    "runtime": 931
+  },
+  {
+    "title": "A Canterbury Tale",
+    "director": "Michael Powell & Emeric Pressburger",
+    "year": "1944",
+    "country": "UK",
+    "runtime": 124
+  },
+  {
+    "title": "The Kid",
+    "director": "Charles Chaplin",
+    "year": "1921",
+    "country": "USA",
+    "runtime": 60
+  },
+  {
+    "title": "The Young Girls Of Rochefort",
+    "director": "Jacques Demy",
+    "year": "1967",
+    "country": "France",
+    "runtime": 124
+  },
+  {
+    "title": "West Side Story",
+    "director": "Robert Wise & Jerome Robbins",
+    "year": "1961",
+    "country": "USA",
+    "runtime": 151
+  },
+  {
+    "title": "The Wages Of Fear",
+    "director": "Henri-Georges Clouzot",
+    "year": "1953",
+    "country": "France-Italy",
+    "runtime": 105
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "director": "George Miller",
+    "year": "2015",
+    "country": "Australia-USA",
+    "runtime": 120
+  },
+  {
+    "title": "Tie Xi Qu: West Of The Tracks",
+    "director": "Wang Bing",
+    "year": "2003",
+    "country": "China",
+    "runtime": 551
+  },
+  {
+    "title": "Bonnie And Clyde",
+    "director": "Arthur Penn",
+    "year": "1967",
+    "country": "USA",
+    "runtime": 111
+  },
+  {
+    "title": "Some Came Running",
+    "director": "Vincente Minnelli",
+    "year": "1958",
+    "country": "USA",
+    "runtime": 136
+  },
+  {
+    "title": "Get Out",
+    "director": "Jordan Peele",
+    "year": "2017",
+    "country": "USA-Japan",
+    "runtime": 104
+  },
+  {
+    "title": "The Time To Live And The Time To Die",
+    "director": "Hou Hsiao-hsien",
+    "year": "1985",
+    "country": "Taiwan",
+    "runtime": 137
+  },
+  {
+    "title": "Broken Blossoms",
+    "director": "D.W. Griffith",
+    "year": "1919",
+    "country": "USA",
+    "runtime": 90
+  },
+  {
+    "title": "Kiss Me Deadly",
+    "director": "Robert Aldrich",
+    "year": "1955",
+    "country": "USA",
+    "runtime": 106
+  },
+  {
+    "title": "Underground",
+    "director": "Emir Kusturica",
+    "year": "1995",
+    "country": "Yugoslavia-France-Germany-Bulgaria-Czech Republic-Hungary-UK-USA",
+    "runtime": 167
+  },
+  {
+    "title": "The Tree Of Wooden Clogs",
+    "director": "Ermanno Olmi",
+    "year": "1978",
+    "country": "Italy",
+    "runtime": 185
+  },
+  {
+    "title": "The Double Life Of Véronique",
+    "director": "Krzysztof Kieslowski",
+    "year": "1991",
+    "country": "France",
+    "runtime": 97
+  },
+  {
+    "title": "Aliens",
+    "director": "James Cameron",
+    "year": "1986",
+    "country": "USA",
+    "runtime": 137
+  },
+  {
+    "title": "The Last Picture Show",
+    "director": "Peter Bogdanovich",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 118
+  },
+  {
+    "title": "It Happened One Night",
+    "director": "Frank Capra",
+    "year": "1934",
+    "country": "USA",
+    "runtime": 105
+  },
+  {
+    "title": "The Elephant Man",
+    "director": "David Lynch",
+    "year": "1980",
+    "country": "USA",
+    "runtime": 125
+  },
+  {
+    "title": "Weekend",
+    "director": "Jean-Luc Godard",
+    "year": "1967",
+    "country": "France-Italy",
+    "runtime": 105
+  },
+  {
+    "title": "Opening Night",
+    "director": "John Cassavetes",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 144
+  },
+  {
+    "title": "The Cranes Are Flying",
+    "director": "Mikhail Kalatozov",
+    "year": "1957",
+    "country": "USSR",
+    "runtime": 95
+  },
+  {
+    "title": "A Touch Of Zen",
+    "director": "King Hu",
+    "year": "1971",
+    "country": "Taiwan-Hong Kong",
+    "runtime": 180
+  },
+  {
+    "title": "The Puppetmaster",
+    "director": "Hou Hsiao-hsien",
+    "year": "1993",
+    "country": "Taiwan",
+    "runtime": 141
+  },
+  {
+    "title": "The Cloud-Capped Star",
+    "director": "Ritwik Ghatak",
+    "year": "1960",
+    "country": "India",
+    "runtime": 126
+  },
+  {
+    "title": "The Silence Of The Lambs",
+    "director": "Jonathan Demme",
+    "year": "1991",
+    "country": "USA",
+    "runtime": 118
+  },
+  {
+    "title": "Night Of The Living Dead",
+    "director": "George A. Romero",
+    "year": "1968",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "Last Tango In Paris",
+    "director": "Bernardo Bertolucci",
+    "year": "1972",
+    "country": "Italy-France",
+    "runtime": 129
+  },
+  {
+    "title": "The Turin Horse",
+    "director": "Béla Tarr",
+    "year": "2011",
+    "country": "Hungary-France-Germany-Switzerland",
+    "runtime": 155
+  },
+  {
+    "title": "How Green Was My Valley",
+    "director": "John Ford",
+    "year": "1941",
+    "country": "USA",
+    "runtime": 118
+  },
+  {
+    "title": "Written On The Wind",
+    "director": "Douglas Sirk",
+    "year": "1956",
+    "country": "USA",
+    "runtime": 99
+  },
+  {
+    "title": "El",
+    "director": "Luis Buñuel",
+    "year": "1953",
+    "country": "Mexico",
+    "runtime": 91
+  },
+  {
+    "title": "Safe",
+    "director": "Todd Haynes",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 119
+  },
+  {
+    "title": "Peeping Tom",
+    "director": "Michael Powell",
+    "year": "1960",
+    "country": "UK",
+    "runtime": 101
+  },
+  {
+    "title": "All The President'S Men",
+    "director": "Alan J. Pakula",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 138
+  },
+  {
+    "title": "Out 1",
+    "director": "Jacques Rivette",
+    "year": "1971",
+    "country": "France",
+    "runtime": 729
+  },
+  {
+    "title": "The Quince Tree Sun",
+    "director": "Víctor Erice",
+    "year": "1992",
+    "country": "Spain",
+    "runtime": 133
+  },
+  {
+    "title": "Make Way For Tomorrow",
+    "director": "Leo McCarey",
+    "year": "1937",
+    "country": "USA",
+    "runtime": 92
+  },
+  {
+    "title": "Heaven'S Gate",
+    "director": "Michael Cimino",
+    "year": "1980",
+    "country": "USA",
+    "runtime": 219
+  },
+  {
+    "title": "The Killing Of A Chinese Bookie",
+    "director": "John Cassavetes",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 109
+  },
+  {
+    "title": "Yojimbo",
+    "director": "Akira Kurosawa",
+    "year": "1961",
+    "country": "Japan",
+    "runtime": 110
+  },
+  {
+    "title": "Muriel",
+    "director": "Alain Resnais",
+    "year": "1963",
+    "country": "France-Italy",
+    "runtime": 115
+  },
+  {
+    "title": "Fitzcarraldo",
+    "director": "Werner Herzog",
+    "year": "1982",
+    "country": "West Germany",
+    "runtime": 157
+  },
+  {
+    "title": "Through The Olive Trees",
+    "director": "Abbas Kiarostami",
+    "year": "1994",
+    "country": "Iran-France",
+    "runtime": 103
+  },
+  {
+    "title": "Marnie",
+    "director": "Alfred Hitchcock",
+    "year": "1964",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "This Is Spinal Tap",
+    "director": "Rob Reiner",
+    "year": "1984",
+    "country": "USA",
+    "runtime": 82
+  },
+  {
+    "title": "The White Ribbon",
+    "director": "Michael Haneke",
+    "year": "2009",
+    "country": "Germany-Austria-France-Italy-Canada",
+    "runtime": 144
+  },
+  {
+    "title": "Two-Lane Blacktop",
+    "director": "Monte Hellman",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "Stromboli",
+    "director": "Roberto Rossellini",
+    "year": "1950",
+    "country": "Italy",
+    "runtime": 107
+  },
+  {
+    "title": "An Affair To Remember",
+    "director": "Leo McCarey",
+    "year": "1957",
+    "country": "USA",
+    "runtime": 115
+  },
+  {
+    "title": "Teorema",
+    "director": "Pier Paolo Pasolini",
+    "year": "1968",
+    "country": "Italy",
+    "runtime": 98
+  },
+  {
+    "title": "Lost Highway",
+    "director": "David Lynch",
+    "year": "1997",
+    "country": "USA-France",
+    "runtime": 134
+  },
+  {
+    "title": "I Was Born, But...",
+    "director": "Yasujiro Ozu",
+    "year": "1932",
+    "country": "Japan",
+    "runtime": 100
+  },
+  {
+    "title": "Stranger Than Paradise",
+    "director": "Jim Jarmusch",
+    "year": "1984",
+    "country": "USA-West Germany",
+    "runtime": 89
+  },
+  {
+    "title": "Dogville",
+    "director": "Lars von Trier",
+    "year": "2003",
+    "country": "Denmark-Sweden-France-UK-Germany-Finland-Italy-Netherlands-Norway",
+    "runtime": 177
+  },
+  {
+    "title": "Under The Skin",
+    "director": "Jonathan Glazer",
+    "year": "2013",
+    "country": "UK-Switzerland",
+    "runtime": 108
+  },
+  {
+    "title": "Tristana",
+    "director": "Luis Buñuel",
+    "year": "1970",
+    "country": "Spain-Italy-France",
+    "runtime": 98
+  },
+  {
+    "title": "The Hour Of The Furnaces",
+    "director": "Octavio Getino & Fernando E. Solanas",
+    "year": "1968",
+    "country": "Argentina",
+    "runtime": 260
+  },
+  {
+    "title": "Woman In The Dunes",
+    "director": "Hiroshi Teshigahara",
+    "year": "1964",
+    "country": "Japan",
+    "runtime": 147
+  },
+  {
+    "title": "Mon Oncle",
+    "director": "Jacques Tati",
+    "year": "1958",
+    "country": "France",
+    "runtime": 126
+  },
+  {
+    "title": "Day For Night",
+    "director": "François Truffaut",
+    "year": "1973",
+    "country": "France",
+    "runtime": 120
+  },
+  {
+    "title": "The Long Goodbye",
+    "director": "Robert Altman",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "In A Year With 13 Moons",
+    "director": "Rainer Werner Fassbinder",
+    "year": "1978",
+    "country": "West Germany",
+    "runtime": 129
+  },
+  {
+    "title": "Nostalghia",
+    "director": "Andrei Tarkovsky",
+    "year": "1983",
+    "country": "Italy",
+    "runtime": 120
+  },
+  {
+    "title": "Limite",
+    "director": "Mario Peixoto",
+    "year": "1931",
+    "country": "Brazil",
+    "runtime": 114
+  },
+  {
+    "title": "The Thin Blue Line",
+    "director": "Errol Morris",
+    "year": "1988",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "Orlando",
+    "director": "Sally Potter",
+    "year": "1992",
+    "country": "UK-Russia-France-Italy-Netherlands",
+    "runtime": 94
+  },
+  {
+    "title": "Fantasia",
+    "director": "Various Directors",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 120
+  },
+  {
+    "title": "The Flowers Of St. Francis",
+    "director": "Roberto Rossellini",
+    "year": "1950",
+    "country": "Italy",
+    "runtime": 83
+  },
+  {
+    "title": "Eyes Without A Face",
+    "director": "Georges Franju",
+    "year": "1960",
+    "country": "France-Italy",
+    "runtime": 88
+  },
+  {
+    "title": "The Tenant",
+    "director": "Roman Polanski",
+    "year": "1976",
+    "country": "France",
+    "runtime": 126
+  },
+  {
+    "title": "The Birth Of A Nation",
+    "director": "D.W. Griffith",
+    "year": "1915",
+    "country": "USA",
+    "runtime": 187
+  },
+  {
+    "title": "Dawn Of The Dead",
+    "director": "George A. Romero",
+    "year": "1978",
+    "country": "USA",
+    "runtime": 126
+  },
+  {
+    "title": "Crimes And Misdemeanors",
+    "director": "Woody Allen",
+    "year": "1989",
+    "country": "USA",
+    "runtime": 104
+  },
+  {
+    "title": "The Headless Woman",
+    "director": "Lucrecia Martel",
+    "year": "2008",
+    "country": "Argentina-Spain-France-Italy",
+    "runtime": 87
+  },
+  {
+    "title": "Suspiria",
+    "director": "Dario Argento",
+    "year": "1977",
+    "country": "Italy",
+    "runtime": 92
+  },
+  {
+    "title": "I Know Where I'M Going!",
+    "director": "Michael Powell & Emeric Pressburger",
+    "year": "1945",
+    "country": "UK",
+    "runtime": 92
+  },
+  {
+    "title": "1900",
+    "director": "Bernardo Bertolucci",
+    "year": "1976",
+    "country": "Italy-France-West Germany",
+    "runtime": 245
+  },
+  {
+    "title": "Lost In Translation",
+    "director": "Sofia Coppola",
+    "year": "2003",
+    "country": "USA-Japan",
+    "runtime": 102
+  },
+  {
+    "title": "Toni Erdmann",
+    "director": "Maren Ade",
+    "year": "2016",
+    "country": "Germany-Austria-Monaco-Romania-France-Switzerland-Belgium",
+    "runtime": 162
+  },
+  {
+    "title": "Orpheus",
+    "director": "Jean Cocteau",
+    "year": "1950",
+    "country": "France",
+    "runtime": 95
+  },
+  {
+    "title": "Snow White And The Seven Dwarfs",
+    "director": "David Hand",
+    "year": "1937",
+    "country": "USA",
+    "runtime": 83
+  },
+  {
+    "title": "Miracle In Milan",
+    "director": "Vittorio De Sica",
+    "year": "1951",
+    "country": "Italy",
+    "runtime": 95
+  },
+  {
+    "title": "Splendor In The Grass",
+    "director": "Elia Kazan",
+    "year": "1961",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "Le Plaisir",
+    "director": "Max Ophüls",
+    "year": "1952",
+    "country": "France",
+    "runtime": 97
+  },
+  {
+    "title": "Twenty Years Later",
+    "director": "Eduardo Coutinho",
+    "year": "1984",
+    "country": "Brazil",
+    "runtime": 119
+  },
+  {
+    "title": "The Innocents",
+    "director": "Jack Clayton",
+    "year": "1961",
+    "country": "UK",
+    "runtime": 100
+  },
+  {
+    "title": "Europa '51",
+    "director": "Roberto Rossellini",
+    "year": "1952",
+    "country": "Italy",
+    "runtime": 113
+  },
+  {
+    "title": "Network",
+    "director": "Sidney Lumet",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 121
+  },
+  {
+    "title": "Le Bonheur",
+    "director": "Agnès Varda",
+    "year": "1965",
+    "country": "France",
+    "runtime": 79
+  },
+  {
+    "title": "Scenes From A Marriage",
+    "director": "Ingmar Bergman",
+    "year": "1973",
+    "country": "Sweden",
+    "runtime": 168
+  },
+  {
+    "title": "Holy Motors",
+    "director": "Leos Carax",
+    "year": "2012",
+    "country": "France-Germany-Belgium",
+    "runtime": 115
+  },
+  {
+    "title": "The Awful Truth",
+    "director": "Leo McCarey",
+    "year": "1937",
+    "country": "USA",
+    "runtime": 92
+  },
+  {
+    "title": "An Angel At My Table",
+    "director": "Jane Campion",
+    "year": "1990",
+    "country": "New Zealand-Australia-UK",
+    "runtime": 158
+  },
+  {
+    "title": "Chelsea Girls",
+    "director": "Andy Warhol",
+    "year": "1966",
+    "country": "USA",
+    "runtime": 210
+  },
+  {
+    "title": "Bride Of Frankenstein",
+    "director": "James Whale",
+    "year": "1935",
+    "country": "USA",
+    "runtime": 75
+  },
+  {
+    "title": "A.I. Artificial Intelligence",
+    "director": "Steven Spielberg",
+    "year": "2001",
+    "country": "USA",
+    "runtime": 145
+  },
+  {
+    "title": "Salvatore Giuliano",
+    "director": "Francesco Rosi",
+    "year": "1962",
+    "country": "Italy",
+    "runtime": 125
+  },
+  {
+    "title": "Days Of Being Wild",
+    "director": "Wong Kar-wai",
+    "year": "1990",
+    "country": "Hong Kong",
+    "runtime": 94
+  },
+  {
+    "title": "Possession",
+    "director": "Andrzej Żuławski",
+    "year": "1981",
+    "country": "France-West Germany",
+    "runtime": 124
+  },
+  {
+    "title": "Casino",
+    "director": "Martin Scorsese",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 182
+  },
+  {
+    "title": "Naked",
+    "director": "Mike Leigh",
+    "year": "1993",
+    "country": "UK",
+    "runtime": 126
+  },
+  {
+    "title": "No Country For Old Men",
+    "director": "Joel Coen & Ethan Coen",
+    "year": "2007",
+    "country": "USA",
+    "runtime": 122
+  },
+  {
+    "title": "Phantom Thread",
+    "director": "Paul Thomas Anderson",
+    "year": "2017",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "If….",
+    "director": "Lindsay Anderson",
+    "year": "1968",
+    "country": "UK",
+    "runtime": 112
+  },
+  {
+    "title": "A Star Is Born",
+    "director": "George Cukor",
+    "year": "1954",
+    "country": "USA",
+    "runtime": 154
+  },
+  {
+    "title": "Winter Light",
+    "director": "Ingmar Bergman",
+    "year": "1963",
+    "country": "Sweden",
+    "runtime": 80
+  },
+  {
+    "title": "French Cancan",
+    "director": "Jean Renoir",
+    "year": "1955",
+    "country": "France-Italy",
+    "runtime": 102
+  },
+  {
+    "title": "Shadows Of Forgotten Ancestors",
+    "director": "Sergei Parajanov",
+    "year": "1965",
+    "country": "USSR",
+    "runtime": 97
+  },
+  {
+    "title": "Carrie",
+    "director": "Brian De Palma",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "Boogie Nights",
+    "director": "Paul Thomas Anderson",
+    "year": "1997",
+    "country": "USA",
+    "runtime": 155
+  },
+  {
+    "title": "The Act Of Killing",
+    "director": "Joshua Oppenheimer",
+    "year": "2012",
+    "country": "Denmark-Norway-UK-Finland",
+    "runtime": 115
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "director": "Frank Darabont",
+    "year": "1994",
+    "country": "USA",
+    "runtime": 142
+  },
+  {
+    "title": "Listen To Britain",
+    "director": "Humphrey Jennings & Stewart McAllister",
+    "year": "1942",
+    "country": "UK",
+    "runtime": 20
+  },
+  {
+    "title": "Songs From The Second Floor",
+    "director": "Roy Andersson",
+    "year": "2000",
+    "country": "Sweden-Norway-Denmark-France",
+    "runtime": 98
+  },
+  {
+    "title": "Ivan'S Childhood",
+    "director": "Andrei Tarkovsky",
+    "year": "1962",
+    "country": "USSR",
+    "runtime": 94
+  },
+  {
+    "title": "Accattone",
+    "director": "Pier Paolo Pasolini",
+    "year": "1961",
+    "country": "Italy",
+    "runtime": 120
+  },
+  {
+    "title": "Limelight",
+    "director": "Charles Chaplin",
+    "year": "1952",
+    "country": "USA",
+    "runtime": 145
+  },
+  {
+    "title": "The Cameraman",
+    "director": "Buster Keaton & Edward Sedgwick",
+    "year": "1928",
+    "country": "USA",
+    "runtime": 69
+  },
+  {
+    "title": "The Scarlet Empress",
+    "director": "Josef von Sternberg",
+    "year": "1934",
+    "country": "USA",
+    "runtime": 110
+  },
+  {
+    "title": "La Terra Trema",
+    "director": "Luchino Visconti",
+    "year": "1948",
+    "country": "Italy",
+    "runtime": 160
+  },
+  {
+    "title": "The Wind",
+    "director": "Victor Sjöström",
+    "year": "1928",
+    "country": "USA",
+    "runtime": 88
+  },
+  {
+    "title": "Syndromes And A Century",
+    "director": "Apichatpong Weerasethakul",
+    "year": "2006",
+    "country": "Thailand-France-Austria-Netherlands",
+    "runtime": 105
+  },
+  {
+    "title": "The Crime Of Monsieur Lange",
+    "director": "Jean Renoir",
+    "year": "1936",
+    "country": "France",
+    "runtime": 90
+  },
+  {
+    "title": "Festen",
+    "director": "Thomas Vinterberg",
+    "year": "1998",
+    "country": "Denmark",
+    "runtime": 105
+  },
+  {
+    "title": "October",
+    "director": "Sergei Eisenstein & Grigori Aleksandrov",
+    "year": "1928",
+    "country": "USSR",
+    "runtime": 103
+  },
+  {
+    "title": "Flowers Of Shanghai",
+    "director": "Hou Hsiao-hsien",
+    "year": "1998",
+    "country": "Taiwan",
+    "runtime": 130
+  },
+  {
+    "title": "A Trip To The Moon",
+    "director": "Georges Méliès",
+    "year": "1902",
+    "country": "France",
+    "runtime": 14
+  },
+  {
+    "title": "In Vanda'S Room",
+    "director": "Pedro Costa",
+    "year": "2000",
+    "country": "Portugal-Germany-Switzerland-Italy",
+    "runtime": 170
+  },
+  {
+    "title": "Pan'S Labyrinth",
+    "director": "Guillermo del Toro",
+    "year": "2006",
+    "country": "Spain-Mexico-USA",
+    "runtime": 120
+  },
+  {
+    "title": "À Nos Amours",
+    "director": "Maurice Pialat",
+    "year": "1983",
+    "country": "France",
+    "runtime": 102
+  },
+  {
+    "title": "Koyaanisqatsi",
+    "director": "Godfrey Reggio",
+    "year": "1982",
+    "country": "USA",
+    "runtime": 87
+  },
+  {
+    "title": "Dersu Uzala",
+    "director": "Akira Kurosawa",
+    "year": "1975",
+    "country": "USSR-Japan",
+    "runtime": 144
+  },
+  {
+    "title": "Pinocchio",
+    "director": "Ben Sharpsteen & Hamilton Luske",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 88
+  },
+  {
+    "title": "Lola",
+    "director": "Jacques Demy",
+    "year": "1961",
+    "country": "France",
+    "runtime": 90
+  },
+  {
+    "title": "Grave Of The Fireflies",
+    "director": "Isao Takahata",
+    "year": "1988",
+    "country": "Japan",
+    "runtime": 89
+  },
+  {
+    "title": "Barren Lives",
+    "director": "Nelson Pereira dos Santos",
+    "year": "1963",
+    "country": "Brazil",
+    "runtime": 103
+  },
+  {
+    "title": "The Dead",
+    "director": "John Huston",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 83
+  },
+  {
+    "title": "Shoot The Piano Player",
+    "director": "François Truffaut",
+    "year": "1960",
+    "country": "France",
+    "runtime": 81
+  },
+  {
+    "title": "Platform",
+    "director": "Jia Zhangke",
+    "year": "2000",
+    "country": "China-Hong Kong-Japan-France",
+    "runtime": 154
+  },
+  {
+    "title": "Once Upon A Time In Anatolia",
+    "director": "Nuri Bilge Ceylan",
+    "year": "2011",
+    "country": "Turkey-Bosnia and Herzergovina",
+    "runtime": 157
+  },
+  {
+    "title": "Elephant",
+    "director": "Gus Van Sant",
+    "year": "2003",
+    "country": "USA",
+    "runtime": 81
+  },
+  {
+    "title": "Wagon Master",
+    "director": "John Ford",
+    "year": "1950",
+    "country": "USA",
+    "runtime": 86
+  },
+  {
+    "title": "Oldboy",
+    "director": "Park Chan-wook",
+    "year": "2003",
+    "country": "South Korea",
+    "runtime": 120
+  },
+  {
+    "title": "Paris Is Burning",
+    "director": "Jennie Livingston",
+    "year": "1990",
+    "country": "USA",
+    "runtime": 78
+  },
+  {
+    "title": "High Noon",
+    "director": "Fred Zinnemann",
+    "year": "1952",
+    "country": "USA",
+    "runtime": 84
+  },
+  {
+    "title": "To Kill A Mockingbird",
+    "director": "Robert Mulligan",
+    "year": "1962",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "Talk To Her",
+    "director": "Pedro Almodóvar",
+    "year": "2002",
+    "country": "Spain-USA",
+    "runtime": 112
+  },
+  {
+    "title": "Withnail & I",
+    "director": "Bruce Robinson",
+    "year": "1987",
+    "country": "UK",
+    "runtime": 107
+  },
+  {
+    "title": "Harlan County, U.S.A.",
+    "director": "Barbara Kopple",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 103
+  },
+  {
+    "title": "Steamboat Bill, Jr.",
+    "director": "Buster Keaton & Charles Reisner",
+    "year": "1928",
+    "country": "USA",
+    "runtime": 71
+  },
+  {
+    "title": "La Région Centrale",
+    "director": "Michael Snow",
+    "year": "1971",
+    "country": "Canada",
+    "runtime": 180
+  },
+  {
+    "title": "Five Easy Pieces",
+    "director": "Bob Rafelson",
+    "year": "1970",
+    "country": "USA",
+    "runtime": 98
+  },
+  {
+    "title": "The Palm Beach Story",
+    "director": "Preston Sturges",
+    "year": "1942",
+    "country": "USA",
+    "runtime": 88
+  },
+  {
+    "title": "Senso",
+    "director": "Luchino Visconti",
+    "year": "1954",
+    "country": "Italy",
+    "runtime": 123
+  },
+  {
+    "title": "Fight Club",
+    "director": "David Fincher",
+    "year": "1999",
+    "country": "USA-Germany",
+    "runtime": 139
+  },
+  {
+    "title": "The Death Of Mr. Lazarescu",
+    "director": "Cristi Puiu",
+    "year": "2005",
+    "country": "Romania",
+    "runtime": 153
+  },
+  {
+    "title": "Landscape In The Mist",
+    "director": "Theo Angelopoulos",
+    "year": "1988",
+    "country": "Greece-Italy-France",
+    "runtime": 127
+  },
+  {
+    "title": "By The Bluest Of Seas",
+    "director": "Boris Barnet",
+    "year": "1936",
+    "country": "USSR",
+    "runtime": 71
+  },
+  {
+    "title": "Zama",
+    "director": "Lucrecia Martel",
+    "year": "2017",
+    "country": "Argentina-Brazil-Spain-Dominican Republic-France-Netherlands-Mexico-Switzerland-USA-Portugal-Lebanon",
+    "runtime": 115
+  },
+  {
+    "title": "Secrets & Lies",
+    "director": "Mike Leigh",
+    "year": "1996",
+    "country": "UK",
+    "runtime": 142
+  },
+  {
+    "title": "Children Of Men",
+    "director": "Alfonso Cuarón",
+    "year": "2006",
+    "country": "USA-UK",
+    "runtime": 109
+  },
+  {
+    "title": "Reservoir Dogs",
+    "director": "Quentin Tarantino",
+    "year": "1992",
+    "country": "USA",
+    "runtime": 99
+  },
+  {
+    "title": "Raise The Red Lantern",
+    "director": "Zhang Yimou",
+    "year": "1991",
+    "country": "China-Hong Kong-Taiwan",
+    "runtime": 125
+  },
+  {
+    "title": "The Hustler",
+    "director": "Robert Rossen",
+    "year": "1961",
+    "country": "USA",
+    "runtime": 134
+  },
+  {
+    "title": "The Lives Of Others",
+    "director": "Florian Henckel von Donnersmarck",
+    "year": "2006",
+    "country": "Germany",
+    "runtime": 138
+  },
+  {
+    "title": "Punch-Drunk Love",
+    "director": "Paul Thomas Anderson",
+    "year": "2002",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "Memories Of Murder",
+    "director": "Bong Joon-ho",
+    "year": "2003",
+    "country": "South Korea",
+    "runtime": 132
+  },
+  {
+    "title": "Twin Peaks: Fire Walk With Me",
+    "director": "David Lynch",
+    "year": "1992",
+    "country": "USA-France",
+    "runtime": 134
+  },
+  {
+    "title": "Die Hard",
+    "director": "John McTiernan",
+    "year": "1988",
+    "country": "USA",
+    "runtime": 131
+  },
+  {
+    "title": "Shane",
+    "director": "George Stevens",
+    "year": "1953",
+    "country": "USA",
+    "runtime": 118
+  },
+  {
+    "title": "After Life",
+    "director": "Hirokazu Koreeda",
+    "year": "1998",
+    "country": "Japan",
+    "runtime": 118
+  },
+  {
+    "title": "Inland Empire",
+    "director": "David Lynch",
+    "year": "2006",
+    "country": "USA-France-Poland",
+    "runtime": 180
+  },
+  {
+    "title": "Blow Out",
+    "director": "Brian De Palma",
+    "year": "1981",
+    "country": "USA",
+    "runtime": 108
+  },
+  {
+    "title": "The Bitter Tears Of Petra Von Kant",
+    "director": "Rainer Werner Fassbinder",
+    "year": "1972",
+    "country": "West Germany",
+    "runtime": 124
+  },
+  {
+    "title": "The Bridge On The River Kwai",
+    "director": "David Lean",
+    "year": "1957",
+    "country": "UK",
+    "runtime": 161
+  },
+  {
+    "title": "Early Summer",
+    "director": "Yasujiro Ozu",
+    "year": "1951",
+    "country": "Japan",
+    "runtime": 135
+  },
+  {
+    "title": "Twin Peaks: The Return",
+    "director": "David Lynch",
+    "year": "2017",
+    "country": "USA",
+    "runtime": 1024
+  },
+  {
+    "title": "Princess Mononoke",
+    "director": "Hayao Miyazaki",
+    "year": "1997",
+    "country": "Japan",
+    "runtime": 134
+  },
+  {
+    "title": "To Have And Have Not",
+    "director": "Howard Hawks",
+    "year": "1944",
+    "country": "USA",
+    "runtime": 100
+  },
+  {
+    "title": "Crash",
+    "director": "David Cronenberg",
+    "year": "1996",
+    "country": "Canada",
+    "runtime": 100
+  },
+  {
+    "title": "Being There",
+    "director": "Hal Ashby",
+    "year": "1979",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "Our Hospitality",
+    "director": "Buster Keaton & John G. Blystone",
+    "year": "1923",
+    "country": "USA",
+    "runtime": 74
+  },
+  {
+    "title": "Monty Python'S Life Of Brian",
+    "director": "Terry Jones",
+    "year": "1979",
+    "country": "UK",
+    "runtime": 93
+  },
+  {
+    "title": "Masculin Féminin",
+    "director": "Jean-Luc Godard",
+    "year": "1966",
+    "country": "France-Sweden",
+    "runtime": 103
+  },
+  {
+    "title": "12 Angry Men",
+    "director": "Sidney Lumet",
+    "year": "1957",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "Closely Watched Trains",
+    "director": "Jirí Menzel",
+    "year": "1966",
+    "country": "Czechoslovakia",
+    "runtime": 89
+  },
+  {
+    "title": "Jurassic Park",
+    "director": "Steven Spielberg",
+    "year": "1993",
+    "country": "USA",
+    "runtime": 127
+  },
+  {
+    "title": "Marketa Lazarová",
+    "director": "Frantisek Vlácil",
+    "year": "1967",
+    "country": "Czechoslovakia",
+    "runtime": 162
+  },
+  {
+    "title": "Dead Ringers",
+    "director": "David Cronenberg",
+    "year": "1988",
+    "country": "Canada",
+    "runtime": 115
+  },
+  {
+    "title": "Alice In The Cities",
+    "director": "Wim Wenders",
+    "year": "1974",
+    "country": "West Germany",
+    "runtime": 110
+  },
+  {
+    "title": "East Of Eden",
+    "director": "Elia Kazan",
+    "year": "1955",
+    "country": "USA",
+    "runtime": 115
+  },
+  {
+    "title": "Mad Max 2",
+    "director": "George Miller",
+    "year": "1981",
+    "country": "Australia",
+    "runtime": 96
+  },
+  {
+    "title": "The French Connection",
+    "director": "William Friedkin",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 104
+  },
+  {
+    "title": "Short Cuts",
+    "director": "Robert Altman",
+    "year": "1993",
+    "country": "USA",
+    "runtime": 188
+  },
+  {
+    "title": "The Sound Of Music",
+    "director": "Robert Wise",
+    "year": "1965",
+    "country": "USA",
+    "runtime": 174
+  },
+  {
+    "title": "Doctor Zhivago",
+    "director": "David Lean",
+    "year": "1965",
+    "country": "USA",
+    "runtime": 197
+  },
+  {
+    "title": "Butch Cassidy And The Sundance Kid",
+    "director": "George Roy Hill",
+    "year": "1969",
+    "country": "USA-Mexico",
+    "runtime": 110
+  },
+  {
+    "title": "A Moment Of Innocence",
+    "director": "Mohsen Makhmalbaf",
+    "year": "1996",
+    "country": "Iran-France",
+    "runtime": 78
+  },
+  {
+    "title": "Se7En",
+    "director": "David Fincher",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 127
+  },
+  {
+    "title": "The Age Of Innocence",
+    "director": "Martin Scorsese",
+    "year": "1993",
+    "country": "USA",
+    "runtime": 133
+  },
+  {
+    "title": "Hannah And Her Sisters",
+    "director": "Woody Allen",
+    "year": "1986",
+    "country": "USA",
+    "runtime": 107
+  },
+  {
+    "title": "Boyhood",
+    "director": "Richard Linklater",
+    "year": "2014",
+    "country": "USA",
+    "runtime": 165
+  },
+  {
+    "title": "A Night At The Opera",
+    "director": "Sam Wood",
+    "year": "1935",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "And Life Goes On...",
+    "director": "Abbas Kiarostami",
+    "year": "1992",
+    "country": "Iran",
+    "runtime": 108
+  },
+  {
+    "title": "Faust",
+    "director": "F.W. Murnau",
+    "year": "1926",
+    "country": "Germany",
+    "runtime": 116
+  },
+  {
+    "title": "Morvern Callar",
+    "director": "Lynne Ramsay",
+    "year": "2002",
+    "country": "UK-Canada",
+    "runtime": 97
+  },
+  {
+    "title": "The Devil, Probably",
+    "director": "Robert Bresson",
+    "year": "1977",
+    "country": "France",
+    "runtime": 95
+  },
+  {
+    "title": "Les Vampires",
+    "director": "Louis Feuillade",
+    "year": "1915",
+    "country": "France",
+    "runtime": 421
+  },
+  {
+    "title": "The Enigma Of Kaspar Hauser",
+    "director": "Werner Herzog",
+    "year": "1974",
+    "country": "West Germany",
+    "runtime": 110
+  },
+  {
+    "title": "The Damned",
+    "director": "Luchino Visconti",
+    "year": "1969",
+    "country": "Italy-West Germany",
+    "runtime": 155
+  },
+  {
+    "title": "Alexander Nevsky",
+    "director": "Sergei Eisenstein",
+    "year": "1938",
+    "country": "USSR",
+    "runtime": 107
+  },
+  {
+    "title": "The Wind Will Carry Us",
+    "director": "Abbas Kiarostami",
+    "year": "1999",
+    "country": "France-Iran",
+    "runtime": 118
+  },
+  {
+    "title": "Strangers On A Train",
+    "director": "Alfred Hitchcock",
+    "year": "1951",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "La Haine",
+    "director": "Mathieu Kassovitz",
+    "year": "1995",
+    "country": "France",
+    "runtime": 98
+  },
+  {
+    "title": "Nostalgia For The Light",
+    "director": "Patricio Guzmán",
+    "year": "2010",
+    "country": "France-Germany-Chile-Spain",
+    "runtime": 90
+  },
+  {
+    "title": "Yeelen",
+    "director": "Souleymane Cissé",
+    "year": "1987",
+    "country": "Mali-Burkina Faso-France-West Germany-Japan",
+    "runtime": 105
+  },
+  {
+    "title": "Blue",
+    "director": "Derek Jarman",
+    "year": "1993",
+    "country": "UK-Japan",
+    "runtime": 79
+  },
+  {
+    "title": "Tootsie",
+    "director": "Sydney Pollack",
+    "year": "1982",
+    "country": "USA",
+    "runtime": 116
+  },
+  {
+    "title": "The Master",
+    "director": "Paul Thomas Anderson",
+    "year": "2012",
+    "country": "USA",
+    "runtime": 144
+  },
+  {
+    "title": "Aparajito",
+    "director": "Satyajit Ray",
+    "year": "1956",
+    "country": "India",
+    "runtime": 108
+  },
+  {
+    "title": "The Lady From Shanghai",
+    "director": "Orson Welles",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 87
+  },
+  {
+    "title": "Picnic At Hanging Rock",
+    "director": "Peter Weir",
+    "year": "1975",
+    "country": "Australia",
+    "runtime": 110
+  },
+  {
+    "title": "Rosetta",
+    "director": "Jean-Pierre Dardenne & Luc Dardenne",
+    "year": "1999",
+    "country": "Belgium-France",
+    "runtime": 94
+  },
+  {
+    "title": "Terminator 2: Judgment Day",
+    "director": "James Cameron",
+    "year": "1991",
+    "country": "USA",
+    "runtime": 136
+  },
+  {
+    "title": "The Terminator",
+    "director": "James Cameron",
+    "year": "1984",
+    "country": "USA",
+    "runtime": 107
+  },
+  {
+    "title": "Russian Ark",
+    "director": "Aleksandr Sokurov",
+    "year": "2002",
+    "country": "Russia-Germany-Japan-Canada-Finland-Denmark",
+    "runtime": 99
+  },
+  {
+    "title": "Ninotchka",
+    "director": "Ernst Lubitsch",
+    "year": "1939",
+    "country": "USA",
+    "runtime": 110
+  },
+  {
+    "title": "Young Mr. Lincoln",
+    "director": "John Ford",
+    "year": "1939",
+    "country": "USA",
+    "runtime": 100
+  },
+  {
+    "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses Of Beauty",
+    "director": "Jonas Mekas",
+    "year": "2000",
+    "country": "USA",
+    "runtime": 288
+  },
+  {
+    "title": "Point Blank",
+    "director": "John Boorman",
+    "year": "1967",
+    "country": "USA",
+    "runtime": 92
+  },
+  {
+    "title": "Forrest Gump",
+    "director": "Robert Zemeckis",
+    "year": "1994",
+    "country": "USA",
+    "runtime": 142
+  },
+  {
+    "title": "Amélie",
+    "director": "Jean-Pierre Jeunet",
+    "year": "2001",
+    "country": "France-Germany",
+    "runtime": 122
+  },
+  {
+    "title": "Bigger Than Life",
+    "director": "Nicholas Ray",
+    "year": "1956",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "Man Of Aran",
+    "director": "Robert J. Flaherty",
+    "year": "1934",
+    "country": "UK",
+    "runtime": 77
+  },
+  {
+    "title": "I Walked With A Zombie",
+    "director": "Jacques Tourneur",
+    "year": "1943",
+    "country": "USA",
+    "runtime": 69
+  },
+  {
+    "title": "Crouching Tiger, Hidden Dragon",
+    "director": "Ang Lee",
+    "year": "2000",
+    "country": "Taiwan-Hong Kong-USA-China",
+    "runtime": 120
+  },
+  {
+    "title": "Land Without Bread",
+    "director": "Luis Buñuel",
+    "year": "1933",
+    "country": "Spain",
+    "runtime": 28
+  },
+  {
+    "title": "Je, Tu, Il, Elle",
+    "director": "Chantal Akerman",
+    "year": "1974",
+    "country": "Belgium-France",
+    "runtime": 86
+  },
+  {
+    "title": "Wall-E",
+    "director": "Andrew Stanton",
+    "year": "2008",
+    "country": "USA",
+    "runtime": 98
+  },
+  {
+    "title": "The Blue Angel",
+    "director": "Josef von Sternberg",
+    "year": "1930",
+    "country": "Germany",
+    "runtime": 103
+  },
+  {
+    "title": "Brokeback Mountain",
+    "director": "Ang Lee",
+    "year": "2005",
+    "country": "USA-Canada",
+    "runtime": 134
+  },
+  {
+    "title": "Laura",
+    "director": "Otto Preminger",
+    "year": "1944",
+    "country": "USA",
+    "runtime": 85
+  },
+  {
+    "title": "Cat People",
+    "director": "Jacques Tourneur",
+    "year": "1942",
+    "country": "USA",
+    "runtime": 73
+  },
+  {
+    "title": "Halloween",
+    "director": "John Carpenter",
+    "year": "1978",
+    "country": "USA",
+    "runtime": 93
+  },
+  {
+    "title": "Dead Man",
+    "director": "Jim Jarmusch",
+    "year": "1995",
+    "country": "USA-Germany",
+    "runtime": 121
+  },
+  {
+    "title": "Kagemusha",
+    "director": "Akira Kurosawa",
+    "year": "1980",
+    "country": "Japan",
+    "runtime": 159
+  },
+  {
+    "title": "Fellini Satyricon",
+    "director": "Federico Fellini",
+    "year": "1969",
+    "country": "Italy",
+    "runtime": 129
+  },
+  {
+    "title": "The Testament Of Dr. Mabuse",
+    "director": "Fritz Lang",
+    "year": "1933",
+    "country": "Germany",
+    "runtime": 120
+  },
+  {
+    "title": "Shadow Of A Doubt",
+    "director": "Alfred Hitchcock",
+    "year": "1943",
+    "country": "USA",
+    "runtime": 108
+  },
+  {
+    "title": "Deliverance",
+    "director": "John Boorman",
+    "year": "1972",
+    "country": "USA",
+    "runtime": 109
+  },
+  {
+    "title": "That Obscure Object Of Desire",
+    "director": "Luis Buñuel",
+    "year": "1977",
+    "country": "France-Spain",
+    "runtime": 103
+  },
+  {
+    "title": "Zodiac",
+    "director": "David Fincher",
+    "year": "2007",
+    "country": "USA",
+    "runtime": 158
+  },
+  {
+    "title": "Rocky",
+    "director": "John G. Avildsen",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 119
+  },
+  {
+    "title": "The Lord Of The Rings: The Fellowship Of The Ring",
+    "director": "Peter Jackson",
+    "year": "2001",
+    "country": "New Zealand-USA",
+    "runtime": 178
+  },
+  {
+    "title": "The Wedding March",
+    "director": "Erich von Stroheim",
+    "year": "1928",
+    "country": "USA",
+    "runtime": 113
+  },
+  {
+    "title": "When Harry Met Sally...",
+    "director": "Rob Reiner",
+    "year": "1989",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "Yellow Earth",
+    "director": "Chen Kaige",
+    "year": "1984",
+    "country": "China",
+    "runtime": 89
+  },
+  {
+    "title": "Sambizanga",
+    "director": "Sarah Maldoror",
+    "year": "1972",
+    "country": "Angola-France",
+    "runtime": 97
+  },
+  {
+    "title": "Full Metal Jacket",
+    "director": "Stanley Kubrick",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 116
+  },
+  {
+    "title": "Loves Of A Blonde",
+    "director": "Milos Forman",
+    "year": "1965",
+    "country": "Czechoslovakia",
+    "runtime": 88
+  },
+  {
+    "title": "Repulsion",
+    "director": "Roman Polanski",
+    "year": "1965",
+    "country": "UK",
+    "runtime": 105
+  },
+  {
+    "title": "Easy Rider",
+    "director": "Dennis Hopper",
+    "year": "1969",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "Hatari!",
+    "director": "Howard Hawks",
+    "year": "1962",
+    "country": "USA",
+    "runtime": 157
+  },
+  {
+    "title": "The Servant",
+    "director": "Joseph Losey",
+    "year": "1963",
+    "country": "UK",
+    "runtime": 115
+  },
+  {
+    "title": "Amour",
+    "director": "Michael Haneke",
+    "year": "2012",
+    "country": "Austria-France-Germany",
+    "runtime": 127
+  },
+  {
+    "title": "The Silence",
+    "director": "Ingmar Bergman",
+    "year": "1963",
+    "country": "Sweden",
+    "runtime": 96
+  },
+  {
+    "title": "Plácido",
+    "director": "Luis García Berlanga",
+    "year": "1961",
+    "country": "Spain",
+    "runtime": 85
+  },
+  {
+    "title": "The Asphalt Jungle",
+    "director": "John Huston",
+    "year": "1950",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "Rebecca",
+    "director": "Alfred Hitchcock",
+    "year": "1940",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "Barton Fink",
+    "director": "Joel Coen & Ethan Coen",
+    "year": "1991",
+    "country": "USA",
+    "runtime": 117
+  },
+  {
+    "title": "D'Est",
+    "director": "Chantal Akerman",
+    "year": "1993",
+    "country": "Belgium-France-Portugal",
+    "runtime": 107
+  },
+  {
+    "title": "Fellini'S Roma",
+    "director": "Federico Fellini",
+    "year": "1972",
+    "country": "Italy",
+    "runtime": 128
+  },
+  {
+    "title": "Grey Gardens",
+    "director": "David Maysles, Albert Maysles, Ellen Hovde & Muffie Meyer",
+    "year": "1975",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "Seven Chances",
+    "director": "Buster Keaton",
+    "year": "1925",
+    "country": "USA",
+    "runtime": 56
+  },
+  {
+    "title": "Bande À Part",
+    "director": "Jean-Luc Godard",
+    "year": "1964",
+    "country": "France",
+    "runtime": 95
+  },
+  {
+    "title": "Shadows",
+    "director": "John Cassavetes",
+    "year": "1959",
+    "country": "USA",
+    "runtime": 87
+  },
+  {
+    "title": "Edvard Munch",
+    "director": "Peter Watkins",
+    "year": "1974",
+    "country": "Sweden-Norway",
+    "runtime": 210
+  },
+  {
+    "title": "Colossal Youth",
+    "director": "Pedro Costa",
+    "year": "2006",
+    "country": "France-Portugal-Switzerland",
+    "runtime": 155
+  },
+  {
+    "title": "The Taking Of Power By Louis Xiv",
+    "director": "Roberto Rossellini",
+    "year": "1966",
+    "country": "France",
+    "runtime": 100
+  },
+  {
+    "title": "Symbiopsychotaxiplasm: Take One",
+    "director": "William Greaves",
+    "year": "1968",
+    "country": "USA",
+    "runtime": 75
+  },
+  {
+    "title": "The Piano Teacher",
+    "director": "Michael Haneke",
+    "year": "2001",
+    "country": "Austria-France-Germany",
+    "runtime": 130
+  },
+  {
+    "title": "Frankenstein",
+    "director": "James Whale",
+    "year": "1931",
+    "country": "USA",
+    "runtime": 70
+  },
+  {
+    "title": "West Indies: The Fugitive Slaves Of Liberty",
+    "director": "Med Hondo",
+    "year": "1979",
+    "country": "France-Algeria-Mauritania",
+    "runtime": 110
+  },
+  {
+    "title": "Tale Of Tales",
+    "director": "Yuriy Norshteyn",
+    "year": "1979",
+    "country": "USSR",
+    "runtime": 29
+  },
+  {
+    "title": "Providence",
+    "director": "Alain Resnais",
+    "year": "1977",
+    "country": "France-Switzerland",
+    "runtime": 110
+  },
+  {
+    "title": "Gentlemen Prefer Blondes",
+    "director": "Howard Hawks",
+    "year": "1953",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "The Devils",
+    "director": "Ken Russell",
+    "year": "1971",
+    "country": "UK",
+    "runtime": 109
+  },
+  {
+    "title": "Synecdoche, New York",
+    "director": "Charlie Kaufman",
+    "year": "2008",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "The Wicker Man",
+    "director": "Robin Hardy",
+    "year": "1973",
+    "country": "UK",
+    "runtime": 103
+  },
+  {
+    "title": "3 Women",
+    "director": "Robert Altman",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "The Long Day Closes",
+    "director": "Terence Davies",
+    "year": "1992",
+    "country": "UK",
+    "runtime": 83
+  },
+  {
+    "title": "Raising Arizona",
+    "director": "Joel Coen & Ethan Coen",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 94
+  },
+  {
+    "title": "Down By Law",
+    "director": "Jim Jarmusch",
+    "year": "1986",
+    "country": "USA",
+    "runtime": 107
+  },
+  {
+    "title": "Don'T Look Back",
+    "director": "D.A. Pennebaker",
+    "year": "1967",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "The Ladies Man",
+    "director": "Jerry Lewis",
+    "year": "1961",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "The Royal Tenenbaums",
+    "director": "Wes Anderson",
+    "year": "2001",
+    "country": "USA",
+    "runtime": 109
+  },
+  {
+    "title": "The Round-Up",
+    "director": "Miklós Jancsó",
+    "year": "1966",
+    "country": "Hungary",
+    "runtime": 90
+  },
+  {
+    "title": "My Friend Ivan Lapshin",
+    "director": "Aleksei German",
+    "year": "1985",
+    "country": "USSR",
+    "runtime": 100
+  },
+  {
+    "title": "I Vitelloni",
+    "director": "Federico Fellini",
+    "year": "1953",
+    "country": "Italy",
+    "runtime": 104
+  },
+  {
+    "title": "The Red Circle",
+    "director": "Jean-Pierre Melville",
+    "year": "1970",
+    "country": "France-Italy",
+    "runtime": 150
+  },
+  {
+    "title": "Les Amants Du Pont-Neuf",
+    "director": "Leos Carax",
+    "year": "1991",
+    "country": "France",
+    "runtime": 126
+  },
+  {
+    "title": "Mr. Smith Goes To Washington",
+    "director": "Frank Capra",
+    "year": "1939",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "Fat City",
+    "director": "John Huston",
+    "year": "1972",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "Titanic",
+    "director": "James Cameron",
+    "year": "1997",
+    "country": "USA",
+    "runtime": 194
+  },
+  {
+    "title": "Boudu Saved From Drowning",
+    "director": "Jean Renoir",
+    "year": "1932",
+    "country": "France",
+    "runtime": 87
+  },
+  {
+    "title": "Walkabout",
+    "director": "Nicolas Roeg",
+    "year": "1971",
+    "country": "UK-Australia",
+    "runtime": 100
+  },
+  {
+    "title": "Harakiri",
+    "director": "Masaki Kobayashi",
+    "year": "1962",
+    "country": "Japan",
+    "runtime": 133
+  },
+  {
+    "title": "Scorpio Rising",
+    "director": "Kenneth Anger",
+    "year": "1963",
+    "country": "USA",
+    "runtime": 28
+  },
+  {
+    "title": "Pink Flamingos",
+    "director": "John Waters",
+    "year": "1972",
+    "country": "USA",
+    "runtime": 92
+  },
+  {
+    "title": "Hour Of The Wolf",
+    "director": "Ingmar Bergman",
+    "year": "1968",
+    "country": "Sweden",
+    "runtime": 88
+  },
+  {
+    "title": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "year": "2008",
+    "country": "USA-UK",
+    "runtime": 152
+  },
+  {
+    "title": "Ace In The Hole",
+    "director": "Billy Wilder",
+    "year": "1951",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "Hana-Bi",
+    "director": "Takeshi Kitano",
+    "year": "1997",
+    "country": "Japan",
+    "runtime": 103
+  },
+  {
+    "title": "A Prophet",
+    "director": "Jacques Audiard",
+    "year": "2009",
+    "country": "France-Italy",
+    "runtime": 155
+  },
+  {
+    "title": "Nazarín",
+    "director": "Luis Buñuel",
+    "year": "1958",
+    "country": "Mexico",
+    "runtime": 94
+  },
+  {
+    "title": "Alphaville",
+    "director": "Jean-Luc Godard",
+    "year": "1965",
+    "country": "France",
+    "runtime": 95
+  },
+  {
+    "title": "Portrait Of Jason",
+    "director": "Shirley Clarke",
+    "year": "1967",
+    "country": "USA",
+    "runtime": 105
+  },
+  {
+    "title": "Casque D'Or",
+    "director": "Jacques Becker",
+    "year": "1952",
+    "country": "France",
+    "runtime": 96
+  },
+  {
+    "title": "Y Tu Mamá También",
+    "director": "Alfonso Cuarón",
+    "year": "2001",
+    "country": "Mexico",
+    "runtime": 105
+  },
+  {
+    "title": "Millennium Mambo",
+    "director": "Hou Hsiao-hsien",
+    "year": "2001",
+    "country": "Taiwan-France",
+    "runtime": 119
+  },
+  {
+    "title": "Pat Garrett And Billy The Kid",
+    "director": "Sam Peckinpah",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 122
+  },
+  {
+    "title": "Malcolm X",
+    "director": "Spike Lee",
+    "year": "1992",
+    "country": "USA-Japan",
+    "runtime": 201
+  },
+  {
+    "title": "The Golden Coach",
+    "director": "Jean Renoir",
+    "year": "1952",
+    "country": "Italy-France",
+    "runtime": 100
+  },
+  {
+    "title": "Robocop",
+    "director": "Paul Verhoeven",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "Ferris Bueller'S Day Off",
+    "director": "John Hughes",
+    "year": "1986",
+    "country": "USA",
+    "runtime": 103
+  },
+  {
+    "title": "Silent Light",
+    "director": "Carlos Reygadas",
+    "year": "2007",
+    "country": "Mexico-France-Netherlands",
+    "runtime": 136
+  },
+  {
+    "title": "Ratcatcher",
+    "director": "Lynne Ramsay",
+    "year": "1999",
+    "country": "UK-France",
+    "runtime": 94
+  },
+  {
+    "title": "Scarface",
+    "director": "Howard Hawks",
+    "year": "1932",
+    "country": "USA",
+    "runtime": 93
+  },
+  {
+    "title": "Hoop Dreams",
+    "director": "Steve James",
+    "year": "1994",
+    "country": "USA",
+    "runtime": 170
+  },
+  {
+    "title": "The Watermelon Woman",
+    "director": "Cheryl Dunye",
+    "year": "1996",
+    "country": "USA",
+    "runtime": 84
+  },
+  {
+    "title": "The Virgin Spring",
+    "director": "Ingmar Bergman",
+    "year": "1960",
+    "country": "Sweden",
+    "runtime": 88
+  },
+  {
+    "title": "Strike",
+    "director": "Sergei Eisenstein",
+    "year": "1925",
+    "country": "USSR",
+    "runtime": 82
+  },
+  {
+    "title": "Top Hat",
+    "director": "Mark Sandrich",
+    "year": "1935",
+    "country": "USA",
+    "runtime": 99
+  },
+  {
+    "title": "Young Frankenstein",
+    "director": "Mel Brooks",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 105
+  },
+  {
+    "title": "Arrebato",
+    "director": "Iván Zulueta",
+    "year": "1979",
+    "country": "Spain",
+    "runtime": 105
+  },
+  {
+    "title": "My Own Private Idaho",
+    "director": "Gus Van Sant",
+    "year": "1991",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "They Live By Night",
+    "director": "Nicholas Ray",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "Bring Me The Head Of Alfredo Garcia",
+    "director": "Sam Peckinpah",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "Dr. Mabuse, The Gambler",
+    "director": "Fritz Lang",
+    "year": "1922",
+    "country": "Germany",
+    "runtime": 270
+  },
+  {
+    "title": "The Lady Vanishes",
+    "director": "Alfred Hitchcock",
+    "year": "1938",
+    "country": "UK",
+    "runtime": 97
+  },
+  {
+    "title": "The Marriage Of Maria Braun",
+    "director": "Rainer Werner Fassbinder",
+    "year": "1979",
+    "country": "West Germany",
+    "runtime": 120
+  },
+  {
+    "title": "Akira",
+    "director": "Katsuhiro Otomo",
+    "year": "1988",
+    "country": "Japan",
+    "runtime": 124
+  },
+  {
+    "title": "The Manchurian Candidate",
+    "director": "John Frankenheimer",
+    "year": "1962",
+    "country": "USA",
+    "runtime": 126
+  },
+  {
+    "title": "The Navigator",
+    "director": "Buster Keaton & Donald Crisp",
+    "year": "1924",
+    "country": "USA",
+    "runtime": 59
+  },
+  {
+    "title": "Wake In Fright",
+    "director": "Ted Kotcheff",
+    "year": "1971",
+    "country": "Australia-USA-UK",
+    "runtime": 109
+  },
+  {
+    "title": "Rushmore",
+    "director": "Wes Anderson",
+    "year": "1998",
+    "country": "USA",
+    "runtime": 93
+  },
+  {
+    "title": "Xala",
+    "director": "Ousmane Sembene",
+    "year": "1975",
+    "country": "Senegal",
+    "runtime": 123
+  },
+  {
+    "title": "An American Werewolf In London",
+    "director": "John Landis",
+    "year": "1981",
+    "country": "UK-USA",
+    "runtime": 97
+  },
+  {
+    "title": "Il Posto",
+    "director": "Ermanno Olmi",
+    "year": "1961",
+    "country": "Italy",
+    "runtime": 93
+  },
+  {
+    "title": "A Place In The Sun",
+    "director": "George Stevens",
+    "year": "1951",
+    "country": "USA",
+    "runtime": 122
+  },
+  {
+    "title": "Dancer In The Dark",
+    "director": "Lars von Trier",
+    "year": "2000",
+    "country": "Denmark-France-Sweden-Italy-Germany-Norway-Netherlands-Iceland-Finland-UK-USA",
+    "runtime": 140
+  },
+  {
+    "title": "Hyènes",
+    "director": "Djibril Diop Mambéty",
+    "year": "1992",
+    "country": "Senegal-France-Switzerland-UK-Netherlands-Italy",
+    "runtime": 110
+  },
+  {
+    "title": "The Purple Rose Of Cairo",
+    "director": "Woody Allen",
+    "year": "1985",
+    "country": "USA",
+    "runtime": 82
+  },
+  {
+    "title": "Chronicle Of A Summer",
+    "director": "Jean Rouch & Edgar Morin",
+    "year": "1961",
+    "country": "France",
+    "runtime": 85
+  },
+  {
+    "title": "Trainspotting",
+    "director": "Danny Boyle",
+    "year": "1996",
+    "country": "UK",
+    "runtime": 95
+  },
+  {
+    "title": "Bambi",
+    "director": "David Hand",
+    "year": "1942",
+    "country": "USA",
+    "runtime": 69
+  },
+  {
+    "title": "The Killing",
+    "director": "Stanley Kubrick",
+    "year": "1956",
+    "country": "USA",
+    "runtime": 85
+  },
+  {
+    "title": "The Ghost And Mrs. Muir",
+    "director": "Joseph L. Mankiewicz",
+    "year": "1947",
+    "country": "USA",
+    "runtime": 104
+  },
+  {
+    "title": "The Great Beauty",
+    "director": "Paolo Sorrentino",
+    "year": "2013",
+    "country": "Italy-France",
+    "runtime": 141
+  },
+  {
+    "title": "Farewell, My Concubine",
+    "director": "Chen Kaige",
+    "year": "1993",
+    "country": "China-Hong Kong",
+    "runtime": 155
+  },
+  {
+    "title": "The Intruder",
+    "director": "Claire Denis",
+    "year": "2004",
+    "country": "France-South Korea",
+    "runtime": 130
+  },
+  {
+    "title": "A Hard Day'S Night",
+    "director": "Richard Lester",
+    "year": "1964",
+    "country": "UK",
+    "runtime": 87
+  },
+  {
+    "title": "Toy Story",
+    "director": "John Lasseter",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 81
+  },
+  {
+    "title": "Wild At Heart",
+    "director": "David Lynch",
+    "year": "1990",
+    "country": "USA",
+    "runtime": 127
+  },
+  {
+    "title": "Carol",
+    "director": "Todd Haynes",
+    "year": "2015",
+    "country": "UK-USA",
+    "runtime": 118
+  },
+  {
+    "title": "The Sorrow And The Pity",
+    "director": "Marcel Ophüls",
+    "year": "1969",
+    "country": "Switzerland-Germany",
+    "runtime": 261
+  },
+  {
+    "title": "Thelma & Louise",
+    "director": "Ridley Scott",
+    "year": "1991",
+    "country": "USA",
+    "runtime": 128
+  },
+  {
+    "title": "Gimme Shelter",
+    "director": "Albert Maysles, David Maysles & Charlotte Zwerin",
+    "year": "1970",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "Chronicle Of Anna Magdalena Bach",
+    "director": "Jean-Marie Straub",
+    "year": "1968",
+    "country": "West Germany-Italy",
+    "runtime": 94
+  },
+  {
+    "title": "Roma",
+    "director": "Alfonso Cuarón",
+    "year": "2018",
+    "country": "Mexico-USA",
+    "runtime": 135
+  },
+  {
+    "title": "Cure",
+    "director": "Kiyoshi Kurosawa",
+    "year": "1997",
+    "country": "Japan",
+    "runtime": 111
+  },
+  {
+    "title": "Salesman",
+    "director": "Albert Maysles, David Maysles & Charlotte Zwerin",
+    "year": "1969",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "Wr: Mysteries Of The Organism",
+    "director": "Dušan Makavejev",
+    "year": "1971",
+    "country": "Yugoslavia-West Germany",
+    "runtime": 84
+  },
+  {
+    "title": "4 Months, 3 Weeks And 2 Days",
+    "director": "Cristian Mungiu",
+    "year": "2007",
+    "country": "Romania-Netherlands-France-Germany",
+    "runtime": 113
+  },
+  {
+    "title": "Before Sunset",
+    "director": "Richard Linklater",
+    "year": "2004",
+    "country": "USA-Austria",
+    "runtime": 80
+  },
+  {
+    "title": "Distant",
+    "director": "Nuri Bilge Ceylan",
+    "year": "2002",
+    "country": "Turkey-Netherlands",
+    "runtime": 110
+  },
+  {
+    "title": "Local Hero",
+    "director": "Bill Forsyth",
+    "year": "1983",
+    "country": "UK",
+    "runtime": 111
+  },
+  {
+    "title": "The Holy Mountain",
+    "director": "Alejandro Jodorowsky",
+    "year": "1973",
+    "country": "Mexico-USA",
+    "runtime": 114
+  },
+  {
+    "title": "The Social Network",
+    "director": "David Fincher",
+    "year": "2010",
+    "country": "USA",
+    "runtime": 120
+  },
+  {
+    "title": "Ben-Hur",
+    "director": "William Wyler",
+    "year": "1959",
+    "country": "USA",
+    "runtime": 212
+  },
+  {
+    "title": "Lancelot Du Lac",
+    "director": "Robert Bresson",
+    "year": "1974",
+    "country": "France-Italy",
+    "runtime": 85
+  },
+  {
+    "title": "Memento",
+    "director": "Christopher Nolan",
+    "year": "2000",
+    "country": "USA",
+    "runtime": 113
+  },
+  {
+    "title": "7 Women",
+    "director": "John Ford",
+    "year": "1965",
+    "country": "USA",
+    "runtime": 87
+  },
+  {
+    "title": "Once Upon A Time... In Hollywood",
+    "director": "Quentin Tarantino",
+    "year": "2019",
+    "country": "USA-UK-China",
+    "runtime": 161
+  },
+  {
+    "title": "The Party",
+    "director": "Blake Edwards",
+    "year": "1968",
+    "country": "USA",
+    "runtime": 99
+  },
+  {
+    "title": "Il Grido",
+    "director": "Michelangelo Antonioni",
+    "year": "1957",
+    "country": "Italy",
+    "runtime": 111
+  },
+  {
+    "title": "The Phantom Of Liberty",
+    "director": "Luis Buñuel",
+    "year": "1974",
+    "country": "France-Italy",
+    "runtime": 104
+  },
+  {
+    "title": "The Firemen'S Ball",
+    "director": "Milos Forman",
+    "year": "1967",
+    "country": "Czechoslovakia-Italy",
+    "runtime": 73
+  },
+  {
+    "title": "Fish Tank",
+    "director": "Andrea Arnold",
+    "year": "2009",
+    "country": "UK",
+    "runtime": 123
+  },
+  {
+    "title": "Paper Moon",
+    "director": "Peter Bogdanovich",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "Sauve Qui Peut (La Vie)",
+    "director": "Jean-Luc Godard",
+    "year": "1980",
+    "country": "France-Switzerland",
+    "runtime": 87
+  },
+  {
+    "title": "Kaagaz Ke Phool",
+    "director": "Guru Dutt",
+    "year": "1959",
+    "country": "India",
+    "runtime": 148
+  },
+  {
+    "title": "The Sun Shines Bright",
+    "director": "John Ford",
+    "year": "1953",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "The Adventures Of Prince Achmed",
+    "director": "Lotte Reiniger",
+    "year": "1926",
+    "country": "Germany",
+    "runtime": 65
+  },
+  {
+    "title": "Big Deal On Madonna Street",
+    "director": "Mario Monicelli",
+    "year": "1958",
+    "country": "Italy",
+    "runtime": 91
+  },
+  {
+    "title": "Good Morning",
+    "director": "Yasujiro Ozu",
+    "year": "1959",
+    "country": "Japan",
+    "runtime": 94
+  },
+  {
+    "title": "Dazed And Confused",
+    "director": "Richard Linklater",
+    "year": "1993",
+    "country": "USA",
+    "runtime": 103
+  },
+  {
+    "title": "Nouvelle Vague",
+    "director": "Jean-Luc Godard",
+    "year": "1990",
+    "country": "France-Switzerland",
+    "runtime": 90
+  },
+  {
+    "title": "Red Beard",
+    "director": "Akira Kurosawa",
+    "year": "1965",
+    "country": "Japan",
+    "runtime": 185
+  },
+  {
+    "title": "Love Me Tonight",
+    "director": "Rouben Mamoulian",
+    "year": "1932",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "Hunger",
+    "director": "Steve McQueen",
+    "year": "2008",
+    "country": "UK-Ireland",
+    "runtime": 96
+  },
+  {
+    "title": "The Idiots",
+    "director": "Lars von Trier",
+    "year": "1998",
+    "country": "Denmark-Spain-Sweden-France-Netherlands-Italy",
+    "runtime": 117
+  },
+  {
+    "title": "Moonfleet",
+    "director": "Fritz Lang",
+    "year": "1955",
+    "country": "USA",
+    "runtime": 89
+  },
+  {
+    "title": "A New Leaf",
+    "director": "Elaine May",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "The Hawks And The Sparrows",
+    "director": "Pier Paolo Pasolini",
+    "year": "1966",
+    "country": "Italy",
+    "runtime": 91
+  },
+  {
+    "title": "The Emperor'S Naked Army Marches On",
+    "director": "Kazuo Hara",
+    "year": "1987",
+    "country": "Japan",
+    "runtime": 122
+  },
+  {
+    "title": "The Big Heat",
+    "director": "Fritz Lang",
+    "year": "1953",
+    "country": "USA",
+    "runtime": 90
+  },
+  {
+    "title": "Moulin Rouge!",
+    "director": "Baz Luhrmann",
+    "year": "2001",
+    "country": "Australia-USA",
+    "runtime": 127
+  },
+  {
+    "title": "Stand By Me",
+    "director": "Rob Reiner",
+    "year": "1986",
+    "country": "USA",
+    "runtime": 89
+  },
+  {
+    "title": "Antonio Das Mortes",
+    "director": "Glauber Rocha",
+    "year": "1969",
+    "country": "Brazil",
+    "runtime": 95
+  },
+  {
+    "title": "A Streetcar Named Desire",
+    "director": "Elia Kazan",
+    "year": "1951",
+    "country": "USA",
+    "runtime": 122
+  },
+  {
+    "title": "Les Dames Du Bois De Boulogne",
+    "director": "Robert Bresson",
+    "year": "1945",
+    "country": "France",
+    "runtime": 85
+  },
+  {
+    "title": "The Fly",
+    "director": "David Cronenberg",
+    "year": "1986",
+    "country": "USA",
+    "runtime": 96
+  },
+  {
+    "title": "Miller'S Crossing",
+    "director": "Joel Coen & Ethan Coen",
+    "year": "1990",
+    "country": "USA",
+    "runtime": 115
+  },
+  {
+    "title": "Titicut Follies",
+    "director": "Frederick Wiseman",
+    "year": "1967",
+    "country": "USA",
+    "runtime": 84
+  },
+  {
+    "title": "A Short Film About Killing",
+    "director": "Krzysztof Kieslowski",
+    "year": "1987",
+    "country": "Poland",
+    "runtime": 85
+  },
+  {
+    "title": "Rebel Without A Cause",
+    "director": "Nicholas Ray",
+    "year": "1955",
+    "country": "USA",
+    "runtime": 111
+  },
+  {
+    "title": "Oh, Sun",
+    "director": "Med Hondo",
+    "year": "1970",
+    "country": "France-Mauritania",
+    "runtime": 98
+  },
+  {
+    "title": "The Bad And The Beautiful",
+    "director": "Vincente Minnelli",
+    "year": "1952",
+    "country": "USA",
+    "runtime": 118
+  },
+  {
+    "title": "The Tiger Of Eschnapur",
+    "director": "Fritz Lang",
+    "year": "1958",
+    "country": "West Germany-France-Italy",
+    "runtime": 101
+  },
+  {
+    "title": "35 Shots Of Rum",
+    "director": "Claire Denis",
+    "year": "2008",
+    "country": "France-Germany",
+    "runtime": 101
+  },
+  {
+    "title": "The Circus",
+    "director": "Charles Chaplin",
+    "year": "1928",
+    "country": "USA",
+    "runtime": 72
+  },
+  {
+    "title": "One Way Or Another",
+    "director": "Sara Gómez",
+    "year": "1977",
+    "country": "Cuba",
+    "runtime": 78
+  },
+  {
+    "title": "Design For Living",
+    "director": "Ernst Lubitsch",
+    "year": "1933",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "Lolita",
+    "director": "Stanley Kubrick",
+    "year": "1962",
+    "country": "UK",
+    "runtime": 152
+  },
+  {
+    "title": "Phantom Of The Paradise",
+    "director": "Brian De Palma",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "Triumph Of The Will",
+    "director": "Leni Riefenstahl",
+    "year": "1935",
+    "country": "Germany",
+    "runtime": 110
+  },
+  {
+    "title": "Jfk",
+    "director": "Oliver Stone",
+    "year": "1991",
+    "country": "USA-France",
+    "runtime": 189
+  },
+  {
+    "title": "Born In Flames",
+    "director": "Lizzie Borden",
+    "year": "1983",
+    "country": "USA",
+    "runtime": 79
+  },
+  {
+    "title": "New York, New York",
+    "director": "Martin Scorsese",
+    "year": "1977",
+    "country": "USA",
+    "runtime": 155
+  },
+  {
+    "title": "The New World",
+    "director": "Terrence Malick",
+    "year": "2005",
+    "country": "USA",
+    "runtime": 135
+  },
+  {
+    "title": "Diaries, Notes And Sketches",
+    "director": "Jonas Mekas",
+    "year": "1969",
+    "country": "USA",
+    "runtime": 177
+  },
+  {
+    "title": "Subarnarekha",
+    "director": "Ritwik Ghatak",
+    "year": "1965",
+    "country": "India",
+    "runtime": 126
+  },
+  {
+    "title": "The Cook, The Thief, His Wife & Her Lover",
+    "director": "Peter Greenaway",
+    "year": "1989",
+    "country": "UK-Netherlands-France",
+    "runtime": 124
+  },
+  {
+    "title": "The Wild Child",
+    "director": "François Truffaut",
+    "year": "1970",
+    "country": "France",
+    "runtime": 85
+  },
+  {
+    "title": "Clueless",
+    "director": "Amy Heckerling",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "Fort Apache",
+    "director": "John Ford",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 127
+  },
+  {
+    "title": "Diabolique",
+    "director": "Henri-Georges Clouzot",
+    "year": "1955",
+    "country": "France",
+    "runtime": 117
+  },
+  {
+    "title": "Ossessione",
+    "director": "Luchino Visconti",
+    "year": "1943",
+    "country": "Italy",
+    "runtime": 140
+  },
+  {
+    "title": "Mädchen In Uniform",
+    "director": "Leontine Sagan",
+    "year": "1931",
+    "country": "Germany",
+    "runtime": 87
+  },
+  {
+    "title": "Detour",
+    "director": "Edgar G. Ulmer",
+    "year": "1945",
+    "country": "USA",
+    "runtime": 69
+  },
+  {
+    "title": "La Belle Noiseuse",
+    "director": "Jacques Rivette",
+    "year": "1991",
+    "country": "France",
+    "runtime": 240
+  },
+  {
+    "title": "Two English Girls",
+    "director": "François Truffaut",
+    "year": "1971",
+    "country": "France",
+    "runtime": 108
+  },
+  {
+    "title": "Flaming Creatures",
+    "director": "Jack Smith",
+    "year": "1963",
+    "country": "USA",
+    "runtime": 45
+  },
+  {
+    "title": "The Man Who Would Be King",
+    "director": "John Huston",
+    "year": "1975",
+    "country": "UK-USA",
+    "runtime": 129
+  },
+  {
+    "title": "Vive L'Amour",
+    "director": "Tsai Ming-liang",
+    "year": "1994",
+    "country": "Taiwan",
+    "runtime": 118
+  },
+  {
+    "title": "Hellzapoppin'",
+    "director": "H.C. Potter",
+    "year": "1941",
+    "country": "USA",
+    "runtime": 84
+  },
+  {
+    "title": "The Age Of The Earth",
+    "director": "Glauber Rocha",
+    "year": "1980",
+    "country": "Brazil",
+    "runtime": 158
+  },
+  {
+    "title": "Edward Scissorhands",
+    "director": "Tim Burton",
+    "year": "1990",
+    "country": "USA",
+    "runtime": 105
+  },
+  {
+    "title": "Great Expectations",
+    "director": "David Lean",
+    "year": "1946",
+    "country": "UK",
+    "runtime": 118
+  },
+  {
+    "title": "Blissfully Yours",
+    "director": "Apichatpong Weerasethakul",
+    "year": "2002",
+    "country": "Thailand-France",
+    "runtime": 125
+  },
+  {
+    "title": "Veronika Voss",
+    "director": "Rainer Werner Fassbinder",
+    "year": "1982",
+    "country": "West Germany",
+    "runtime": 105
+  },
+  {
+    "title": "Mother And Son",
+    "director": "Aleksandr Sokurov",
+    "year": "1997",
+    "country": "Russia-Germany",
+    "runtime": 73
+  },
+  {
+    "title": "Code Unknown",
+    "director": "Michael Haneke",
+    "year": "2000",
+    "country": "France-Germany-Romania",
+    "runtime": 118
+  },
+  {
+    "title": "My Life As A Dog",
+    "director": "Lasse Hallström",
+    "year": "1985",
+    "country": "Sweden",
+    "runtime": 101
+  },
+  {
+    "title": "The Trial",
+    "director": "Orson Welles",
+    "year": "1962",
+    "country": "France-Italy-West Germany",
+    "runtime": 119
+  },
+  {
+    "title": "Airplane!",
+    "director": "Jim Abrahams, David Zucker & Jerry Zucker",
+    "year": "1980",
+    "country": "USA",
+    "runtime": 86
+  },
+  {
+    "title": "Foolish Wives",
+    "director": "Erich von Stroheim",
+    "year": "1922",
+    "country": "USA",
+    "runtime": 117
+  },
+  {
+    "title": "El Sur",
+    "director": "Víctor Erice",
+    "year": "1983",
+    "country": "Spain-France",
+    "runtime": 95
+  },
+  {
+    "title": "Mamma Roma",
+    "director": "Pier Paolo Pasolini",
+    "year": "1962",
+    "country": "Italy",
+    "runtime": 110
+  },
+  {
+    "title": "Morocco",
+    "director": "Josef von Sternberg",
+    "year": "1930",
+    "country": "USA",
+    "runtime": 92
+  },
+  {
+    "title": "The 39 Steps",
+    "director": "Alfred Hitchcock",
+    "year": "1935",
+    "country": "UK",
+    "runtime": 87
+  },
+  {
+    "title": "Mikey And Nicky",
+    "director": "Elaine May",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 106
+  },
+  {
+    "title": "Scarface",
+    "director": "Brian De Palma",
+    "year": "1983",
+    "country": "USA",
+    "runtime": 170
+  },
+  {
+    "title": "Chikamatsu Monogatari",
+    "director": "Kenji Mizoguchi",
+    "year": "1954",
+    "country": "Japan",
+    "runtime": 100
+  },
+  {
+    "title": "Wings",
+    "director": "Larisa Shepitko",
+    "year": "1966",
+    "country": "USSR",
+    "runtime": 85
+  },
+  {
+    "title": "Trouble Every Day",
+    "director": "Claire Denis",
+    "year": "2001",
+    "country": "France-Germany-Japan-Luxembourg",
+    "runtime": 101
+  },
+  {
+    "title": "Requiem For A Dream",
+    "director": "Darren Aronofsky",
+    "year": "2000",
+    "country": "USA",
+    "runtime": 100
+  },
+  {
+    "title": "Dog Star Man",
+    "director": "Stan Brakhage",
+    "year": "1964",
+    "country": "USA",
+    "runtime": 75
+  },
+  {
+    "title": "Un Chant D'Amour",
+    "director": "Jean Genet",
+    "year": "1950",
+    "country": "France",
+    "runtime": 26
+  },
+  {
+    "title": "Evil Dead Ii",
+    "director": "Sam Raimi",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 84
+  },
+  {
+    "title": "The Thief Of Bagdad",
+    "director": "Michael Powell, Ludwig Berger & Tim Whelan",
+    "year": "1940",
+    "country": "UK",
+    "runtime": 106
+  },
+  {
+    "title": "Cairo Station",
+    "director": "Youssef Chahine",
+    "year": "1958",
+    "country": "Egypt",
+    "runtime": 77
+  },
+  {
+    "title": "Let The Right One In",
+    "director": "Tomas Alfredson",
+    "year": "2008",
+    "country": "Sweden-Norway",
+    "runtime": 114
+  },
+  {
+    "title": "Zelig",
+    "director": "Woody Allen",
+    "year": "1983",
+    "country": "USA",
+    "runtime": 79
+  },
+  {
+    "title": "Broadcast News",
+    "director": "James L. Brooks",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 133
+  },
+  {
+    "title": "Margaret",
+    "director": "Kenneth Lonergan",
+    "year": "2011",
+    "country": "USA",
+    "runtime": 150
+  },
+  {
+    "title": "All Quiet On The Western Front",
+    "director": "Lewis Milestone",
+    "year": "1930",
+    "country": "USA",
+    "runtime": 133
+  },
+  {
+    "title": "Faster, Pussycat! Kill! Kill!",
+    "director": "Russ Meyer",
+    "year": "1965",
+    "country": "USA",
+    "runtime": 83
+  },
+  {
+    "title": "The Great Escape",
+    "director": "John Sturges",
+    "year": "1963",
+    "country": "USA",
+    "runtime": 172
+  },
+  {
+    "title": "Saving Private Ryan",
+    "director": "Steven Spielberg",
+    "year": "1998",
+    "country": "USA",
+    "runtime": 169
+  },
+  {
+    "title": "Funny Games",
+    "director": "Michael Haneke",
+    "year": "1997",
+    "country": "Austria",
+    "runtime": 108
+  },
+  {
+    "title": "Taipei Story",
+    "director": "Edward Yang",
+    "year": "1985",
+    "country": "Taiwan",
+    "runtime": 119
+  },
+  {
+    "title": "A Woman Of Paris",
+    "director": "Charles Chaplin",
+    "year": "1923",
+    "country": "USA",
+    "runtime": 78
+  },
+  {
+    "title": "Dumbo",
+    "director": "Ben Sharpsteen",
+    "year": "1941",
+    "country": "USA",
+    "runtime": 64
+  },
+  {
+    "title": "Inglourious Basterds",
+    "director": "Quentin Tarantino",
+    "year": "2009",
+    "country": "USA-Germany",
+    "runtime": 153
+  },
+  {
+    "title": "The Producers",
+    "director": "Mel Brooks",
+    "year": "1968",
+    "country": "USA",
+    "runtime": 88
+  },
+  {
+    "title": "She Wore A Yellow Ribbon",
+    "director": "John Ford",
+    "year": "1949",
+    "country": "USA",
+    "runtime": 103
+  },
+  {
+    "title": "Smiles Of A Summer Night",
+    "director": "Ingmar Bergman",
+    "year": "1955",
+    "country": "Sweden",
+    "runtime": 108
+  },
+  {
+    "title": "Forbidden Games",
+    "director": "René Clément",
+    "year": "1952",
+    "country": "France",
+    "runtime": 87
+  },
+  {
+    "title": "Still Life",
+    "director": "Jia Zhangke",
+    "year": "2006",
+    "country": "China-Hong Kong",
+    "runtime": 113
+  },
+  {
+    "title": "Van Gogh",
+    "director": "Maurice Pialat",
+    "year": "1991",
+    "country": "France",
+    "runtime": 158
+  },
+  {
+    "title": "Shock Corridor",
+    "director": "Samuel Fuller",
+    "year": "1963",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "Grizzly Man",
+    "director": "Werner Herzog",
+    "year": "2005",
+    "country": "USA",
+    "runtime": 103
+  },
+  {
+    "title": "Women On The Verge Of A Nervous Breakdown",
+    "director": "Pedro Almodóvar",
+    "year": "1988",
+    "country": "Spain",
+    "runtime": 88
+  },
+  {
+    "title": "After Hours",
+    "director": "Martin Scorsese",
+    "year": "1985",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "Abraham'S Valley",
+    "director": "Manoel de Oliveira",
+    "year": "1993",
+    "country": "Portugal-France-Switzerland",
+    "runtime": 187
+  },
+  {
+    "title": "Passion",
+    "director": "Jean-Luc Godard",
+    "year": "1982",
+    "country": "France-Switzerland",
+    "runtime": 87
+  },
+  {
+    "title": "My Little Loves",
+    "director": "Jean Eustache",
+    "year": "1974",
+    "country": "France",
+    "runtime": 123
+  },
+  {
+    "title": "Gummo",
+    "director": "Harmony Korine",
+    "year": "1997",
+    "country": "USA",
+    "runtime": 88
+  },
+  {
+    "title": "Shanghai Express",
+    "director": "Josef von Sternberg",
+    "year": "1932",
+    "country": "USA",
+    "runtime": 82
+  },
+  {
+    "title": "Invasion Of The Body Snatchers",
+    "director": "Don Siegel",
+    "year": "1956",
+    "country": "USA",
+    "runtime": 80
+  },
+  {
+    "title": "Rose Hobart",
+    "director": "Joseph Cornell",
+    "year": "1936",
+    "country": "USA",
+    "runtime": 20
+  },
+  {
+    "title": "Blue Is The Warmest Colour",
+    "director": "Abdellatif Kechiche",
+    "year": "2013",
+    "country": "France-Belgium-Spain",
+    "runtime": 179
+  },
+  {
+    "title": "Funeral Parade Of Roses",
+    "director": "Toshio Matsumoto",
+    "year": "1969",
+    "country": "Japan",
+    "runtime": 105
+  },
+  {
+    "title": "Petite Maman",
+    "director": "Céline Sciamma",
+    "year": "2021",
+    "country": "France",
+    "runtime": 73
+  },
+  {
+    "title": "Amores Perros",
+    "director": "Alejandro González Iñárritu",
+    "year": "2000",
+    "country": "Mexico",
+    "runtime": 153
+  },
+  {
+    "title": "Point Break",
+    "director": "Kathryn Bigelow",
+    "year": "1991",
+    "country": "USA-Japan",
+    "runtime": 122
+  },
+  {
+    "title": "The Son",
+    "director": "Jean-Pierre Dardenne & Luc Dardenne",
+    "year": "2002",
+    "country": "Belgium-France",
+    "runtime": 103
+  },
+  {
+    "title": "O Lucky Man!",
+    "director": "Lindsay Anderson",
+    "year": "1973",
+    "country": "UK-USA",
+    "runtime": 178
+  },
+  {
+    "title": "Deep End",
+    "director": "Jerzy Skolimowski",
+    "year": "1970",
+    "country": "UK-West Germany",
+    "runtime": 88
+  },
+  {
+    "title": "Street Of Shame",
+    "director": "Kenji Mizoguchi",
+    "year": "1956",
+    "country": "Japan",
+    "runtime": 87
+  },
+  {
+    "title": "White Heat",
+    "director": "Raoul Walsh",
+    "year": "1949",
+    "country": "USA",
+    "runtime": 114
+  },
+  {
+    "title": "La Commune (Paris, 1871)",
+    "director": "Peter Watkins",
+    "year": "2000",
+    "country": "France",
+    "runtime": 345
+  },
+  {
+    "title": "Toute Une Nuit",
+    "director": "Chantal Akerman",
+    "year": "1982",
+    "country": "Belgium-France-Netherlands-Canada",
+    "runtime": 90
+  },
+  {
+    "title": "Losing Ground",
+    "director": "Kathleen Collins",
+    "year": "1982",
+    "country": "USA",
+    "runtime": 86
+  },
+  {
+    "title": "Irréversible",
+    "director": "Gaspar Noé",
+    "year": "2002",
+    "country": "France",
+    "runtime": 97
+  },
+  {
+    "title": "The Red And The White",
+    "director": "Miklós Jancsó",
+    "year": "1967",
+    "country": "Hungary-USSR",
+    "runtime": 90
+  },
+  {
+    "title": "The Naked Island",
+    "director": "Kaneto Shindo",
+    "year": "1960",
+    "country": "Japan",
+    "runtime": 96
+  },
+  {
+    "title": "Who'S Afraid Of Virginia Woolf?",
+    "director": "Mike Nichols",
+    "year": "1966",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "Spione",
+    "director": "Fritz Lang",
+    "year": "1928",
+    "country": "Germany",
+    "runtime": 90
+  },
+  {
+    "title": "Dodes'Ka-Den",
+    "director": "Akira Kurosawa",
+    "year": "1970",
+    "country": "Japan",
+    "runtime": 140
+  },
+  {
+    "title": "The Asthenic Syndrome",
+    "director": "Kira Muratova",
+    "year": "1989",
+    "country": "USSR",
+    "runtime": 153
+  },
+  {
+    "title": "Starship Troopers",
+    "director": "Paul Verhoeven",
+    "year": "1997",
+    "country": "USA",
+    "runtime": 129
+  },
+  {
+    "title": "Persepolis",
+    "director": "Vincent Paronnaud & Marjane Satrapi",
+    "year": "2007",
+    "country": "France-USA",
+    "runtime": 96
+  },
+  {
+    "title": "L'Amour Fou",
+    "director": "Jacques Rivette",
+    "year": "1969",
+    "country": "France",
+    "runtime": 252
+  },
+  {
+    "title": "Angel",
+    "director": "Ernst Lubitsch",
+    "year": "1937",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "The Adventures Of Robin Hood",
+    "director": "Michael Curtiz & William Keighley",
+    "year": "1938",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "Mon Oncle D'Amérique",
+    "director": "Alain Resnais",
+    "year": "1980",
+    "country": "France",
+    "runtime": 123
+  },
+  {
+    "title": "The Right Stuff",
+    "director": "Philip Kaufman",
+    "year": "1983",
+    "country": "USA",
+    "runtime": 193
+  },
+  {
+    "title": "They Were Expendable",
+    "director": "John Ford",
+    "year": "1945",
+    "country": "USA",
+    "runtime": 135
+  },
+  {
+    "title": "Female Trouble",
+    "director": "John Waters",
+    "year": "1974",
+    "country": "USA",
+    "runtime": 98
+  },
+  {
+    "title": "Claire'S Knee",
+    "director": "Eric Rohmer",
+    "year": "1970",
+    "country": "France",
+    "runtime": 105
+  },
+  {
+    "title": "Time Of The Gypsies",
+    "director": "Emir Kusturica",
+    "year": "1988",
+    "country": "Yugoslavia-Italy-UK",
+    "runtime": 142
+  },
+  {
+    "title": "Hitler: A Film From Germany",
+    "director": "Hans-Jürgen Syberberg",
+    "year": "1977",
+    "country": "West Germany-France-UK",
+    "runtime": 442
+  },
+  {
+    "title": "The Unknown",
+    "director": "Tod Browning",
+    "year": "1927",
+    "country": "USA",
+    "runtime": 63
+  },
+  {
+    "title": "The Tin Drum",
+    "director": "Volker Schlöndorff",
+    "year": "1979",
+    "country": "West Germany-France-Poland-Yugoslavia",
+    "runtime": 142
+  },
+  {
+    "title": "Too Early, Too Late",
+    "director": "Jean-Marie Straub & Danièle Huillet",
+    "year": "1981",
+    "country": "France-Egypt",
+    "runtime": 100
+  },
+  {
+    "title": "Welfare",
+    "director": "Frederick Wiseman",
+    "year": "1975",
+    "country": "USA",
+    "runtime": 167
+  },
+  {
+    "title": "Breakfast At Tiffany'S",
+    "director": "Blake Edwards",
+    "year": "1961",
+    "country": "USA",
+    "runtime": 115
+  },
+  {
+    "title": "The Last Detail",
+    "director": "Hal Ashby",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 105
+  },
+  {
+    "title": "Showgirls",
+    "director": "Paul Verhoeven",
+    "year": "1995",
+    "country": "USA-France",
+    "runtime": 128
+  },
+  {
+    "title": "Shame",
+    "director": "Ingmar Bergman",
+    "year": "1968",
+    "country": "Sweden",
+    "runtime": 103
+  },
+  {
+    "title": "Mysteries Of Lisbon",
+    "director": "Raúl Ruiz",
+    "year": "2010",
+    "country": "Portugal-France",
+    "runtime": 272
+  },
+  {
+    "title": "The Princess Bride",
+    "director": "Rob Reiner",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 98
+  },
+  {
+    "title": "Sicilia!",
+    "director": "Jean-Marie Straub & Danièle Huillet",
+    "year": "1999",
+    "country": "Italy-France-Germany",
+    "runtime": 66
+  },
+  {
+    "title": "Atlantics",
+    "director": "Mati Diop",
+    "year": "2019",
+    "country": "France-Senegal-Belgium",
+    "runtime": 106
+  },
+  {
+    "title": "We All Loved Each Other So Much",
+    "director": "Ettore Scola",
+    "year": "1974",
+    "country": "Italy",
+    "runtime": 124
+  },
+  {
+    "title": "Gloria",
+    "director": "John Cassavetes",
+    "year": "1980",
+    "country": "USA",
+    "runtime": 121
+  },
+  {
+    "title": "Cría Cuervos",
+    "director": "Carlos Saura",
+    "year": "1976",
+    "country": "Spain",
+    "runtime": 110
+  },
+  {
+    "title": "Juliet Of The Spirits",
+    "director": "Federico Fellini",
+    "year": "1965",
+    "country": "Italy",
+    "runtime": 148
+  },
+  {
+    "title": "Excalibur",
+    "director": "John Boorman",
+    "year": "1981",
+    "country": "UK",
+    "runtime": 140
+  },
+  {
+    "title": "Elephant",
+    "director": "Alan Clarke",
+    "year": "1989",
+    "country": "UK",
+    "runtime": 39
+  },
+  {
+    "title": "Monty Python And The Holy Grail",
+    "director": "Terry Gilliam & Terry Jones",
+    "year": "1975",
+    "country": "UK",
+    "runtime": 90
+  },
+  {
+    "title": "The Misfits",
+    "director": "John Huston",
+    "year": "1961",
+    "country": "USA",
+    "runtime": 125
+  },
+  {
+    "title": "Outskirts",
+    "director": "Boris Barnet",
+    "year": "1933",
+    "country": "USSR",
+    "runtime": 98
+  },
+  {
+    "title": "Wendy And Lucy",
+    "director": "Kelly Reichardt",
+    "year": "2008",
+    "country": "USA",
+    "runtime": 80
+  },
+  {
+    "title": "Avatar",
+    "director": "James Cameron",
+    "year": "2009",
+    "country": "USA-UK",
+    "runtime": 161
+  },
+  {
+    "title": "Port Of Shadows",
+    "director": "Marcel Carné",
+    "year": "1938",
+    "country": "France",
+    "runtime": 91
+  },
+  {
+    "title": "Red Sorghum",
+    "director": "Zhang Yimou",
+    "year": "1987",
+    "country": "China",
+    "runtime": 91
+  },
+  {
+    "title": "The Miracle Of Morgan'S Creek",
+    "director": "Preston Sturges",
+    "year": "1944",
+    "country": "USA",
+    "runtime": 99
+  },
+  {
+    "title": "The African Queen",
+    "director": "John Huston",
+    "year": "1951",
+    "country": "UK-USA",
+    "runtime": 105
+  },
+  {
+    "title": "Spring, Summer, Autumn, Winter… And Spring",
+    "director": "Kim Ki-duk",
+    "year": "2003",
+    "country": "South Korea-Germany",
+    "runtime": 103
+  },
+  {
+    "title": "The Woman Next Door",
+    "director": "François Truffaut",
+    "year": "1981",
+    "country": "France",
+    "runtime": 106
+  },
+  {
+    "title": "The Bridges Of Madison County",
+    "director": "Clint Eastwood",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 135
+  },
+  {
+    "title": "They Live",
+    "director": "John Carpenter",
+    "year": "1988",
+    "country": "USA",
+    "runtime": 93
+  },
+  {
+    "title": "The Night Of Counting The Years",
+    "director": "Shadi Abdel Salam",
+    "year": "1969",
+    "country": "Egypt",
+    "runtime": 102
+  },
+  {
+    "title": "L'Enfance Nue",
+    "director": "Maurice Pialat",
+    "year": "1968",
+    "country": "France",
+    "runtime": 80
+  },
+  {
+    "title": "The Tarnished Angels",
+    "director": "Douglas Sirk",
+    "year": "1957",
+    "country": "USA",
+    "runtime": 91
+  },
+  {
+    "title": "Shaun Of The Dead",
+    "director": "Edgar Wright",
+    "year": "2004",
+    "country": "UK-USA-France",
+    "runtime": 99
+  },
+  {
+    "title": "Exotica",
+    "director": "Atom Egoyan",
+    "year": "1994",
+    "country": "Canada",
+    "runtime": 104
+  },
+  {
+    "title": "Caro Diario",
+    "director": "Nanni Moretti",
+    "year": "1993",
+    "country": "Italy-France",
+    "runtime": 100
+  },
+  {
+    "title": "Akira Kurosawa'S Dreams",
+    "director": "Akira Kurosawa",
+    "year": "1990",
+    "country": "Japan-USA",
+    "runtime": 119
+  },
+  {
+    "title": "Stroszek",
+    "director": "Werner Herzog",
+    "year": "1977",
+    "country": "West Germany",
+    "runtime": 115
+  },
+  {
+    "title": "The Seasons",
+    "director": "Artavazd Peleshian",
+    "year": "1975",
+    "country": "USSR",
+    "runtime": 29
+  },
+  {
+    "title": "Meek'S Cutoff",
+    "director": "Kelly Reichardt",
+    "year": "2010",
+    "country": "USA",
+    "runtime": 104
+  },
+  {
+    "title": "The Fountainhead",
+    "director": "King Vidor",
+    "year": "1949",
+    "country": "USA",
+    "runtime": 114
+  },
+  {
+    "title": "Sideways",
+    "director": "Alexander Payne",
+    "year": "2004",
+    "country": "USA",
+    "runtime": 123
+  },
+  {
+    "title": "Tabu",
+    "director": "Miguel Gomes",
+    "year": "2012",
+    "country": "Portugal-Germany-Brazil-France",
+    "runtime": 118
+  },
+  {
+    "title": "Deep Red",
+    "director": "Dario Argento",
+    "year": "1975",
+    "country": "Italy",
+    "runtime": 98
+  },
+  {
+    "title": "Tongues Untied",
+    "director": "Marlon Riggs",
+    "year": "1989",
+    "country": "USA",
+    "runtime": 55
+  },
+  {
+    "title": "Assault On Precinct 13",
+    "director": "John Carpenter",
+    "year": "1976",
+    "country": "USA",
+    "runtime": 90
+  },
+  {
+    "title": "The Phantom Carriage",
+    "director": "Victor Sjöström",
+    "year": "1921",
+    "country": "Sweden",
+    "runtime": 107
+  },
+  {
+    "title": "People On Sunday",
+    "director": "Robert Siodmak & Edgar G. Ulmer",
+    "year": "1930",
+    "country": "Germany",
+    "runtime": 74
+  },
+  {
+    "title": "Zabriskie Point",
+    "director": "Michelangelo Antonioni",
+    "year": "1970",
+    "country": "USA",
+    "runtime": 112
+  },
+  {
+    "title": "The Blues Brothers",
+    "director": "John Landis",
+    "year": "1980",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "It'S A Gift",
+    "director": "Norman Z. McLeod",
+    "year": "1934",
+    "country": "USA",
+    "runtime": 73
+  },
+  {
+    "title": "Heimat",
+    "director": "Edgar Reitz",
+    "year": "1984",
+    "country": "West Germany",
+    "runtime": 924
+  },
+  {
+    "title": "Seven Beauties",
+    "director": "Lina Wertmüller",
+    "year": "1975",
+    "country": "Italy",
+    "runtime": 116
+  },
+  {
+    "title": "Reds",
+    "director": "Warren Beatty",
+    "year": "1981",
+    "country": "USA",
+    "runtime": 200
+  },
+  {
+    "title": "The River",
+    "director": "Tsai Ming-liang",
+    "year": "1997",
+    "country": "Taiwan",
+    "runtime": 115
+  },
+  {
+    "title": "Sholay",
+    "director": "Ramesh Sippy",
+    "year": "1975",
+    "country": "India",
+    "runtime": 162
+  },
+  {
+    "title": "Night Of The Demon",
+    "director": "Jacques Tourneur",
+    "year": "1957",
+    "country": "UK-USA",
+    "runtime": 95
+  },
+  {
+    "title": "The End Of Summer",
+    "director": "Yasujiro Ozu",
+    "year": "1961",
+    "country": "Japan",
+    "runtime": 103
+  },
+  {
+    "title": "The Criminal Life Of Archibaldo De La Cruz",
+    "director": "Luis Buñuel",
+    "year": "1955",
+    "country": "Mexico",
+    "runtime": 91
+  },
+  {
+    "title": "Ceddo",
+    "director": "Ousmane Sembene",
+    "year": "1977",
+    "country": "Senegal-France",
+    "runtime": 120
+  },
+  {
+    "title": "A History Of Violence",
+    "director": "David Cronenberg",
+    "year": "2005",
+    "country": "USA-Germany",
+    "runtime": 96
+  },
+  {
+    "title": "Le Trou",
+    "director": "Jacques Becker",
+    "year": "1960",
+    "country": "France-Italy",
+    "runtime": 131
+  },
+  {
+    "title": "Duel",
+    "director": "Steven Spielberg",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 90
+  },
+  {
+    "title": "La Flor",
+    "director": "Mariano Llinás",
+    "year": "2018",
+    "country": "Argentina",
+    "runtime": 808
+  },
+  {
+    "title": "Simon Of The Desert",
+    "director": "Luis Buñuel",
+    "year": "1965",
+    "country": "Mexico",
+    "runtime": 43
+  },
+  {
+    "title": "Anatomy Of A Murder",
+    "director": "Otto Preminger",
+    "year": "1959",
+    "country": "USA",
+    "runtime": 160
+  },
+  {
+    "title": "An American In Paris",
+    "director": "Vincente Minnelli",
+    "year": "1951",
+    "country": "USA",
+    "runtime": 115
+  },
+  {
+    "title": "Kwaidan",
+    "director": "Masaki Kobayashi",
+    "year": "1964",
+    "country": "Japan",
+    "runtime": 183
+  },
+  {
+    "title": "Le Boucher",
+    "director": "Claude Chabrol",
+    "year": "1970",
+    "country": "France-Italy",
+    "runtime": 94
+  },
+  {
+    "title": "The Straight Story",
+    "director": "David Lynch",
+    "year": "1999",
+    "country": "USA-France-UK",
+    "runtime": 111
+  },
+  {
+    "title": "The Last Temptation Of Christ",
+    "director": "Martin Scorsese",
+    "year": "1988",
+    "country": "USA-Canada",
+    "runtime": 164
+  },
+  {
+    "title": "Carlito'S Way",
+    "director": "Brian De Palma",
+    "year": "1993",
+    "country": "USA",
+    "runtime": 144
+  },
+  {
+    "title": "Roman Holiday",
+    "director": "William Wyler",
+    "year": "1953",
+    "country": "USA",
+    "runtime": 118
+  },
+  {
+    "title": "Zorns Lemma",
+    "director": "Hollis Frampton",
+    "year": "1970",
+    "country": "USA",
+    "runtime": 60
+  },
+  {
+    "title": "The Hurt Locker",
+    "director": "Kathryn Bigelow",
+    "year": "2008",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "Cool Hand Luke",
+    "director": "Stuart Rosenberg",
+    "year": "1967",
+    "country": "USA",
+    "runtime": 126
+  },
+  {
+    "title": "Portrait Of Jennie",
+    "director": "William Dieterle",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 86
+  },
+  {
+    "title": "No Home Movie",
+    "director": "Chantal Akerman",
+    "year": "2015",
+    "country": "Belgium-France",
+    "runtime": 115
+  },
+  {
+    "title": "Mothlight",
+    "director": "Stan Brakhage",
+    "year": "1963",
+    "country": "USA",
+    "runtime": 4
+  },
+  {
+    "title": "Before Sunrise",
+    "director": "Richard Linklater",
+    "year": "1995",
+    "country": "USA",
+    "runtime": 101
+  },
+  {
+    "title": "7Th Heaven",
+    "director": "Frank Borzage",
+    "year": "1927",
+    "country": "USA",
+    "runtime": 119
+  },
+  {
+    "title": "Near Dark",
+    "director": "Kathryn Bigelow",
+    "year": "1987",
+    "country": "USA",
+    "runtime": 95
+  },
+  {
+    "title": "The Killer",
+    "director": "John Woo",
+    "year": "1989",
+    "country": "Hong Kong",
+    "runtime": 110
+  },
+  {
+    "title": "The Godfather Part Iii",
+    "director": "Francis Ford Coppola",
+    "year": "1990",
+    "country": "USA",
+    "runtime": 161
+  },
+  {
+    "title": "Z",
+    "director": "Constantin Costa-Gavras",
+    "year": "1969",
+    "country": "France-Algeria",
+    "runtime": 127
+  },
+  {
+    "title": "The Lord Of The Rings: The Return Of The King",
+    "director": "Peter Jackson",
+    "year": "2003",
+    "country": "New Zealand-USA",
+    "runtime": 201
+  },
+  {
+    "title": "American Graffiti",
+    "director": "George Lucas",
+    "year": "1973",
+    "country": "USA",
+    "runtime": 110
+  },
+  {
+    "title": "Blood Simple",
+    "director": "Joel Coen & Ethan Coen",
+    "year": "1984",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "Dirty Harry",
+    "director": "Don Siegel",
+    "year": "1971",
+    "country": "USA",
+    "runtime": 102
+  },
+  {
+    "title": "Il Sorpasso",
+    "director": "Dino Risi",
+    "year": "1962",
+    "country": "Italy",
+    "runtime": 108
+  },
+  {
+    "title": "Enter The Dragon",
+    "director": "Robert Clouse",
+    "year": "1973",
+    "country": "USA-Hong Kong",
+    "runtime": 97
+  },
+  {
+    "title": "La Chienne",
+    "director": "Jean Renoir",
+    "year": "1931",
+    "country": "France",
+    "runtime": 95
+  },
+  {
+    "title": "From The Clouds To The Resistance",
+    "director": "Jean-Marie Straub & Danièle Huillet",
+    "year": "1979",
+    "country": "Italy-West Germany-UK-France",
+    "runtime": 104
+  },
+  {
+    "title": "Othello",
+    "director": "Orson Welles",
+    "year": "1951",
+    "country": "Italy-Morocco-USA",
+    "runtime": 90
+  },
+  {
+    "title": "Doomed Love",
+    "director": "Manoel de Oliveira",
+    "year": "1978",
+    "country": "Portugal",
+    "runtime": 262
+  },
+  {
+    "title": "The Return",
+    "director": "Andrey Zvyagintsev",
+    "year": "2003",
+    "country": "Russia",
+    "runtime": 110
+  },
+  {
+    "title": "A Page Of Madness",
+    "director": "Teinosuke Kinugasa",
+    "year": "1926",
+    "country": "Japan",
+    "runtime": 70
+  },
+  {
+    "title": "Ghostbusters",
+    "director": "Ivan Reitman",
+    "year": "1984",
+    "country": "USA",
+    "runtime": 107
+  },
+  {
+    "title": "American Beauty",
+    "director": "Sam Mendes",
+    "year": "1999",
+    "country": "USA",
+    "runtime": 121
+  },
+  {
+    "title": "Khrustalyov, My Car!",
+    "director": "Aleksei German",
+    "year": "1998",
+    "country": "Russia-France",
+    "runtime": 147
+  },
+  {
+    "title": "Duel In The Sun",
+    "director": "King Vidor",
+    "year": "1946",
+    "country": "USA",
+    "runtime": 130
+  },
+  {
+    "title": "The Last Emperor",
+    "director": "Bernardo Bertolucci",
+    "year": "1987",
+    "country": "China-Italy-UK-France",
+    "runtime": 163
+  },
+  {
+    "title": "Spartacus",
+    "director": "Stanley Kubrick",
+    "year": "1960",
+    "country": "USA",
+    "runtime": 197
+  },
+  {
+    "title": "Diary",
+    "director": "David Perlov",
+    "year": "1983",
+    "country": "Israel",
+    "runtime": 330
+  },
+  {
+    "title": "Berlin: Symphony Of A Great City",
+    "director": "Walter Ruttmann",
+    "year": "1927",
+    "country": "Germany",
+    "runtime": 65
+  },
+  {
+    "title": "Elevator To The Gallows",
+    "director": "Louis Malle",
+    "year": "1958",
+    "country": "France",
+    "runtime": 92
+  },
+  {
+    "title": "The Host",
+    "director": "Bong Joon-ho",
+    "year": "2006",
+    "country": "South Korea-Japan",
+    "runtime": 119
+  },
+  {
+    "title": "The Reckless Moment",
+    "director": "Max Ophüls",
+    "year": "1949",
+    "country": "USA",
+    "runtime": 82
+  },
+  {
+    "title": "Dead Poets Society",
+    "director": "Peter Weir",
+    "year": "1989",
+    "country": "USA",
+    "runtime": 128
+  },
+  {
+    "title": "Gun Crazy",
+    "director": "Joseph H. Lewis",
+    "year": "1950",
+    "country": "USA",
+    "runtime": 86
+  },
+  {
+    "title": "The Breakfast Club",
+    "director": "John Hughes",
+    "year": "1985",
+    "country": "USA",
+    "runtime": 97
+  },
+  {
+    "title": "La Bête Humaine",
+    "director": "Jean Renoir",
+    "year": "1938",
+    "country": "France",
+    "runtime": 100
+  },
+  {
+    "title": "Perfumed Nightmare",
+    "director": "Kidlat Tahimik",
+    "year": "1977",
+    "country": "Philippines",
+    "runtime": 93
+  },
+  {
+    "title": "Fox And His Friends",
+    "director": "Rainer Werner Fassbinder",
+    "year": "1975",
+    "country": "West Germany",
+    "runtime": 123
+  },
+  {
+    "title": "Olympia",
+    "director": "Leni Riefenstahl",
+    "year": "1938",
+    "country": "Germany",
+    "runtime": 201
+  },
+  {
+    "title": "The Ice Storm",
+    "director": "Ang Lee",
+    "year": "1997",
+    "country": "USA",
+    "runtime": 113
+  },
+  {
+    "title": "The Pianist",
+    "director": "Roman Polanski",
+    "year": "2002",
+    "country": "France-Poland-Germany-UK",
+    "runtime": 148
+  },
+  {
+    "title": "Léon",
+    "director": "Luc Besson",
+    "year": "1994",
+    "country": "France",
+    "runtime": 119
+  },
+  {
+    "title": "Saturday Night And Sunday Morning",
+    "director": "Karel Reisz",
+    "year": "1960",
+    "country": "UK",
+    "runtime": 89
+  },
+  {
+    "title": "True Heart Susie",
+    "director": "D.W. Griffith",
+    "year": "1919",
+    "country": "USA",
+    "runtime": 87
+  },
+  {
+    "title": "Ed Wood",
+    "director": "Tim Burton",
+    "year": "1994",
+    "country": "USA",
+    "runtime": 124
+  },
+  {
+    "title": "The Long Farewell",
+    "director": "Kira Muratova",
+    "year": "1971",
+    "country": "USSR",
+    "runtime": 97
+  },
+  {
+    "title": "Rope",
+    "director": "Alfred Hitchcock",
+    "year": "1948",
+    "country": "USA",
+    "runtime": 80
+  },
+  {
+    "title": "Lady Windermere'S Fan",
+    "director": "Ernst Lubitsch",
+    "year": "1925",
+    "country": "USA",
+    "runtime": 120
+  },
+  {
+    "title": "Sawdust And Tinsel",
+    "director": "Ingmar Bergman",
+    "year": "1953",
+    "country": "Sweden",
+    "runtime": 92
+  },
+  {
+    "title": "Ride The High Country",
+    "director": "Sam Peckinpah",
+    "year": "1962",
+    "country": "USA",
+    "runtime": 94
+  },
+  {
+    "title": "L.A. Confidential",
+    "director": "Curtis Hanson",
+    "year": "1997",
+    "country": "USA",
+    "runtime": 137
+  }
+]
