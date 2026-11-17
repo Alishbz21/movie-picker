@@ -97,3 +97,20 @@ README.md                # راهنمای نصب
 در سایت از **انتخاب‌های من / My picks** می‌توانید کنار هر فیلم گزینه **لغو انتخاب / Undo pick** را بزنید. پس از تأیید، انتخاب از تاریخچهٔ JSON حذف می‌شود. اگر فیلم هنوز اولویت داشته باشد، مقدار ستون G آن پاک می‌شود و اولویت‌های بزرگ‌تر یک واحد کم می‌شوند. **Personal Rating هیچ‌وقت پاک نمی‌شود.** فیلم بدون امتیاز دوباره می‌تواند در قرعه‌کشی بیاید؛ فیلم امتیازدار همچنان از قرعه‌کشی کنار می‌ماند. حالت نمایشی هم لغو انتخاب را در حافظهٔ مرورگر پشتیبانی می‌کند.
 
 **برای فعال شدن لغو انتخاب در حالت متصل:** نسخهٔ جدید بک‌اند را در فایل `PickerBackend.gs` پروژهٔ Apps Script جایگزین و ذخیره کنید؛ سپس **Deploy → Manage deployments → Edit → New version → Deploy** را انجام دهید. صرفاً تغییر فایل‌های GitHub Pages کافی نیست و تا زمانی که بک‌اند به‌روزرسانی نشود، سایت نمی‌تواند لغو انتخاب را در Google Sheets اجرا کند.
+
+## Movie posters (optional integration)
+
+The movie cards now support actual posters from **TMDB**. The web page renders immediately with a styled fallback; the server fetches posters in a separate request. A movie title and its original release year must match the metadata record to prevent posters for unrelated movies. Missing or unmatched images show the fallback instead.
+
+### Activate real posters
+
+1. Create a TMDB account at https://www.themoviedb.org/ and request developer API access under **Settings → API**. Check TMDB's usage terms and attribution guidelines.
+2. Copy the **API Read Access Token** (long bearer token, **not** the short API Key).
+3. In the same Google Apps Script project as the movie-picker backend, open **Project Settings → Script Properties**, add `TMDB_READ_ACCESS_TOKEN` with the token as its value, and save.
+4. Replace **only the PickerBackend.gs file content** with the newer file **PickerBackend_with_Posters.gs** (which also includes the previous undo-selection behavior). Keep the separate Code.gs sorting functions unchanged.
+5. Go to **Deploy → Manage deployments → Edit (pencil) → Version: New version → Deploy**. Keep your existing Web App URL and its access code.
+6. Reload the GitHub Pages site and draw 20 films. Each poster loads asynchronously; films without matching posters keep a clean generic cover.
+
+Do **not** put the TMDB token in GitHub, `posters.js`, `app.js`, or `index.html`. TMDB requests go through Google Apps Script, which also caches successful and missing matches for six hours, while the browser caches display results locally for up to 30 days. The site works without the token, but shows the fallback artwork until it is configured.
+
+TMDB's approved logos and attribution: https://www.themoviedb.org/about/logos-attribution . The footer includes the non-endorsement statement; ensure your use follows TMDB's current developer terms.
