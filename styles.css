@@ -68,3 +68,40 @@ html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
   .history-cancel-btn{grid-column:2;justify-self:start}
   .history-date{grid-column:auto}
 }
+
+/* Rating controls (1–10), searchable catalog, and selected film rating */
+.rating-controls{display:flex;flex-wrap:wrap;align-items:center;gap:7px;min-width:0;margin:8px 0 10px}
+.rating-label{font-size:11px;font-weight:700;color:var(--muted);width:100%}
+.rating-select{background:#121d20;color:var(--ink);border:1px solid #52615c;border-radius:8px;min-height:35px;padding:6px 9px;font:600 12px 'DM Sans',sans-serif;flex:1;min-width:86px;direction:ltr}
+.rating-select:focus-visible,.rating-save-btn:focus-visible,.catalog-search-form input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rating-save-btn{background:rgba(211,255,141,.09);color:var(--accent);border:1px solid #657b56;border-radius:8px;padding:7px 9px;min-height:35px;font-size:11px;font-weight:700;white-space:nowrap}
+.rating-save-btn:hover:not(:disabled){background:var(--accent);color:#122010}
+.film-card .rating-controls{margin:auto 0 12px}
+.film-card .film-pick{margin-top:0}
+.history-meta .rating-controls{margin:9px 0 0}
+.history-meta .rating-label{width:auto}
+.history-meta .rating-select{max-width:135px}
+.history-entry{align-items:start}
+.catalog-search-form{display:flex;gap:10px;margin-bottom:14px}
+.catalog-search-form input{background:#121b1e;border:1px solid #51605d;min-height:45px;color:var(--ink);padding:8px 14px;border-radius:9px;font:inherit;min-width:0;flex:1}
+.catalog-results-count{font-size:12px;color:var(--muted);min-height:20px}
+.catalog-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.catalog-entry{background:var(--panel2);border:1px solid var(--line);padding:17px;border-radius:11px;display:flex;flex-direction:column;gap:9px}
+.catalog-info{min-width:0}
+.catalog-title{font:700 16px 'DM Sans',sans-serif;overflow-wrap:anywhere;direction:ltr;text-align:left}
+.catalog-meta{font:400 12px 'DM Sans',sans-serif;color:var(--muted);direction:ltr;text-align:left;margin:7px 0}
+.catalog-priority{color:var(--gold);font-size:11px}
+.catalog-entry .rating-controls{margin-top:auto}
+.catalog-entry .rating-label{width:auto}
+.catalog-empty{grid-column:1/-1}
+@media(max-width:680px){
+  .catalog-results{grid-template-columns:1fr}
+  .catalog-search-form{flex-wrap:wrap}
+  .catalog-search-form .button{width:100%}
+  .history-meta .rating-controls{align-items:stretch}
+  .history-meta .rating-label{width:100%}
+  .history-entry .rating-select{min-width:70px}
+  .film-card .rating-controls{gap:5px}
+  .film-card .rating-select{min-width:70px}
+  .film-card .rating-save-btn{width:100%}
+}
