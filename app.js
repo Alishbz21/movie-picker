@@ -6,12 +6,12 @@ const $ = (id) => document.getElementById(id);
 const tr = (key,vars) => window.FrameI18n.t(key,vars);
 const localizedNum = (n) => window.FrameI18n.number(n);
 const localizedDate = (d) => window.FrameI18n.date(d);
-const app = { mode: 'disconnected', endpoint: '', code: '', busy: false, batch: [], chosen: false, selected: [], status: null, demoFilms: [] };
+const app = { mode: 'disconnected', endpoint: '', code: '', busy: false, batch: [], chosen: false, selected: [], status: null, demoFilms: [], demoRatings: {}, searchResults: [], lastSearch: '' };
 
 function show(id, visible) { $(id).classList.toggle('hidden', !visible); }
 function toast(message) { const node = $('toast'); node.textContent = message; show('toast', true); clearTimeout(toast.timer); toast.timer = setTimeout(() => show('toast', false), 4200); }
 function message(text, error = false) { const node = $('picker-message'); node.textContent = text; node.classList.toggle('error', error); show('picker-message', Boolean(text)); }
-function setBusy(value) { app.busy = value; ['draw-btn', 'connect-btn'].forEach(id => {$(id).disabled = value;}); document.querySelectorAll('.film-pick').forEach(el => el.disabled = value || app.chosen); document.querySelectorAll('.history-cancel-btn').forEach(el => el.disabled = value); }
+function setBusy(value) { app.busy = value; ['draw-btn', 'connect-btn'].forEach(id => {$(id).disabled = value;}); document.querySelectorAll('.film-pick').forEach(el => el.disabled = value || app.chosen); document.querySelectorAll('.history-cancel-btn, .rating-save-btn, .rating-select').forEach(el => el.disabled = value); if ($('catalog-search-btn')) $('catalog-search-btn').disabled=value; }
 function normalize(text) { return String(text ?? '').normalize('NFC').trim().toLocaleLowerCase(); }
 function movieKey(movie) { return [movie.title, movie.director, String(movie.year)].map(normalize).join('||'); }
 function validRating(value) { return Number.isFinite(Number(value)) && value !== '' && value !== null && value !== undefined && Number(value) >= 1 && Number(value) <= 10; }
@@ -65,7 +65,7 @@ async function connect(event) {
 }
 
 function enterPicker(label) {
-  show('connection-panel',false); show('picker-panel',true); show('history-panel',false);
+  show('connection-panel',false); show('picker-panel',true); show('history-panel',false); show('catalog-panel',false);
   const pill=$('connection-pill'); pill.classList.toggle('connected',app.mode==='live'); pill.classList.toggle('demo',app.mode==='demo');
   $('connection-text').textContent=label;
   $('movie-grid').replaceChildren();
@@ -84,6 +84,10 @@ async function startDemo() {
     if(!Array.isArray(app.demoFilms)||app.demoFilms.length<20) throw new Error(tr('demoIncomplete'));
     const state=JSON.parse(localStorage.getItem('frame20_demo_state')||'{"selected":[]}');
     app.selected=Array.isArray(state.selected)?state.selected:[];
+    try{
+      const ratings=JSON.parse(localStorage.getItem('frame20_demo_ratings')||'{}');
+      app.demoRatings=ratings&&typeof ratings==='object'&&!Array.isArray(ratings)?ratings:{};
+    }catch(_){app.demoRatings={};}
     app.mode='demo';
     refreshDemoStatus(); enterPicker(tr('demoConnected'));
     toast(tr('demoToast'));
@@ -91,13 +95,22 @@ async function startDemo() {
 }
 function refreshDemoStatus() {
   const keys=new Set(app.selected.map(x=>x.key));
-  statusDisplay({prioritized:app.selected.length,remaining:app.demoFilms.filter(x=>!keys.has(movieKey(x))).length,rated:0,selected:app.selected});
+  const movies=app.demoFilms;
+  const rated=movies.filter(m=>validRating(app.demoRatings[movieKey(m)])).length;
+  const prioritized=app.selected.filter(s=>validPriority(s.priority)).length;
+  const remaining=movies.filter(m=>!keys.has(movieKey(m)) && !validRating(app.demoRatings[movieKey(m)])).length;
+  const selected=app.selected.map(s=>{
+    const rating=app.demoRatings[s.key];
+    return {...s,isRated:validRating(rating),currentRating:validRating(rating)?Number(rating):null,
+      currentPriority:validPriority(s.priority)?Number(s.priority):null};
+  });
+  statusDisplay({prioritized,remaining,rated,selected});
 }
 async function draw() {
   if(app.busy)return;
   setBusy(true);message('');$('movie-grid').replaceChildren();
   try {
-    const result=app.mode==='live'?await api('draw'):{movies:random20(app.demoFilms.filter(x=>!new Set(app.selected.map(s=>s.key)).has(movieKey(x))))};
+    const result=app.mode==='live'?await api('draw'):{movies:random20(app.demoFilms.filter(x=>!new Set(app.selected.map(s=>s.key)).has(movieKey(x))&&!validRating(app.demoRatings[movieKey(x)])))};
     app.batch=result.movies||[];app.chosen=false;
     renderMovies(app.batch);
     const count=app.batch.length;
@@ -111,7 +124,7 @@ function renderMovies(movies) {
   const grid=$('movie-grid');grid.replaceChildren();
   if(!movies.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=tr('emptyMovie');grid.appendChild(empty);return;}
   movies.forEach((movie,i)=>{
-    const card=document.createElement('article');card.className='film-card';
+    const card=document.createElement('article');card.className='film-card';card.dataset.movieKey=movie.key||movieKey(movie);
     const top=document.createElement('div');top.className='film-top';
     const num=document.createElement('span');num.className='film-number';num.textContent=String(i+1).padStart(2,'0')+' / 20';
     const year=document.createElement('span');year.className='film-year';year.textContent=String(movie.year||'—');top.append(num,year);
@@ -119,7 +132,9 @@ function renderMovies(movies) {
     const director=document.createElement('div');director.className='film-director';director.textContent=movie.director||'—';
     const details=document.createElement('div');details.className='film-details';details.textContent=[movie.country, movie.runtime ? `${movie.runtime} ${tr('min')}` : ''].filter(Boolean).join(' · ');
     const choose=document.createElement('button');choose.type='button';choose.className='film-pick';choose.textContent=tr('choose');choose.addEventListener('click',()=>pick(movie,card));
-    card.append(top,title,director,details,choose);
+    card.append(top,title,director,details);
+    if(window.FrameRatings) card.append(window.FrameRatings.createControls(movie));
+    card.append(choose);
     grid.appendChild(card);
   });
 }
@@ -175,11 +190,12 @@ async function cancelSelection(selection) {
     } else {
       const index = app.selected.findIndex(item => (item.key || movieKey(item)) === key);
       if (index < 0) throw new Error(tr('cancelMissing'));
-      const removedPriority = Number(app.selected[index].priority);
+      const old=app.selected[index].currentPriority ?? app.selected[index].priority;
+      const removedPriority = validPriority(old)?Number(old):null;
       app.selected.splice(index, 1);
-      if (Number.isInteger(removedPriority)) {
+      if (removedPriority !== null) {
         for (const item of app.selected) {
-          if (Number(item.priority) > removedPriority) item.priority = Number(item.priority) - 1;
+          if (validPriority(item.priority) && Number(item.priority) > removedPriority) {item.priority = Number(item.priority) - 1;item.currentPriority=item.priority;}
         }
       }
       localStorage.setItem('frame20_demo_state',
@@ -236,6 +252,7 @@ function renderHistory() {
     date.className = 'history-date';
     date.textContent = selection.selectedAt ? localizedDate(selection.selectedAt) : '—';
     details.append(title,date);
+    if(window.FrameRatings) details.append(window.FrameRatings.createControls(selection));
 
     const cancel = document.createElement('button');
     cancel.type = 'button';
@@ -254,7 +271,7 @@ function exportJson(){
   const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json;charset=utf-8'});
   const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='movie_picker_state.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);
 }
-function disconnect(){app.mode='disconnected';app.code='';app.chosen=false;sessionStorage.removeItem('frame20_code');show('connection-panel',true);show('picker-panel',false);show('history-panel',false);$('connection-pill').classList.remove('connected','demo');$('connection-text').textContent=tr('disconnected');$('passcode-input').value='';}
+function disconnect(){app.mode='disconnected';app.code='';app.chosen=false;sessionStorage.removeItem('frame20_code');show('connection-panel',true);show('picker-panel',false);show('history-panel',false);show('catalog-panel',false);$('connection-pill').classList.remove('connected','demo');$('connection-text').textContent=tr('disconnected');$('passcode-input').value='';}
 function wire(){
   $('endpoint-input').value=localStorage.getItem('frame20_endpoint')||'';
   $('connect-form').addEventListener('submit',connect);
@@ -300,6 +317,7 @@ function updateLanguage() {
       }
     }
     renderHistory();
+    window.FrameRatings?.translate();
   }
 }
 document.addEventListener('DOMContentLoaded',wire);
