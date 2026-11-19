@@ -95,6 +95,12 @@
       ratingSaved: 'امتیاز {rating} برای «{title}» در شیت ثبت شد.',
       ratingCleared: 'امتیاز «{title}» پاک شد.',
       ratingBackendUpdate: 'برای ثبت امتیاز باید فایل جدید PickerBackend.gs را در Apps Script جایگزین و New version را Deploy کنی.',
+      posterLoading: 'در حال دریافت پوسترهای فیلم‌ها از TMDB…',
+      posterNotConfigured: 'برای نمایش پوسترها ابتدا TMDB_READ_ACCESS_TOKEN را در Script Properties ثبت کن.',
+      posterBackendUpgrade: 'برای نمایش پوسترها باید نسخه جدید PickerBackend.gs را منتشر کنی.',
+      posterTokenInvalid: 'توکن TMDB معتبر نیست یا دسترسی آن تأیید نشده است.',
+      posterTemporaryProblem: 'برخی پوسترها فعلاً بارگذاری نشدند؛ انتخاب فیلم همچنان فعال است.',
+      posterAlt: 'پوستر فیلم {title}',
       min: 'دقیقه',
       noDate: '—'
     },
@@ -190,6 +196,12 @@
       ratingSaved: 'Saved rating {rating} for “{title}” to your Sheet.',
       ratingCleared: 'Cleared the rating for “{title}”.',
       ratingBackendUpdate: 'To save ratings, replace PickerBackend.gs in Apps Script and deploy a New version of the Web App.',
+      posterLoading: 'Loading movie posters from TMDB…',
+      posterNotConfigured: 'Set TMDB_READ_ACCESS_TOKEN in your Apps Script Script Properties to enable posters.',
+      posterBackendUpgrade: 'Deploy the updated PickerBackend.gs to enable posters.',
+      posterTokenInvalid: 'TMDB token was rejected. Check the private token setting.',
+      posterTemporaryProblem: 'Some movie posters are currently unavailable. You can still pick films.',
+      posterAlt: 'Poster for {title}',
       min: 'min',
       noDate: '—'
     }
