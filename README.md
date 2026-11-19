@@ -119,3 +119,7 @@ The integration preserves **pick, cancel, rate, search**, Google Sheets sync and
 If permissions errors appear, review the optional explicit `oauthScopes` in `appsscript.json`; when scopes are explicitly listed, they must include `https://www.googleapis.com/auth/script.external_request` as well as the existing Sheets and Drive scopes.
 
 TMDB copyright/attribution guidance: https://www.themoviedb.org/about/logos-attribution
+
+### Improving missing TMDB posters
+
+The optional backend `PickerBackend_with_Better_Posters.gs` uses a more tolerant but year-verified title match (including capitalization, punctuation, short/long variants, localized alternate-title search results) and retries missing titles without the year filter. It rejects unrelated remakes and ambiguous same-year results. Run the read-only `testPosterCoverage` function manually, then deploy **New version** on the existing Web App. The browser poster cache has been bumped to v2 so previously missing posters are retried; negative matches now expire after 45 minutes. This can improve coverage but is **not** guaranteed to cover all titles, especially films absent from TMDB or with a different title.
