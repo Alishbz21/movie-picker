@@ -118,3 +118,25 @@ html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
 .tmdb-attribution a{text-decoration:underline;text-underline-offset:2px}
 .tmdb-attribution a:hover{color:var(--accent)}
 @media(max-width:680px){.film-poster{margin-bottom:10px}.film-poster-glyph{font-size:44px}.film-poster-caption{font-size:8px}}
+
+/* Poster thumbnails for My Picks and actionable fetch diagnostics */
+.poster-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:-8px 0 17px}
+.poster-toolbar .poster-status{margin:0;flex:1;min-width:190px}
+.poster-toolbar .button{flex-shrink:0}
+.history-poster-toolbar{margin-top:-10px}
+.history-entry{grid-template-columns:62px 50px minmax(0,1fr) auto;align-items:start}
+.history-poster-wrap{width:62px;min-width:62px}
+.history-poster-wrap .film-poster{width:62px;margin:0;aspect-ratio:2/3;border-radius:6px}
+.history-poster-wrap .film-poster-glyph{font-size:24px}
+.history-poster-wrap .film-poster-caption{font-size:5px;letter-spacing:.07em}
+.history-poster-wrap .film-poster-placeholder{gap:4px}
+.history-poster-wrap .film-poster-image{border-radius:5px}
+@media(max-width:680px){
+ .history-entry{grid-template-columns:54px 34px minmax(0,1fr);gap:9px;padding:11px}
+ .history-poster-wrap{grid-column:1;grid-row:1 / span 2;width:54px;min-width:54px}
+ .history-poster-wrap .film-poster{width:54px}
+ .history-priority{grid-column:2;grid-row:1}
+ .history-meta{grid-column:3;grid-row:1 / span 2}
+ .history-cancel-btn{grid-column:3;grid-row:3;justify-self:start}
+ .poster-toolbar .button{width:auto}
+}
