@@ -77,14 +77,15 @@
     link.textContent=t('posterOpenImage');
     link.title=t('posterOpenImage');
     const image=document.createElement('img');
-    image.className='film-poster-image hidden';
+    // Never use display:none on a lazy-loaded image: it can prevent loading entirely.
+    // The CSS keeps it transparent until its load event fires.
+    image.className='film-poster-image';
     image.alt=t('posterAlt',{title:movie.title});
     image.loading=opts.thumbnail?'lazy':'eager';
     image.decoding='async';
     image.referrerPolicy='no-referrer';
     image.addEventListener('load',()=>{
       panel.classList.add('has-image');
-      image.classList.remove('hidden');
       panel.dataset.imageFailed='0';
       link.classList.add('hidden');
     });
@@ -98,7 +99,6 @@
         return;
       }
       panel.classList.remove('has-image');
-      image.classList.add('hidden');
       panel.dataset.imageFailed='1';
       const scope=panel.dataset.posterScope;
       status(scope,'posterImageLoadError');
