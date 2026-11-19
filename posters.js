@@ -3,13 +3,14 @@
  */
 'use strict';
 (function () {
-  const CACHE_NAME = 'frame20_tmdb_posters_v1';
+  const CACHE_NAME = 'frame20_tmdb_posters_v2';
   const POSITIVE_TTL = 30*24*3600*1000;
-  const NEGATIVE_TTL = 24*3600*1000;
+  const NEGATIVE_TTL = 45*60*1000;
   const IMAGE_PATTERN = /^https:\/\/image\.tmdb\.org\/t\/p\/w342\/[A-Za-z0-9_-]+\.(?:jpg|jpeg|png|webp)$/i;
   const caches = readCache();
   let currentLookup = 0;
   let noticeKey = '';
+  let noticeVars = {};
 
   const tr = (key,vars={}) => window.FrameI18n.t(key,vars);
   const normalize = text => String(text ?? '').normalize('NFC').trim().toLocaleLowerCase();
@@ -35,11 +36,11 @@
     if(url !== null && !IMAGE_PATTERN.test(url))return;
     caches[key]={url,at:Date.now()};
   }
-  function setNotice(key) {
-    noticeKey=key;
+  function setNotice(key,vars={}) {
+    noticeKey=key;noticeVars=vars;
     const el=document.getElementById('poster-status');
     if(!el)return;
-    el.textContent=key?tr(key):'';
+    el.textContent=key?tr(key,vars):'';
     el.classList.toggle('hidden',!key);
   }
   function applyPoster(key,url) {
@@ -115,11 +116,14 @@
     if(generation!==currentLookup)return;
     if(noticeKey==='posterBackendUpgrade'||noticeKey==='posterTokenInvalid')return;
     if(!hasConfig){setNotice('posterNotConfigured');return;}
-    setNotice(failures?'posterTemporaryProblem':'');
+    if(failures){setNotice('posterTemporaryProblem');return;}
+    const found=movies.filter(m=>Boolean(cached(filmKey(m)))).length;
+    // Report unmatched film count separately; missing poster is not a failed request.
+    setNotice(found<movies.length?'posterCoverage':'', {found:window.FrameI18n.number(found),total:window.FrameI18n.number(movies.length)});
   }
   function translate(){
     const el=document.getElementById('poster-status');
-    if(el && noticeKey)el.textContent=tr(noticeKey);
+    if(el && noticeKey)el.textContent=tr(noticeKey,noticeVars);
     for(const card of document.querySelectorAll('.film-card')){
       const img=card.querySelector('.film-poster-image');
       const title=card.querySelector('.film-title')?.textContent;
