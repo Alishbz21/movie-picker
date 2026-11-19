@@ -8,7 +8,7 @@
   const CACHE_MISS_MS=30*60*1000;
   const POSTER_URL=/^https:\/\/image\.tmdb\.org\/t\/p\/w342\/[A-Za-z0-9_-]+\.(?:jpe?g|png|webp)$/i;
   const keysInProgress=new Set();
-  const scopes={batch:0,history:0};
+  const scopes={batch:0,history:0,watchlist:0,ratings:0};
   const state=loadCache();
   const $=id=>document.getElementById(id);
   const t=(key,values={})=>window.FrameI18n.t(key,values);
@@ -38,7 +38,7 @@
   }
   function status(scope,key,vars={}){
     info[scope]={key,vars};
-    const id=scope==='history'?'history-poster-status':'poster-status';
+    const id=scope==='batch'?'poster-status':scope+'-poster-status';
     const node=$(id);
     if(!node)return;
     node.textContent=key?t(key,vars):'';
@@ -69,7 +69,7 @@
     const caption=document.createElement('span');
     caption.className='film-poster-caption';caption.textContent='FRAME / 20';
     placeholder.append(glyph,caption);
-    panel.dataset.posterScope=opts.thumbnail?'history':'batch';
+    panel.dataset.posterScope=opts.scope|| (opts.thumbnail?'history':'batch');
     const link=document.createElement('a');
     link.className='film-poster-source hidden';
     link.target='_blank';
