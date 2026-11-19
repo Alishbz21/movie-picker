@@ -156,3 +156,21 @@ The site now registers `sw.js`, a poster-only service worker. It caches the **ac
 - No Apps Script redeployment, new TMDB token, or Google Sheets change is needed.
 
 To verify: open DevTools → Application → Cache Storage → `frame20-poster-images-v1` after viewing posters; previously seen poster image URLs should be present.
+
+
+## Home / Random Picker / Watchlist / Ratings (new navigation)
+
+The landing page is now a **Home dashboard** with three choices:
+- **Random picker**: the original 20-film draw, choosing one film and writing its priority to the Sheet.
+- **Watchlist**: **all** films with a valid Watchlist Priority in Column G, ordered by priority ascending. This includes entries made directly in Google Sheets and not only those selected using the website. Personal ratings and undo for site-selected films remain available.
+- **Ratings**: **all** films with a valid Personal Rating in Column F, ordered from highest to lowest. Ratings can be edited or cleared from the list. The prior **Search & rate movies** tool now lives in the Ratings section.
+
+For speed, both full-library views load 30 films per page (Load more), support a live Sheet-side search across title/director/year/country, and show TMDB posters with the existing browser image cache. The list is reloaded when a film is rated, picked, or cancelled. Bilingual Persian/English UI and the private Google Sheets connection are preserved.
+
+### Required backend upgrade
+
+Download `PickerBackend_with_Home_Watchlist_Ratings.gs` from the ChatGPT deliverable. In the **same** bound Google Apps Script project, replace only the contents of `PickerBackend.gs` and save. Leave `Code.gs` with `onOpen`, `onEdit`, and `sortMovies` unchanged. This new backend includes the previous pick, cancel, rate, search, posters, `testPosterCoverage`, and authentication functionality, plus the read-only `action=library` endpoint.
+
+Go to **Deploy → Manage deployments → Edit → New version → Deploy**. Update the existing Web App deployment: preserve `Execute as: Me`, `Who has access: Anyone`, and the existing `/exec` URL and private `PICKER_ACCESS_CODE`. If you don't deploy, both library views correctly report that an updated backend is required.
+
+**No migration of ratings, selections, Drive JSON or existing TMDB token is required.** No library data is copied into GitHub. The GitHub repository only stores the site's code and static demo film catalog.
