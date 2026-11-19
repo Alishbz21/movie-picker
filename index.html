@@ -20,7 +20,8 @@
     }
   </script>
   <script src="app.js?v=9" defer></script>
-  <script src="ratings.js?v=1" defer></script>
+  <script src="ratings.js?v=2" defer></script>
+  <script src="navigation.js?v=1" defer></script>
 </head>
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -36,9 +37,15 @@
         <button class="button button-outline button-small" id="settings-btn" type="button"><span data-i18n="settings">تنظیمات</span> <span aria-hidden="true">⚙</span></button>
       </div>
     </header>
+    <nav class="site-nav" aria-label="Movie Picker sections">
+      <button type="button" class="site-nav-btn active" data-view="home" data-i18n="navHome" aria-current="page">Home</button>
+      <button type="button" class="site-nav-btn" data-view="picker" data-i18n="navPicker">انتخاب تصادفی</button>
+      <button type="button" class="site-nav-btn" data-view="watchlist" data-i18n="navWatchlist">Watchlist</button>
+      <button type="button" class="site-nav-btn" data-view="ratings" data-i18n="navRatings">Ratings</button>
+    </nav>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="home-panel">
         <div class="eyebrow"><span class="eyebrow-line"></span> <span data-i18n="eyebrow">سینمای تو، انتخاب تو</span></div>
         <h1><span data-i18n="hero1">فیلم بعدی‌ات را</span><br /><em data-i18n="hero2">خودت انتخاب کن.</em></h1>
         <p class="hero-copy" data-i18n="heroCopy">هر بار ۲۰ فیلم تصادفی از فیلم‌های بدون امتیاز نمایش داده می‌شوند. یکی را انتخاب کن تا اولویت بعدی واچ‌لیست را بگیرد. انتخاب‌ها همان لحظه ذخیره می‌شوند.</p>
@@ -46,6 +53,26 @@
           <div class="metric"><span class="metric-number" id="priority-count">—</span><span class="metric-label" data-i18n="selected">انتخاب‌شده</span></div>
           <div class="metric"><span class="metric-number" id="remaining-count">—</span><span class="metric-label" data-i18n="remaining">در انتظار انتخاب</span></div>
           <div class="metric"><span class="metric-number" id="rated-count">—</span><span class="metric-label" data-i18n="rated">امتیازدار</span></div>
+        </div>
+        <div class="home-tiles">
+          <button type="button" class="home-tile" data-view="picker">
+            <span class="home-tile-icon">🎲</span>
+            <span class="home-tile-name" data-i18n="homeTilePicker">انتخاب ۲۰ فیلم تصادفی</span>
+            <span class="home-tile-desc" data-i18n="homeTilePickerDesc">هر دور ۲۰ فیلم، یک انتخاب برای واچ‌لیست</span>
+            <span class="home-tile-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button type="button" class="home-tile" data-view="watchlist">
+            <span class="home-tile-icon">◈</span>
+            <span class="home-tile-name" data-i18n="homeTileWatchlist">واچ‌لیست من</span>
+            <span class="home-tile-desc" data-i18n="homeTileWatchlistDesc">همهٔ فیلم‌های اولویت‌دار به ترتیب اولویت</span>
+            <span class="home-tile-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button type="button" class="home-tile" data-view="ratings">
+            <span class="home-tile-icon">★</span>
+            <span class="home-tile-name" data-i18n="homeTileRatings">امتیازهای من</span>
+            <span class="home-tile-desc" data-i18n="homeTileRatingsDesc">فیلم‌های امتیازدار، مرتب‌شده از ۱۰ تا ۱</span>
+            <span class="home-tile-arrow" aria-hidden="true">↗</span>
+          </button>
         </div>
       </section>
 
@@ -70,7 +97,7 @@
       <section class="panel picker-panel hidden" id="picker-panel">
         <div class="section-heading section-heading-wide">
           <div><span class="mini-label" data-i18n="pickerKicker">۰۲ / ساخت واچ‌لیست</span><h2 data-i18n="pickerTitle">۲۰ فیلم، یک انتخاب</h2><p class="soft" id="batch-subtitle">برای شروع، ۲۰ فیلم تصادفی بگیر.</p></div>
-          <div class="section-actions"><button class="button button-primary" id="draw-btn" type="button">🎲 نمایش ۲۰ فیلم</button><button class="button button-outline" id="history-btn" type="button" data-i18n="history">انتخاب‌های من</button><button class="button button-outline" id="catalog-btn" type="button" data-i18n="catalogOpen">جست‌وجو و امتیازدهی</button></div>
+          <div class="section-actions"><button class="button button-primary" id="draw-btn" type="button">🎲 نمایش ۲۰ فیلم</button></div>
         </div>
         <div id="picker-message" role="status" class="message hidden"></div>
         <div class="poster-toolbar"><p id="poster-status" class="poster-status hidden" role="status"></p>
@@ -78,7 +105,53 @@
         <div id="movie-grid" class="movie-grid" aria-live="polite"></div>
       </section>
 
-      <section class="panel hidden" id="catalog-panel">
+
+      <section class="panel hidden" id="watchlist-panel">
+        <div class="section-heading section-heading-wide">
+          <div><span class="mini-label" data-i18n="watchlistKicker">۰۲ / فیلم‌های منتخب</span>
+            <h2 data-i18n="watchlistTitle">Watchlist من</h2>
+            <p class="soft" data-i18n="watchlistDescription">تمام فیلم‌های دارای اولویت در شیت، از اولویت ۱ به بعد.</p></div>
+          <div class="section-actions">
+            <button class="button button-outline button-small" id="watchlist-refresh" type="button" data-i18n="refreshList">به‌روزرسانی</button>
+            <button class="button button-outline button-small" id="history-btn" type="button" data-i18n="history">تاریخچه انتخاب‌ها</button>
+          </div>
+        </div>
+        <div class="library-toolbar">
+          <input type="search" id="watchlist-query" class="library-query" data-i18n-placeholder="librarySearchPlaceholder" placeholder="جست‌وجو بر اساس عنوان، کارگردان، سال یا کشور..." maxlength="120" />
+          <span id="watchlist-count" class="library-count" aria-live="polite"></span>
+        </div>
+        <p id="watchlist-feedback" class="library-feedback" role="status"></p>
+        <p id="watchlist-poster-status" class="poster-status hidden" role="status"></p>
+        <div id="watchlist-list" class="library-list" aria-live="polite"></div>
+        <button type="button" class="button button-outline library-more hidden" id="watchlist-more" data-i18n="loadMore">نمایش فیلم‌های بیشتر</button>
+        <div class="subpanel hidden" id="history-panel">
+        <div class="section-heading">
+          <div><span class="mini-label" data-i18n="historyKicker">۰۳ / انتخاب‌های تو</span><h2 data-i18n="historyTitle">انتخاب‌های ثبت‌شده</h2></div>
+          <div class="section-actions"><button class="button button-outline button-small" id="export-btn" type="button" data-i18n="export">دریافت JSON</button><button class="button button-outline button-small" id="close-history-btn" type="button" data-i18n="close">بستن</button></div>
+        </div>
+        <div class="poster-toolbar history-poster-toolbar"><p id="history-poster-status" class="poster-status hidden" role="status"></p>
+          <button type="button" class="button button-outline button-small" id="history-poster-retry" data-i18n="posterRetry">دریافت دوباره پوسترها</button></div>
+        <div id="history-list" class="history-list"></div>
+      </div>
+      </section>
+
+      <section class="panel hidden" id="ratings-panel">
+        <div class="section-heading section-heading-wide">
+          <div><span class="mini-label" data-i18n="ratingsKicker">۰۳ / فیلم‌های تماشا‌شده</span>
+            <h2 data-i18n="ratingsTitle">Ratings من</h2>
+            <p class="soft" data-i18n="ratingsDescription">تمام امتیازهای ثبت‌شده در شیت، از بیشترین به کمترین.</p></div>
+          <button class="button button-outline button-small" id="ratings-refresh" type="button" data-i18n="refreshList">به‌روزرسانی</button>
+        </div>
+        <div class="library-toolbar">
+          <input type="search" id="ratings-query" class="library-query" data-i18n-placeholder="librarySearchPlaceholder" placeholder="جست‌وجو بر اساس عنوان، کارگردان، سال یا کشور..." maxlength="120" />
+          <span id="ratings-count" class="library-count" aria-live="polite"></span>
+        </div>
+        <p id="ratings-feedback" class="library-feedback" role="status"></p>
+        <p id="ratings-poster-status" class="poster-status hidden" role="status"></p>
+        <div id="ratings-list" class="library-list" aria-live="polite"></div>
+        <button type="button" class="button button-outline library-more hidden" id="ratings-more" data-i18n="loadMore">نمایش فیلم‌های بیشتر</button>
+        <div class="library-catalog-toggle"><button class="button button-outline" id="catalog-btn" type="button" data-i18n="catalogOpen">جست‌وجو و امتیازدهی به فیلم دیگر</button></div>
+        <div class="subpanel hidden" id="catalog-panel">
         <div class="section-heading">
           <div><span class="mini-label" data-i18n="catalogKicker">۰۳ / کتابخانه فیلم‌ها</span><h2 data-i18n="catalogTitle">جست‌وجو و امتیازدهی به فیلم‌ها</h2><p class="soft" data-i18n="catalogDescription">فیلم را با عنوان، کارگردان یا سال پیدا کن؛ امتیاز ۱ تا ۱۰ بده و در شیت ثبت کن.</p></div>
           <button class="button button-outline button-small" id="catalog-close-btn" type="button" data-i18n="close">بستن</button>
@@ -89,16 +162,7 @@
         </form>
         <p id="catalog-results-count" class="catalog-results-count" role="status"></p>
         <div id="catalog-results" class="catalog-results" aria-live="polite"></div>
-      </section>
-
-      <section class="panel hidden" id="history-panel">
-        <div class="section-heading">
-          <div><span class="mini-label" data-i18n="historyKicker">۰۳ / انتخاب‌های تو</span><h2 data-i18n="historyTitle">انتخاب‌های ثبت‌شده</h2></div>
-          <div class="section-actions"><button class="button button-outline button-small" id="export-btn" type="button" data-i18n="export">دریافت JSON</button><button class="button button-outline button-small" id="close-history-btn" type="button" data-i18n="close">بستن</button></div>
-        </div>
-        <div class="poster-toolbar history-poster-toolbar"><p id="history-poster-status" class="poster-status hidden" role="status"></p>
-          <button type="button" class="button button-outline button-small" id="history-poster-retry" data-i18n="posterRetry">دریافت دوباره پوسترها</button></div>
-        <div id="history-list" class="history-list"></div>
+      </div>
       </section>
     </main>
 
