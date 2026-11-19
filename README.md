@@ -107,3 +107,15 @@ README.md                # راهنمای نصب
 **برای فعال‌سازی این قابلیت در حالت واقعی:** فایل `PickerBackend_with_Ratings.gs` تحویلی را جایگزین محتوای فایل `PickerBackend.gs` در همان پروژه Apps Script کن. فایل قدیمی `Code.gs` (توابع onOpen/onEdit/sortMovies) را تغییر نده. سپس **Deploy → Manage deployments → Edit → New version → Deploy**. تنظیمات `PICKER_ACCESS_CODE` و URL قبلی بدون تغییر باقی می‌مانند. بک‌اند جدید همچنان انتخاب و لغو انتخاب را پشتیبانی می‌کند و نیازی به TMDB یا کلید پوستر ندارد.
 
 **حالت نمایشی** امتیازها را فقط در localStorage مرورگر ذخیره می‌کند و Google Sheets را تغییر نمی‌دهد.
+
+## TMDB poster integration (November 2026)
+
+The site supports movie posters from TMDB. The public code contains **no TMDB token**; poster metadata comes through the existing authorized Apps Script backend. Movies are matched by normalized title and release year (±1 year). Nonmatching titles retain styled fallback covers. The backend caches lookups for six hours; the browser additionally caches positive matches for 30 days and missing posters for 24 hours.
+
+**Installation:** Save `TMDB_READ_ACCESS_TOKEN` (TMDB API Read Access Token) as a **Script Property** in the existing Apps Script project. If only the shorter API v3 key is available, save that as `TMDB_API_KEY` instead. Replace the contents of `PickerBackend.gs` with the generated **PickerBackend_with_Ratings_and_Posters.gs**, retaining the separate `Code.gs` containing `onOpen`, `onEdit` and `sortMovies`. Save. Select `testTmdbConnection`, run it, and grant permissions for external calls; check for `TMDB connection OK` in Execution log. Then use **Deploy → Manage deployments → Edit → New version → Deploy** to update the existing /exec endpoint without changing its URL.
+
+The integration preserves **pick, cancel, rate, search**, Google Sheets sync and the Drive JSON history. It does **not** require a TMDB token in GitHub. Image requests are looked up in groups of five film keys. Missing posters do not block movie picking.
+
+If permissions errors appear, review the optional explicit `oauthScopes` in `appsscript.json`; when scopes are explicitly listed, they must include `https://www.googleapis.com/auth/script.external_request` as well as the existing Sheets and Drive scopes.
+
+TMDB copyright/attribution guidance: https://www.themoviedb.org/about/logos-attribution
