@@ -49,7 +49,11 @@
     for(const box of document.querySelectorAll('.film-poster[data-film-key]')){
       if(box.dataset.filmKey!==key)continue;
       const image=box.querySelector('.film-poster-image');
-      if(image && image.getAttribute('src')!==url)image.src=url;
+      if(image){
+        const link=box.querySelector('.film-poster-source');
+        if(link)link.href=url;
+        if(image.getAttribute('src')!==url)image.src=url;
+      }
     }
   }
   function prepare(host,movie,opts={}){
@@ -65,6 +69,13 @@
     const caption=document.createElement('span');
     caption.className='film-poster-caption';caption.textContent='FRAME / 20';
     placeholder.append(glyph,caption);
+    panel.dataset.posterScope=opts.thumbnail?'history':'batch';
+    const link=document.createElement('a');
+    link.className='film-poster-source hidden';
+    link.target='_blank';
+    link.rel='noopener noreferrer';
+    link.textContent=t('posterOpenImage');
+    link.title=t('posterOpenImage');
     const image=document.createElement('img');
     image.className='film-poster-image hidden';
     image.alt=t('posterAlt',{title:movie.title});
@@ -74,15 +85,33 @@
     image.addEventListener('load',()=>{
       panel.classList.add('has-image');
       image.classList.remove('hidden');
+      panel.dataset.imageFailed='0';
+      link.classList.add('hidden');
     });
     image.addEventListener('error',()=>{
+      // TMDB can occasionally return an image path that is unavailable in one size.
+      // Retry once using its supported w500 variant before reporting a browser error.
+      const previous=image.getAttribute('src') || '';
+      if(panel.dataset.altAttempt!=='1'&&POSTER_URL.test(previous)){
+        panel.dataset.altAttempt='1';
+        image.src=previous.replace('/w342/','/w500/');
+        return;
+      }
       panel.classList.remove('has-image');
       image.classList.add('hidden');
       panel.dataset.imageFailed='1';
+      const scope=panel.dataset.posterScope;
+      status(scope,'posterImageLoadError');
+      if(POSTER_URL.test(link.href)||/^https:\/\/image\.tmdb\.org\/t\/p\/w500\//i.test(link.href)){
+        link.classList.remove('hidden');
+      }
     });
-    panel.append(placeholder,image);
+    panel.append(placeholder,image,link);
     const fromCache=cacheRead(key);
-    if(fromCache)image.src=fromCache;
+    if(fromCache){
+      link.href=fromCache;
+      image.src=fromCache;
+    }
     if(!opts.thumbnail)host.prepend(panel);
     return panel;
   }
@@ -103,6 +132,15 @@
     if(mode!=='live'||!total)return;
     if(force){
       for(const movie of unique)delete state[keyFor(movie)];
+      // A previous failed image must be retried even if its URL has not changed.
+      for(const box of document.querySelectorAll('.film-poster[data-poster-scope="'+scope+'"]')){
+        if(box.dataset.imageFailed==='1'){
+          box.querySelector('img')?.removeAttribute('src');
+          box.dataset.altAttempt='0';
+          box.dataset.imageFailed='0';
+          box.querySelector('.film-poster-source')?.classList.add('hidden');
+        }
+      }
       persist();
     }
     const pending=unique.filter(movie=>cacheRead(keyFor(movie))===undefined);
@@ -152,9 +190,15 @@
     }
     if(scopes[scope]!==generation)return;
     const found=unique.filter(movie=>Boolean(cacheRead(keyFor(movie)))).length;
-    if(failures){
+    const failedImages=[...document.querySelectorAll('.film-poster[data-poster-scope="'+scope+'"]')]
+      .some(box=>box.dataset.imageFailed==='1');
+    if(failedImages){
+      status(scope,'posterImageLoadError');
+    }else if(failures){
       status(scope,'posterPartialFailure',{found:window.FrameI18n.number(found),
         total:window.FrameI18n.number(total)});
+    }else if(found===0){
+      status(scope,'posterNoMatches',{total:window.FrameI18n.number(total)});
     }else{
       status(scope,'posterCoverage',{found:window.FrameI18n.number(found),
         total:window.FrameI18n.number(total)});
@@ -171,6 +215,8 @@
       const card=box.closest('.film-card,.history-entry');
       const title=card?.querySelector('.film-title,.history-title')?.textContent;
       if(img&&title)img.alt=t('posterAlt',{title});
+      const link=box.querySelector('.film-poster-source');
+      if(link){link.textContent=t('posterOpenImage');link.title=t('posterOpenImage');}
     }
   }
   function retry(movies,mode,api,scope='batch'){
