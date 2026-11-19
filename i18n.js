@@ -99,7 +99,8 @@
       posterNotConfigured: 'برای نمایش پوسترها ابتدا TMDB_READ_ACCESS_TOKEN را در Script Properties ثبت کن.',
       posterBackendUpgrade: 'برای نمایش پوسترها باید نسخه جدید PickerBackend.gs را منتشر کنی.',
       posterTokenInvalid: 'توکن TMDB معتبر نیست یا دسترسی آن تأیید نشده است.',
-      posterTemporaryProblem: 'برخی پوسترها فعلاً بارگذاری نشدند؛ انتخاب فیلم همچنان فعال است.',
+      posterTemporaryProblem: 'ارتباط با TMDB برای تعدادی از فیلم‌ها ناموفق بود؛ می‌توانی دوباره تلاش کنی.',
+      posterCoverage: 'برای {found} فیلم از {total} فیلم، پوستر با اطمینان پیدا شد. بقیه هنوز بدون پوسترند.',
       posterAlt: 'پوستر فیلم {title}',
       min: 'دقیقه',
       noDate: '—'
@@ -200,7 +201,8 @@
       posterNotConfigured: 'Set TMDB_READ_ACCESS_TOKEN in your Apps Script Script Properties to enable posters.',
       posterBackendUpgrade: 'Deploy the updated PickerBackend.gs to enable posters.',
       posterTokenInvalid: 'TMDB token was rejected. Check the private token setting.',
-      posterTemporaryProblem: 'Some movie posters are currently unavailable. You can still pick films.',
+      posterTemporaryProblem: 'Some TMDB requests failed. Please try again shortly.',
+      posterCoverage: 'Found confidently matched posters for {found} out of {total} films. The rest have no matched poster yet.',
       posterAlt: 'Poster for {title}',
       min: 'min',
       noDate: '—'
