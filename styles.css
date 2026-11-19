@@ -111,8 +111,9 @@ html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
 .film-poster-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
 .film-poster-glyph{font-size:clamp(42px,6vw,70px);color:rgba(211,255,141,.4)}
 .film-poster-caption{font:600 9px 'DM Sans',sans-serif;letter-spacing:.22em;color:rgba(236,240,228,.55)}
-.film-poster-image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.film-poster-image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity .2s ease}
 .film-poster.has-image .film-poster-placeholder{opacity:0}
+.film-poster.has-image .film-poster-image{opacity:1}
 .poster-status{color:var(--muted);font-size:12px;margin:-8px 0 17px}
 .tmdb-attribution{font-family:'DM Sans',sans-serif;direction:ltr;text-align:left;max-width:350px;line-height:1.7;font-size:10px;color:var(--muted)}
 .tmdb-attribution a{text-decoration:underline;text-underline-offset:2px}
