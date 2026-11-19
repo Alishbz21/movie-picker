@@ -17,6 +17,11 @@
   function isReady(){return app.mode==='live'||app.mode==='demo';}
   function go(view) {
     if(!views.includes(view))view='home';
+    if(!isReady() && view!=='home'){
+      view='home';
+      const connection=$('connection-panel');
+      connection?.scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
     current=view;
     for(const panel of ['home','picker','watchlist','ratings']){
       const id=panel==='home'?'home-panel':panel+'-panel';
@@ -34,7 +39,7 @@
       const data=library[view];
       if(!data.loaded && !data.loading)void load(view,true);
     }
-    window.scrollTo({top:0,behavior:'smooth'});
+    if(isReady() || view==='home')window.scrollTo({top:0,behavior:'smooth'});
   }
   function demoRows(type,query) {
     const terms=query.toLocaleLowerCase().split(/\s+/).filter(Boolean);
