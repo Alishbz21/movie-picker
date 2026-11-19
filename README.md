@@ -174,3 +174,13 @@ Download `PickerBackend_with_Home_Watchlist_Ratings.gs` from the ChatGPT deliver
 Go to **Deploy → Manage deployments → Edit → New version → Deploy**. Update the existing Web App deployment: preserve `Execute as: Me`, `Who has access: Anyone`, and the existing `/exec` URL and private `PICKER_ACCESS_CODE`. If you don't deploy, both library views correctly report that an updated backend is required.
 
 **No migration of ratings, selections, Drive JSON or existing TMDB token is required.** No library data is copied into GitHub. The GitHub repository only stores the site's code and static demo film catalog.
+
+
+## Per-section movie display settings
+
+Each of the three film views (**Random Picker**, **Watchlist**, **Ratings**) now includes a **Movie display / نحوه نمایش فیلم‌ها** toolbar with two independent options:
+
+- **Layout:** Grid (poster gallery), List (horizontal cards), Compact (dense rows).
+- **Size:** Small, Medium, Large.
+
+Preferences are saved per section in browser `localStorage` under `frame20_view_preferences_v1`. For example, you may use large posters in the random picker and compact rows in Watchlist without affecting each other. All layouts preserve existing rating, undo, search, priority, and poster capabilities. Layout and size changes are client-side only: **no Apps Script deploy or Google Sheets change is required**. The grids adapt to smaller screens.
