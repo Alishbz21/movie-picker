@@ -41,6 +41,8 @@ function statusDisplay(s) {
   $('rated-count').textContent = localizedNum(s.rated ?? 0);
   app.selected = Array.isArray(s.selected) ? s.selected : [];
   renderHistory();
+  if(app.mode==='live' && !($('history-panel')?.classList.contains('hidden')) && window.FramePosters)
+    void window.FramePosters.lookup(app.selected,app.mode,api,'history');
 }
 
 async function connect(event) {
@@ -265,6 +267,12 @@ function renderHistory() {
     cancel.disabled = app.busy;
     cancel.addEventListener('click', () => cancelSelection(selection));
 
+    if(window.FramePosters){
+      const thumb=document.createElement('div');
+      thumb.className='history-poster-wrap';
+      thumb.append(window.FramePosters.prepare(thumb,selection,{thumbnail:true}));
+      row.append(thumb);
+    }
     row.append(number,details,cancel);
     el.appendChild(row);
   }
@@ -292,7 +300,19 @@ function wire(){
   document.addEventListener('frame20:languagechange', updateLanguage);
   $('demo-btn').addEventListener('click',startDemo);
   $('draw-btn').addEventListener('click',draw);
-  $('history-btn').addEventListener('click',()=>{renderHistory();show('history-panel',true);$('history-panel').scrollIntoView({behavior:'smooth',block:'start'});});
+  $('batch-poster-retry').addEventListener('click',()=>{
+    if(!app.busy&&app.mode==='live'&&window.FramePosters)
+      void window.FramePosters.retry(app.batch,app.mode,api,'batch');
+  });
+  $('history-btn').addEventListener('click',()=>{
+    renderHistory();show('history-panel',true);
+    if(window.FramePosters)void window.FramePosters.lookup(app.selected,app.mode,api,'history');
+    $('history-panel').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  $('history-poster-retry').addEventListener('click',()=>{
+    if(!app.busy&&app.mode==='live'&&window.FramePosters)
+      void window.FramePosters.retry(app.selected,app.mode,api,'history');
+  });
   $('close-history-btn').addEventListener('click',()=>show('history-panel',false));
   $('export-btn').addEventListener('click',exportJson);
   const oldCode=sessionStorage.getItem('frame20_code');
