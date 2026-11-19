@@ -4,6 +4,15 @@
 (function () {
   const translations = {
     fa: {
+      viewOptions: 'نحوه نمایش فیلم‌ها',
+      viewLayoutLabel: 'چیدمان',
+      viewSizeLabel: 'اندازه',
+      viewLayoutGrid: 'شبکه‌ای',
+      viewLayoutList: 'لیستی',
+      viewLayoutCompact: 'فشرده',
+      viewSizeSmall: 'کوچک',
+      viewSizeMedium: 'متوسط',
+      viewSizeLarge: 'بزرگ',
       navHome: 'Home',
       navPicker: 'انتخاب تصادفی',
       navWatchlist: 'Watchlist',
@@ -140,6 +149,15 @@
       noDate: '—'
     },
     en: {
+      viewOptions: 'Movie display',
+      viewLayoutLabel: 'Layout',
+      viewSizeLabel: 'Size',
+      viewLayoutGrid: 'Grid',
+      viewLayoutList: 'List',
+      viewLayoutCompact: 'Compact',
+      viewSizeSmall: 'Small',
+      viewSizeMedium: 'Medium',
+      viewSizeLarge: 'Large',
       navHome: 'Home',
       navPicker: 'Random picker',
       navWatchlist: 'Watchlist',
