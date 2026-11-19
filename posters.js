@@ -1,134 +1,180 @@
-/* FRAME / 20 — TMDB posters loaded through private Google Apps Script backend.
- * Public files contain neither TMDB API keys nor access tokens.
+/* FRAME / 20 — TMDB artwork for random draws and saved picks.
+ * All TMDB secrets remain exclusively in private Apps Script Script Properties.
  */
 'use strict';
-(function () {
-  const CACHE_NAME = 'frame20_tmdb_posters_v2';
-  const POSITIVE_TTL = 30*24*3600*1000;
-  const NEGATIVE_TTL = 45*60*1000;
-  const IMAGE_PATTERN = /^https:\/\/image\.tmdb\.org\/t\/p\/w342\/[A-Za-z0-9_-]+\.(?:jpg|jpeg|png|webp)$/i;
-  const caches = readCache();
-  let currentLookup = 0;
-  let noticeKey = '';
-  let noticeVars = {};
+(function(){
+  const CACHE_KEY='frame20_tmdb_posters_v3';
+  const CACHE_POSITIVE_MS=30*24*3600*1000;
+  const CACHE_MISS_MS=30*60*1000;
+  const POSTER_URL=/^https:\/\/image\.tmdb\.org\/t\/p\/w342\/[A-Za-z0-9_-]+\.(?:jpe?g|png|webp)$/i;
+  const keysInProgress=new Set();
+  const scopes={batch:0,history:0};
+  const state=loadCache();
+  const $=id=>document.getElementById(id);
+  const t=(key,values={})=>window.FrameI18n.t(key,values);
+  const keyFor=movie=>movie.key||[movie.title,movie.director,String(movie.year)]
+    .map(v=>String(v??'').normalize('NFC').trim().toLocaleLowerCase()).join('||');
+  const info={batch:{key:'',vars:{}},history:{key:'',vars:{}}};
 
-  const tr = (key,vars={}) => window.FrameI18n.t(key,vars);
-  const normalize = text => String(text ?? '').normalize('NFC').trim().toLocaleLowerCase();
-  const filmKey = m => m.key || [m.title,m.director,String(m.year)].map(normalize).join('||');
-
-  function readCache() {
-    try {
-      const found = JSON.parse(localStorage.getItem(CACHE_NAME) || '{}');
-      return found && typeof found === 'object' && !Array.isArray(found) ? found : {};
-    } catch (_) { return {}; }
+  function loadCache(){
+    try{
+      const value=JSON.parse(localStorage.getItem(CACHE_KEY)||'{}');
+      return value&&typeof value==='object'&&!Array.isArray(value)?value:{};
+    }catch(_){return{};}
   }
-  function saveCache() {
-    try {localStorage.setItem(CACHE_NAME,JSON.stringify(caches));} catch (_) {}
+  function persist(){
+    try{localStorage.setItem(CACHE_KEY,JSON.stringify(state));}catch(_){}
   }
-  function cached(key) {
-    const item = caches[key];
-    if (!item || !Number.isFinite(item.at)) return undefined;
-    const ttl = item.url === null ? NEGATIVE_TTL : POSITIVE_TTL;
-    if (Date.now() - item.at > ttl) return undefined;
-    return item.url === null || IMAGE_PATTERN.test(item.url) ? item.url : undefined;
+  function cacheRead(key){
+    const record=state[key];
+    if(!record||!Number.isFinite(record.at))return undefined;
+    if(Date.now()-record.at>(record.url===null?CACHE_MISS_MS:CACHE_POSITIVE_MS))return undefined;
+    return record.url===null||POSTER_URL.test(record.url)?record.url:undefined;
   }
-  function store(key,url) {
-    if(url !== null && !IMAGE_PATTERN.test(url))return;
-    caches[key]={url,at:Date.now()};
+  function cacheWrite(key,url){
+    if(url!==null&&!POSTER_URL.test(url))return false;
+    state[key]={at:Date.now(),url};
+    return true;
   }
-  function setNotice(key,vars={}) {
-    noticeKey=key;noticeVars=vars;
-    const el=document.getElementById('poster-status');
-    if(!el)return;
-    el.textContent=key?tr(key,vars):'';
-    el.classList.toggle('hidden',!key);
+  function status(scope,key,vars={}){
+    info[scope]={key,vars};
+    const id=scope==='history'?'history-poster-status':'poster-status';
+    const node=$(id);
+    if(!node)return;
+    node.textContent=key?t(key,vars):'';
+    node.classList.toggle('hidden',!key);
   }
-  function applyPoster(key,url) {
-    if(!IMAGE_PATTERN.test(url || ''))return;
-    for(const card of document.querySelectorAll('.film-card')){
-      if(card.dataset.movieKey !== key)continue;
-      const image=card.querySelector('.film-poster-image');
+  function renderImage(key,url){
+    if(!POSTER_URL.test(url||''))return;
+    for(const box of document.querySelectorAll('.film-poster[data-film-key]')){
+      if(box.dataset.filmKey!==key)continue;
+      const image=box.querySelector('.film-poster-image');
       if(image && image.getAttribute('src')!==url)image.src=url;
     }
   }
-  function prepare(card,movie) {
-    const key=filmKey(movie);
-    card.dataset.movieKey=key;
+  function prepare(host,movie,opts={}){
+    const key=keyFor(movie);
     const panel=document.createElement('div');
     panel.className='film-poster';
-    const art=document.createElement('div');
-    art.className='film-poster-placeholder';
-    const symbol=document.createElement('span');
-    symbol.className='film-poster-glyph';
-    symbol.textContent='✦';
+    if(opts.thumbnail)panel.classList.add('film-poster-thumb');
+    panel.dataset.filmKey=key;
+    const placeholder=document.createElement('div');
+    placeholder.className='film-poster-placeholder';
+    const glyph=document.createElement('span');
+    glyph.className='film-poster-glyph';glyph.textContent='✦';
     const caption=document.createElement('span');
-    caption.textContent='FRAME / 20';
-    caption.className='film-poster-caption';
-    art.append(symbol,caption);
-    const img=document.createElement('img');
-    img.className='film-poster-image hidden';
-    img.loading='lazy';
-    img.decoding='async';
-    img.alt=tr('posterAlt',{title:movie.title});
-    img.referrerPolicy='no-referrer';
-    img.addEventListener('load',()=>panel.classList.add('has-image') || img.classList.remove('hidden'));
-    img.addEventListener('error',()=>{panel.classList.remove('has-image');img.classList.add('hidden');});
-    panel.append(art,img);
-    card.prepend(panel);
-    const previous=cached(key);
-    if(previous)img.src=previous;
+    caption.className='film-poster-caption';caption.textContent='FRAME / 20';
+    placeholder.append(glyph,caption);
+    const image=document.createElement('img');
+    image.className='film-poster-image hidden';
+    image.alt=t('posterAlt',{title:movie.title});
+    image.loading=opts.thumbnail?'lazy':'eager';
+    image.decoding='async';
+    image.referrerPolicy='no-referrer';
+    image.addEventListener('load',()=>{
+      panel.classList.add('has-image');
+      image.classList.remove('hidden');
+    });
+    image.addEventListener('error',()=>{
+      panel.classList.remove('has-image');
+      image.classList.add('hidden');
+      panel.dataset.imageFailed='1';
+    });
+    panel.append(placeholder,image);
+    const fromCache=cacheRead(key);
+    if(fromCache)image.src=fromCache;
+    if(!opts.thumbnail)host.prepend(panel);
+    return panel;
   }
-  async function lookup(movies, mode, api) {
-    const generation=++currentLookup;
-    setNotice('');
-    if(mode!=='live' || !movies?.length)return;
-    const missing=movies.filter(m=>cached(filmKey(m))===undefined);
-    if(!missing.length)return;
-    setNotice('posterLoading');
-    let failures=0,hasConfig=true;
-    // Five keys per request keeps Apps Script JSONP URLs short.
-    const chunks=[];
-    for(let i=0;i<missing.length;i+=5)chunks.push(missing.slice(i,i+5));
-    for(const group of chunks) {
-      if(generation!==currentLookup)break;
-      try {
-        const response=await api('posters',{keys:JSON.stringify(group.map(filmKey))},45000);
-        if(generation!==currentLookup)break;
-        if(!response.configured){hasConfig=false;break;}
-        for(const movie of group) {
-          const key=filmKey(movie);
-          if(!Object.prototype.hasOwnProperty.call(response.posters||{},key))continue;
-          const url=response.posters[key];
-          if(url===null || IMAGE_PATTERN.test(url)){
-            store(key,url);
-            applyPoster(key,url);
-          }
+  function uniqueMovies(movies){
+    const seen=new Set();
+    return (movies||[]).filter(movie=>{
+      const key=keyFor(movie);
+      if(!key||seen.has(key))return false;
+      seen.add(key);return true;
+    });
+  }
+  async function lookup(movies,mode,api,scope='batch',force=false){
+    if(!Object.prototype.hasOwnProperty.call(scopes,scope))scope='batch';
+    const generation=++scopes[scope];
+    const unique=uniqueMovies(movies);
+    const total=unique.length;
+    status(scope,'');
+    if(mode!=='live'||!total)return;
+    if(force){
+      for(const movie of unique)delete state[keyFor(movie)];
+      persist();
+    }
+    const pending=unique.filter(movie=>cacheRead(keyFor(movie))===undefined);
+    if(!pending.length){
+      const found=unique.filter(movie=>Boolean(cacheRead(keyFor(movie)))).length;
+      status(scope,'posterCoverage',{found:window.FrameI18n.number(found),total:window.FrameI18n.number(total)});
+      return;
+    }
+    status(scope,'posterLoading');
+    let failures=0;
+    for(let i=0;i<pending.length;i+=5){
+      if(scopes[scope]!==generation)return;
+      const chunk=pending.slice(i,i+5);
+      try{
+        const response=await api('posters',{keys:JSON.stringify(chunk.map(keyFor))},45000);
+        if(scopes[scope]!==generation)return;
+        if(response.configured===false){status(scope,'posterNotConfigured');return;}
+        if(!response.posters||typeof response.posters!=='object'){
+          status(scope,'posterUnexpectedResponse');return;
         }
-      } catch(error) {
-        if(generation!==currentLookup)break;
+        for(const movie of chunk){
+          const key=keyFor(movie);
+          if(!Object.prototype.hasOwnProperty.call(response.posters,key))continue;
+          const url=response.posters[key];
+          if(cacheWrite(key,url))renderImage(key,url);
+        }
+        persist();
+      }catch(error){
+        if(scopes[scope]!==generation)return;
+        const msg=String(error?.message||error);
+        if(/Unknown action|not found.*posters/i.test(msg)){
+          status(scope,'posterBackendUpgrade');return;
+        }
+        if(/TMDB access rejected|invalid.*token/i.test(msg)){
+          status(scope,'posterTokenInvalid');return;
+        }
+        if(/permission|authorization|scope|DriveApp|UrlFetchApp/i.test(msg)){
+          status(scope,'posterPermissionProblem');return;
+        }
+        if(/Too many|rate limit|HTTP 429/i.test(msg)){
+          status(scope,'posterRateLimit');return;
+        }
         failures++;
-        const msg=String(error.message||'');
-        if(/Unknown action/i.test(msg)){setNotice('posterBackendUpgrade');break;}
-        if(/TMDB access rejected/i.test(msg)){setNotice('posterTokenInvalid');break;}
+        // Stop on repeated failures, so the site does not silently wait on 4 timeouts.
+        if(failures>=2){status(scope,'posterConnectionProblem');return;}
       }
     }
-    saveCache();
-    if(generation!==currentLookup)return;
-    if(noticeKey==='posterBackendUpgrade'||noticeKey==='posterTokenInvalid')return;
-    if(!hasConfig){setNotice('posterNotConfigured');return;}
-    if(failures){setNotice('posterTemporaryProblem');return;}
-    const found=movies.filter(m=>Boolean(cached(filmKey(m)))).length;
-    // Report unmatched film count separately; missing poster is not a failed request.
-    setNotice(found<movies.length?'posterCoverage':'', {found:window.FrameI18n.number(found),total:window.FrameI18n.number(movies.length)});
-  }
-  function translate(){
-    const el=document.getElementById('poster-status');
-    if(el && noticeKey)el.textContent=tr(noticeKey,noticeVars);
-    for(const card of document.querySelectorAll('.film-card')){
-      const img=card.querySelector('.film-poster-image');
-      const title=card.querySelector('.film-title')?.textContent;
-      if(img&&title)img.alt=tr('posterAlt',{title});
+    if(scopes[scope]!==generation)return;
+    const found=unique.filter(movie=>Boolean(cacheRead(keyFor(movie)))).length;
+    if(failures){
+      status(scope,'posterPartialFailure',{found:window.FrameI18n.number(found),
+        total:window.FrameI18n.number(total)});
+    }else{
+      status(scope,'posterCoverage',{found:window.FrameI18n.number(found),
+        total:window.FrameI18n.number(total)});
     }
   }
-  window.FramePosters={prepare,lookup,translate};
+  function translate(){
+    for(const scope of Object.keys(info)){
+      const data=info[scope];
+      if(data.key)status(scope,data.key,data.vars);
+    }
+    for(const box of document.querySelectorAll('.film-poster[data-film-key]')){
+      const img=box.querySelector('img');
+      const key=box.dataset.filmKey;
+      const card=box.closest('.film-card,.history-entry');
+      const title=card?.querySelector('.film-title,.history-title')?.textContent;
+      if(img&&title)img.alt=t('posterAlt',{title});
+    }
+  }
+  function retry(movies,mode,api,scope='batch'){
+    return lookup(movies,mode,api,scope,true);
+  }
+  window.FramePosters={prepare,lookup,retry,translate};
 })();
