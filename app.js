@@ -41,6 +41,7 @@ function statusDisplay(s) {
   $('rated-count').textContent = localizedNum(s.rated ?? 0);
   app.selected = Array.isArray(s.selected) ? s.selected : [];
   renderHistory();
+  document.dispatchEvent(new CustomEvent('frame20:datachange'));
   if(app.mode==='live' && !($('history-panel')?.classList.contains('hidden')) && window.FramePosters)
     void window.FramePosters.lookup(app.selected,app.mode,api,'history');
 }
@@ -67,7 +68,7 @@ async function connect(event) {
 }
 
 function enterPicker(label) {
-  show('connection-panel',false); show('picker-panel',true); show('history-panel',false); show('catalog-panel',false);
+  show('connection-panel',false); show('picker-panel',false); show('history-panel',false); show('catalog-panel',false);
   const pill=$('connection-pill'); pill.classList.toggle('connected',app.mode==='live'); pill.classList.toggle('demo',app.mode==='demo');
   $('connection-text').textContent=label;
   $('movie-grid').replaceChildren();
@@ -75,6 +76,7 @@ function enterPicker(label) {
   app.batch=[]; app.chosen=false;
   $('draw-btn').textContent=tr('draw');
   message('');
+  window.FrameNavigation?.go('home');
 }
 
 async function startDemo() {
@@ -282,7 +284,7 @@ function exportJson(){
   const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json;charset=utf-8'});
   const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='movie_picker_state.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);
 }
-function disconnect(){app.mode='disconnected';app.code='';app.chosen=false;sessionStorage.removeItem('frame20_code');show('connection-panel',true);show('picker-panel',false);show('history-panel',false);show('catalog-panel',false);$('connection-pill').classList.remove('connected','demo');$('connection-text').textContent=tr('disconnected');$('passcode-input').value='';}
+function disconnect(){app.mode='disconnected';app.code='';app.chosen=false;sessionStorage.removeItem('frame20_code');show('connection-panel',true);show('picker-panel',false);show('history-panel',false);show('catalog-panel',false);window.FrameNavigation?.go('home');$('connection-pill').classList.remove('connected','demo');$('connection-text').textContent=tr('disconnected');$('passcode-input').value='';}
 function wire(){
   $('endpoint-input').value=localStorage.getItem('frame20_endpoint')||'';
   $('connect-form').addEventListener('submit',connect);
