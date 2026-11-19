@@ -140,3 +140,19 @@ Troubleshoot in this order:
 5. If the poster toolbar reports a connection or permission error, inspect **Apps Script → Executions** for the exact server error. External URL fetch permission is required when explicit OAuth scopes are configured: `https://www.googleapis.com/auth/script.external_request`.
 
 TMDB poster lookup may not find a confident match for every classic film. No image means the movie card still works and its rating/priority is unchanged.
+
+
+## Persistent poster image cache (browser)
+
+The site now registers `sw.js`, a poster-only service worker. It caches the **actual TMDB image responses** in the browser's Cache Storage, rather than just storing the URL in localStorage. When an already-viewed poster is requested again, the image is served from this local cache first. Downloads in progress are deduplicated.
+
+- The cache is limited to **320 poster URLs**; older entries are removed in insertion order to avoid uncontrolled disk usage.
+- Only TMDB poster images at `https://image.tmdb.org/t/p/w342/...` and `.../w500/...` are cached.
+- Requests for Apps Script, Google Sheets, tokens, JSONP, ratings, and other app assets are **never** handled by this poster image cache.
+- The image URL-matching cache in `posters.js` remains separate: the service worker stores bytes, while localStorage stores mappings from film identifiers to poster URLs.
+- An initial normal online load is required before a poster is available from the browser's persistent cache. In normal operation, subsequent views should avoid re-downloading that poster.
+- Cache Storage is browser-specific. Another browser/device starts with an empty image cache, and browsers may evict stored images under quota or storage cleanup policies.
+- If Service Workers or Cache Storage are blocked/unsupported, the site continues to work normally, just without persistent image caching.
+- No Apps Script redeployment, new TMDB token, or Google Sheets change is needed.
+
+To verify: open DevTools → Application → Cache Storage → `frame20-poster-images-v1` after viewing posters; previously seen poster image URLs should be present.
