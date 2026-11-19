@@ -123,3 +123,20 @@ TMDB copyright/attribution guidance: https://www.themoviedb.org/about/logos-attr
 ### Improving missing TMDB posters
 
 The optional backend `PickerBackend_with_Better_Posters.gs` uses a more tolerant but year-verified title match (including capitalization, punctuation, short/long variants, localized alternate-title search results) and retries missing titles without the year filter. It rejects unrelated remakes and ambiguous same-year results. Run the read-only `testPosterCoverage` function manually, then deploy **New version** on the existing Web App. The browser poster cache has been bumped to v2 so previously missing posters are retried; negative matches now expire after 45 minutes. This can improve coverage but is **not** guaranteed to cover all titles, especially films absent from TMDB or with a different title.
+
+
+## Poster display troubleshooting — random movies and My Picks
+
+The frontend now renders TMDB artwork in both **20 random movies** and **My Picks / انتخاب‌های من**. It shows a retry button in both sections and a diagnostic status such as `Posters loaded: 12 of 20`, `Deploy updated PickerBackend.gs`, or `Could not retrieve posters through Apps Script`.
+
+For the live site to load poster URLs, its saved `/exec` endpoint **must use a deployed version** containing `doGet` with `case 'posters'` and the `posters_(rawKeys)` function. A successful manual `testPosterCoverage()` execution in the Apps Script editor proves the API token can work in the current editor code, but does not prove that the old production Web App is running that version.
+
+Troubleshoot in this order:
+
+1. Run `testPosterCoverage` in Apps Script (already checks sample TMDB matching).
+2. Select **Deploy → Manage deployments → Edit → Version: New version → Deploy** on the *existing* Web App, using `Execute as: Me` and `Who has access: Anyone`. Do not inadvertently use another deployment's `/exec` URL.
+3. Refresh GitHub Pages with Ctrl+Shift+R, connect using the current Web App URL and `PICKER_ACCESS_CODE`, and draw 20 films.
+4. In **My Picks**, thumbnails are loaded independently for saved choices, including rated films. Use the **Retry posters** button if an earlier lookup failed.
+5. If the poster toolbar reports a connection or permission error, inspect **Apps Script → Executions** for the exact server error. External URL fetch permission is required when explicit OAuth scopes are configured: `https://www.googleapis.com/auth/script.external_request`.
+
+TMDB poster lookup may not find a confident match for every classic film. No image means the movie card still works and its rating/priority is unchanged.
