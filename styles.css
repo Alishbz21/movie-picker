@@ -105,3 +105,16 @@ html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
   .film-card .rating-select{min-width:70px}
   .film-card .rating-save-btn{width:100%}
 }
+
+/* Poster cards — optional image and graceful fallback */
+.film-poster {position:relative;overflow:hidden;aspect-ratio:2/3;border-radius:10px;border:1px solid rgba(211,255,141,.14);background:linear-gradient(160deg,#2c3f3a,#111b1e 55%,#354139);margin:0 0 13px;isolation:isolate}
+.film-poster-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.film-poster-glyph{font-size:clamp(42px,6vw,70px);color:rgba(211,255,141,.4)}
+.film-poster-caption{font:600 9px 'DM Sans',sans-serif;letter-spacing:.22em;color:rgba(236,240,228,.55)}
+.film-poster-image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.film-poster.has-image .film-poster-placeholder{opacity:0}
+.poster-status{color:var(--muted);font-size:12px;margin:-8px 0 17px}
+.tmdb-attribution{font-family:'DM Sans',sans-serif;direction:ltr;text-align:left;max-width:350px;line-height:1.7;font-size:10px;color:var(--muted)}
+.tmdb-attribution a{text-decoration:underline;text-underline-offset:2px}
+.tmdb-attribution a:hover{color:var(--accent)}
+@media(max-width:680px){.film-poster{margin-bottom:10px}.film-poster-glyph{font-size:44px}.film-poster-caption{font-size:8px}}
