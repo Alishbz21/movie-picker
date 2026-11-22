@@ -442,3 +442,13 @@ html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
   #watchlist-panel[data-layout=grid] .library-actions,
   #ratings-panel[data-layout=grid] .library-actions{max-width:100%}
 }
+
+/* Password visibility control: works in both RTL and LTR without shifting form layout. */
+.password-field{position:relative;display:block;width:100%;direction:ltr}
+.connect-form .password-field input{display:block;width:100%;padding-right:49px}
+.password-toggle{position:absolute;right:7px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:35px;height:35px;border:1px solid transparent;border-radius:8px;background:transparent;color:#a8bcb4;cursor:pointer}
+.password-toggle:hover{background:#2a3734;color:var(--accent)}
+.password-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.password-toggle .eye-closed{display:none}
+.password-toggle.is-visible .eye-open{display:none}
+.password-toggle.is-visible .eye-closed{display:block}
