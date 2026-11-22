@@ -68,6 +68,13 @@ async function connect(event) {
 }
 
 function enterPicker(label) {
+  // Always return the password field to its masked state after connecting.
+  $('passcode-input').type='password';
+  const visibility=$('passcode-visibility-btn');
+  visibility.classList.remove('is-visible');
+  visibility.setAttribute('aria-pressed','false');
+  visibility.setAttribute('aria-label',tr('showPasscode'));
+  visibility.title=tr('showPasscode');
   show('connection-panel',false); show('picker-panel',false); show('history-panel',false); show('catalog-panel',false);
   const pill=$('connection-pill'); pill.classList.toggle('connected',app.mode==='live'); pill.classList.toggle('demo',app.mode==='demo');
   $('connection-text').textContent=label;
@@ -288,6 +295,24 @@ function disconnect(){app.mode='disconnected';app.code='';app.chosen=false;sessi
 function wire(){
   $('endpoint-input').value=localStorage.getItem('frame20_endpoint')||'';
   $('connect-form').addEventListener('submit',connect);
+  // Optional local visibility: never stores the access code or changes the form value.
+  const passcodeInput=$('passcode-input');
+  const passcodeVisibility=$('passcode-visibility-btn');
+  function syncPasscodeVisibility(){
+    const shown=passcodeInput.type==='text';
+    const label=tr(shown?'hidePasscode':'showPasscode');
+    passcodeVisibility.classList.toggle('is-visible',shown);
+    passcodeVisibility.setAttribute('aria-pressed',String(shown));
+    passcodeVisibility.setAttribute('aria-label',label);
+    passcodeVisibility.title=label;
+  }
+  passcodeVisibility.addEventListener('click',()=>{
+    passcodeInput.type=passcodeInput.type==='password'?'text':'password';
+    syncPasscodeVisibility();
+    passcodeInput.focus({preventScroll:true});
+  });
+  document.addEventListener('frame20:languagechange',syncPasscodeVisibility);
+  syncPasscodeVisibility();
   $('settings-btn').addEventListener('click', () => $('settings-dialog').showModal());
   const closeSettings = () => $('settings-dialog').close();
   $('settings-close-btn').addEventListener('click',closeSettings);
