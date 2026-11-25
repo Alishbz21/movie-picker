@@ -162,7 +162,7 @@
     try{
       if(app.mode==='live'){
         await api('save_ranks',{rating:String(group.rating),
-          keys:JSON.stringify(group.movies.map(movie=>movie.key)),snapshot:group.snapshot},45000);
+          rows:JSON.stringify(group.movies.map(movie=>movie.row)),snapshot:group.snapshot},45000);
       }else{
         const saved=readDemoRanks();
         group.movies.forEach((film,i)=>{saved[film.key]={rating:group.rating,rank:i+1};});
