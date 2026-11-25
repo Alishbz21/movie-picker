@@ -5,6 +5,7 @@
   const translations = {
     fa: {
       rankOpen: 'مرتب‌سازی دلخواه فیلم‌های هم‌امتیاز',
+      rankDisplay: 'رتبه {position}',
       rankKicker: 'رتبه‌بندی شخصی',
       rankTitle: 'ترتیب دلخواه فیلم‌های هم‌امتیاز',
       rankChooseRating: 'گروه امتیاز',
@@ -172,6 +173,7 @@
     },
     en: {
       rankOpen: 'Custom order for equally rated films',
+      rankDisplay: 'Rank {position}',
       rankKicker: 'PERSONAL RANKING',
       rankTitle: 'Order films with the same rating',
       rankChooseRating: 'Rating group',
