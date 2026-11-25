@@ -56,9 +56,14 @@
       const corpus=[movie.title,movie.director,movie.year,movie.country].join(' ').toLocaleLowerCase();
       return terms.every(term=>corpus.includes(term));
     });
+    let demoRanks={};
+    try{demoRanks=JSON.parse(localStorage.getItem('frame20_demo_rating_ranks')||'{}')||{};}catch(_){}
     list.sort((a,b)=>type==='watchlist'
       ? a.priority-b.priority||a.title.localeCompare(b.title)
-      : b.rating-a.rating||a.title.localeCompare(b.title));
+      : b.rating-a.rating ||
+        (demoRanks[a.key]?.rating===a.rating?demoRanks[a.key].rank:Infinity)-
+          (demoRanks[b.key]?.rating===b.rating?demoRanks[b.key].rank:Infinity) ||
+        Number(a.year)-Number(b.year)||a.title.localeCompare(b.title));
     return list;
   }
   function feedback(view,key,vars={}) {
@@ -90,6 +95,12 @@
         index.textContent='#'+num(movie.priority);
       }else{
         index.textContent='★ '+num(movie.rating);
+        if(Number.isInteger(movie.ratingRank) && movie.ratingRank>0){
+          const rank=document.createElement('small');
+          rank.className='rating-rank-display';
+          rank.textContent=t('rankDisplay',{position:num(movie.ratingRank)});
+          index.append(rank);
+        }
       }
       const details=document.createElement('div');
       details.className='library-details';
