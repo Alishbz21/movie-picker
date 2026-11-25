@@ -486,3 +486,6 @@ html[lang="en"] .settings-dialog {font-family:'DM Sans',Arial,sans-serif}
 .ranking-subtitle{font-size:10px}
 .ranking-jump{width:55px}
 }
+
+/* Tie-break rank underneath each Ratings score */
+.rating-rank-display{display:block;font-size:10px;font-weight:500;color:var(--muted);white-space:nowrap;margin-top:5px}
