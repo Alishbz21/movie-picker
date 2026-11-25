@@ -184,3 +184,17 @@ Each of the three film views (**Random Picker**, **Watchlist**, **Ratings**) now
 - **Size:** Small, Medium, Large.
 
 Preferences are saved per section in browser `localStorage` under `frame20_view_preferences_v1`. For example, you may use large posters in the random picker and compact rows in Watchlist without affecting each other. All layouts preserve existing rating, undo, search, priority, and poster capabilities. Layout and size changes are client-side only: **no Apps Script deploy or Google Sheets change is required**. The grids adapt to smaller screens.
+
+
+## Custom tie ranking inside Ratings (November 2026)
+
+**Live sheet:** Column H `Rating Rank` stores a unique 1-based position **within each existing Personal Rating in column F**. Higher ratings still sort before lower ones. The site's main Ratings list sorts by F descending, then H ascending, then year/title as a fallback. The Watchlist stays sorted independently by column G. Six current rated films received an initial year-based order, while A:G data was preserved.
+
+**Using the site:** Open Ratings → **Custom order for equally rated films**. Select the rating group (1–10). Drag and drop rows, press ↑/↓, or enter a target position. Changes are temporary until **Save Order** is clicked. **Discard changes** and a group-switch confirmation are available; the ranking editor fetches the entire selected rating group rather than depending on paginated search results. Both Persian and English are supported. A secondary label under each rating score shows its manual group rank.
+
+**Deploy required:** Replace the *contents* of the existing Apps Script `PickerBackend.gs` with `PickerBackend_with_Manual_Rating_Order.gs` (provided in the ChatGPT conversation). Leave `Code.gs` and Script Properties unchanged. Deploy → Manage deployments → Edit existing Web App → **New version** → Deploy. The new backend retains previous poster, draw, pick, cancel, search, and rating features, and adds `action=rank_group` and `action=save_ranks`.
+
+**Safety:** The save endpoint authenticates through the existing access code, validates that the submitted film row indexes are exactly the full selected rating group, checks a current server-side snapshot to reject stale edits, takes a script lock, and writes only the H cells belonging to that rating group. It does not reorder actual spreadsheet rows. Changing a film's rating from within the website moves that film to the end of its new rating group and closes gaps in its old rating group. Direct edits to F in Google Sheets do not invoke the web backend; they may need a subsequent Save Order to normalize manual ranking.
+
+**Backup:** An unchanged Drive copy was made before adding H:
+https://docs.google.com/spreadsheets/d/1gHUyj9W2TVr_snCWbtZvQMC38Zv2qFLcdyFnS8dMQBQ/edit
