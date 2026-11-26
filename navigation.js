@@ -95,12 +95,6 @@
         index.textContent='#'+num(movie.priority);
       }else{
         index.textContent='★ '+num(movie.rating);
-        if(Number.isInteger(movie.ratingRank) && movie.ratingRank>0){
-          const rank=document.createElement('small');
-          rank.className='rating-rank-display';
-          rank.textContent=t('rankDisplay',{position:num(movie.ratingRank)});
-          index.append(rank);
-        }
       }
       const details=document.createElement('div');
       details.className='library-details';
